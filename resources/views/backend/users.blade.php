@@ -96,19 +96,19 @@
                         </div>
                         <div class="form-group">
                             <label  class="col-form-label">Chứng minh thư:</label>
-                            <input type="text"  class="form-control" id="CMT">
+                            <input type="text"  class="form-control" id="CMT" onblur="valiCMT(this.value)">
                             <span id="errorCMT" style="color: red"></span>
 
                         </div>
                         <div class="form-group">
                             <label  class="col-form-label">Level:</label>
-                            <select class="form-control" id="level">
+                            <select class="form-control" id="level" onchange="ChangeLevel(this.value)">
                                 <option value="0">User</option>
                                 <option value="1">Admin</option>
                                 <option value="2">Quản Lý</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="displaystatus">
                             <label  class="col-form-label">Loại TK:</label>
                             <select class="form-control" id="status">
                                 <option value="1">Thường</option>
@@ -135,7 +135,32 @@
 @endsection
 @section('script')
     <script>
+        function valiCMT(value) {
+            if (value.length==0){
+                $('#errorCMT').text('');
+                $('#CMT').removeClass('is-invalid');
+            }else
+            if(isNaN(value)){
+                $('#errorCMT').text('CMT phải là số')
+                $('#CMT').addClass('is-invalid');
+            }else
+            if (value.length>10 || value.length<9){
+                $('#errorCMT').text('Độ dài CMT không đúng')
+                $('#CMT').addClass('is-invalid');
+            } else{
+                $('#errorCMT').text('')
+                $('#CMT').removeClass('is-invalid');
+            }
+        }
+        function ChangeLevel(level){
+            if (level==1||level==2){
+                $('#displaystatus').hide();
+            }else{
+                $('#displaystatus').show();
+            }
+        };
         $(document).ready(function() {
+
             var table= $('#example').DataTable({
                 "columnDefs": [
                     {"className": "dt-center", "targets": "_all"}
@@ -228,8 +253,10 @@
                 })
 
             });
+
             $(document).on('click','.add',function () {
                 $('#UserModal').modal('show');
+
                 $('#formsubmit').show();
                 $('.information').hide();
                 $('#modaluser').removeClass('modal-lg');
@@ -261,7 +288,11 @@
                         $('#UserModal').modal('show');
                         $('#formsubmit').show();
                         $('.information').hide();
-
+                        if (data.level==1||data.level==2){
+                            $('#displaystatus').hide();
+                        }else{
+                            $('#displaystatus').show();
+                        }
                         $('.modal-title').text('Edit '+data.name);
                         $('.submitbutton').text('Update');
                         $('#action').val('Edit');

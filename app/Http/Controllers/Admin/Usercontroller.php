@@ -66,12 +66,21 @@ class Usercontroller extends Controller
             $user->name=$request->name;
             $user->email=$request->email;
             $user->CMT=$request->CMT;
-            $user->level=$request->level;
-            $user->status=$request->status;
+            if ($request->level==1||$request->level==2){
+                $user->level=$request->level;
+                $user->status=null;
+                $user->beginstatus=null;
+                $user->endstatus=null;
+
+            }else{
+                $user->level=$request->level;
+                $user->status=$request->status;
+                $user->beginstatus=Carbon::now()->toDateString();
+                $user->endstatus=Carbon::now()->addDays(30)->toDateString();
+
+            }
             $user->activated=1;
             $user->password=bcrypt('1');
-            $user->beginstatus=Carbon::now()->toDateString();
-            $user->endstatus=Carbon::now()->addDays(30)->toDateString();
             $user->save();
             $success='Bạn đã đãng ký thành công';
         }
@@ -131,11 +140,21 @@ class Usercontroller extends Controller
         }else{
             $user=User::find($request->id);
             $user->name=$request->name;
-            $user->level=$request->level;
-            if ($user->status!== $request->status){
-                $user->status=$request->status;
-                $user->beginstatus=Carbon::now()->toDateString();
-                $user->endstatus=Carbon::now()->addDays(30)->toDateString();
+
+            if ($request->level==1||$request->level==2){
+                $user->level=$request->level;
+                $user->status=null;
+                $user->beginstatus=null;
+                $user->endstatus=null;
+
+            }else{
+                $user->level=$request->level;
+                if ($user->status!= $request->status){
+                    $user->status=$request->status;
+                    $user->beginstatus=Carbon::now()->toDateString();
+                    $user->endstatus=Carbon::now()->addDays(30)->toDateString();
+                }
+
             }
 
             $user->save();
