@@ -65,6 +65,9 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <div class="top-right links">
+                <a href="{{asset('register')}}" >Register</a>
+            </div>
             @if (Route::has('login-asset'))
                 <div class="top-right links">
                     @auth

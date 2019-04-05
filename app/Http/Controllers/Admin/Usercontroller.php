@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class Usercontroller extends Controller
 {
@@ -22,7 +23,7 @@ class Usercontroller extends Controller
     }
     public function getData(){
         return response([
-            'data'=> User::all()
+            'data'=> User::where('id','<>',Auth::user()->id)->get(),
         ]);
     }
 
@@ -180,6 +181,24 @@ class Usercontroller extends Controller
         User::destroy($request->id);
         return response([
             'success'=>'Bạn đã xóa thành công'
+        ]);
+    }
+    public function active(Request $request)
+    {
+        $user=User::find($request->value);
+        $user->activated=1;
+        $user->save();
+        return response([
+            'success'=>'Kích hoạt thành công.'
+        ]);
+    }
+    public function resetpass(Request $request)
+    {
+        $user=User::find($request->value);
+        $user->password=bcrypt('1');
+        $user->save();
+        return response([
+            'success'=>'Thành công.ResetPassword thành 1.'
         ]);
     }
 }

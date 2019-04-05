@@ -14,14 +14,29 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('login','Admin\LogController@getLogin');
-Route::group(['prefix'=>'admin'],function (){
+Route::get('/register','Admin\LogController@getRegister');
+Route::post('/postregister','Admin\LogController@postRegister');
+
+Route::get('login','Admin\LogController@getLogin')->middleware('LoggedOut');
+Route::post('postlogin','Admin\LogController@postLogin');
+
+Route::get('logout','Admin\LogController@logout');
+
+Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],function (){
     route::get('/',function (){
         return view('backend.dashboard');
     });//
     Route::group(['prefix'=>'user'],function (){
         Route::get('/','Admin\UserController@index');
         Route::get('/data','Admin\UserController@getData');
+        Route::get('/edit','Admin\UserController@edit');
+        Route::get('/delete','Admin\UserController@destroy');
+        Route::post('update','Admin\UserController@update');
+        Route::post('/add','Admin\UserController@store');
+        Route::post('/active','Admin\UserController@active');
+        Route::post('/resetpass','Admin\UserController@resetpass');
+
+
 
     });
 //

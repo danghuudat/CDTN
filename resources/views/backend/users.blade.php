@@ -33,13 +33,13 @@
     </style>
 
             <div class="row mt-3">
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <h1 class="page-header ">Users
                         <small>List</small>
                     </h1>
                 </div>
-                <div class="col-md-2">
-                    <button class="btn btn-success add"><i class="fas fa-user-plus"></i> AddUser</button>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-secondary refresh" onclick="window.location.reload()"><i class="fas fa-sync-alt"></i> Refresh</button>&nbsp;<button class="btn btn-success add"><i class="fas fa-user-plus"></i> AddUser</button>
                 </div>
             </div>
 
@@ -48,11 +48,12 @@
         <table id="example" class="table display cell-border mt-2" style="width:100%">
             <thead>
             <tr>
-                <th>ID</th>
+
                 <th>Name</th>
                 <th>Email</th>
                 <th>Level</th>
                 <th>CMT</th>
+                <th>Status</th>
                 <th>Modifly</th>
 
             </tr>
@@ -122,7 +123,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" id="action" value="">
-                    <a id="resetpassword" class="btn btn-default"> Reset Password</a>
+                    <button type="button"  class="btn btn-default resetpassword" value=""> Reset Password</button>
                     <button type="submit" class="btn btn-primary submitbutton" value="" ></button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
@@ -130,11 +131,18 @@
                 </form>
             </div>
         </div>
+
     </div>
 
 @endsection
 @section('script')
     <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
         function valiCMT(value) {
             if (value.length==0){
                 $('#errorCMT').text('');
@@ -161,6 +169,7 @@
         };
         $(document).ready(function() {
 
+
             var table= $('#example').DataTable({
                 "columnDefs": [
                     {"className": "dt-center", "targets": "_all"}
@@ -170,8 +179,6 @@
 
                 ajax:'{{asset('admin/user/data')}}',
                 columns:[
-
-                    {data:'id',"width": "5%"},
                     {data:'name'},
                     {data:'email'},
                     {data:'level',"render": function (data, type, row) {
@@ -186,20 +193,28 @@
 
                         }},
                     {data:'CMT'},
+                    {data:'activated',"render": function (data, type, row) {
+
+                            if (row.activated === 1) {
+                                return '<p style="color: #31b131">Đã kích hoạt</p>';
+                            }else if(row.level === 0){
+                                return '<p style="color: red">Chưa kích hoạt</p>';
+                            };
+                    }},
                     {data:'Modifly',
                         "searchable": false,
                         "orderable":false,
                         "render": function (data, type, row) {
-                            return '<button class="btn btn-outline-info info" value="'+row.id+'"><i class="fas fa-info-circle"></i></a>&nbsp;<button class="btn btn-outline-primary edit" value="'+row.id+'"><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete" value="'+row.id+'"><i class="fas fa-trash"></i></button>'
-
-                        }}
+                            if (row.activated==0){
+                                return '<button class="btn btn-outline-info info" title="info" value="'+row.id+'"><i class="fas fa-info-circle"></i></button>&nbsp;<button class="btn btn-outline-success activated" title="Phê duyệt"  value="'+row.id+'"><i class="far fa-check-circle"></i></button>&nbsp;<button class="btn btn-outline-danger delete" title="Hủy bỏ" value="'+row.id+'"><i class="fas fa-times-circle"></i></button>'
+                            }else {
+                                return '<button class="btn btn-outline-info info" title="info" value="'+row.id+'"><i class="fas fa-info-circle"></i></button>&nbsp;<button class="btn btn-outline-primary edit" value="' + row.id + '"><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete" value="' + row.id + '"><i class="fas fa-trash"></i></button>'
+                            }
+                    }},
 
                 ]
             });
-            $(document).on('click','#resetpassword',function () {
-                $('#UserModal').modal('hide');
-                alert('change password')
-            });
+
             $(document).on('click','.info',function () {
                 $('#modaluser').addClass('modal-lg');
                 $.ajax({
@@ -247,11 +262,29 @@
 
 
                             };
+                        }else{
+                            if (data.level===0){
+                                html+='<p><i class="fas fa-chess-knight"></i> <b>Loại tài khoản:</b> <span style="color: red">Đợi kích hoạt</span> </p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Thường:</b> <span style="color: red">Đợi kích hoạt</span></p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Thường:</b> <span style="color: red">Đợi kích hoạt</span></p>';
+                            };
                         }
                         $('.text-deltais').html(html);
                     }
                 })
 
+            });
+            $(document).on('click','.activated',function () {
+                $.ajax({
+                    url:'{{asset("admin/user/active")}}',
+                    type:'POST',
+                    dataType:'json',
+                    data:{value:$(this).val()},
+                    success:function(data){
+                        alert(data.success);
+                        table.ajax.reload();
+                    }
+                })
             });
 
             $(document).on('click','.add',function () {
@@ -276,8 +309,23 @@
 
 
             });
+            $(document).on('click','.resetpassword',function () {
+                $.ajax({
+                    url:'{{asset("admin/user/resetpass")}}',
+                    type:'POST',
+                    dataType:'json',
+                    data:{value:$(this).val()},
+                    success:function(data){
+                        alert(data.success);
+
+                        $('#UserModal').modal('hide');
+                    }
+                })
+            });
             $(document).on('click','.edit',function () {
                 $('.submitbutton').val($(this).val());
+                $('.resetpassword').val($(this).val());
+                
                 $.ajax({
                     url: '{{asset("admin/user/edit")}}',
                     type: 'GET',
@@ -310,6 +358,8 @@
                         $('#erroremail').text('');
                         $('#CMT').removeClass('is-invalid');
                         $('#errorCMT').text('');
+
+
 
                     }
                 })
@@ -410,5 +460,7 @@
                 }
             })
         } );
+
+
     </script>
 @stop

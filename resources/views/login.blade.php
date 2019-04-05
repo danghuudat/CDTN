@@ -19,7 +19,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--//webfonts-->
 </head>
 <body>
-
+<style>
+    input[type="text"], input[type="password"] {
+        font-family: 'Open Sans', sans-serif;
+        width:78%;
+        padding:0.7em 2em 0.7em 1.7em;
+        color:whitesmoke;
+        font-size:18px;
+        outline: none;
+        background: none;
+        border:none;
+        font-weight:600;
+    }
+</style>
 <!-----start-main---->
 <div class="login-form">
     <div class="head">
@@ -65,8 +77,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     if (data.link){
                         window.location=data.link;
                         alert('Đăng nhập thành công');
-                    }else if(data.error){
+                    }
+                    if(data.error){
                         alert(data.error);
+                    }
+                    if(data.active){
+                        alert(data.active);
                     }
 
                 }
