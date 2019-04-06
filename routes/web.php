@@ -35,8 +35,16 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::post('/add','Admin\UserController@store');
         Route::post('/active','Admin\UserController@active');
         Route::post('/resetpass','Admin\UserController@resetpass');
-
-
+    });
+    Route::group(['prefix'=>'book'],function (){
+        Route::group(['prefix'=>'theloai'],function (){
+            Route::get('/','Admin\TheLoaiSachController@index');
+            Route::get('/data','Admin\TheLoaiSachController@getData');
+            Route::get('/edit','Admin\TheLoaiSachController@edit');
+            Route::get('/delete','Admin\TheLoaiSachController@destroy');
+            Route::post('/update','Admin\TheLoaiSachController@update');
+            Route::post('/add','Admin\TheLoaiSachController@store');
+        });
 
     });
 //
