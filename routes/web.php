@@ -39,5 +39,11 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
 
 
     });
+    Route::group(['prefix'=>'menu'],function (){
+       Route::get('/','Admin\MenuController@index');
+    });
+    Route::group(['prefix'=>'theloai_douong'],function (){
+        Route::get('/','Admin\Theloai_DouongController@index');
+    });
 //
 });

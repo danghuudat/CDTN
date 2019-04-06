@@ -120,6 +120,30 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-coffee"></i>
+                            <p>
+                                Đồ uống
+                                <i class="fa fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview" style="display: block;">
+                            <li class="nav-item">
+                                <a href="pages/UI/general.html" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>Danh sách đồ uống</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/UI/icons.html" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>Thể loại đồ uống</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
                     <li class="nav-item">
 
                         <a href="/logout" class="nav-link">
