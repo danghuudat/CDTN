@@ -41,6 +41,11 @@
     .sidebar-dark-primary{
         background-color: #7d6757;
     }
+   .active1 {
+        color: #fff;
+        background-color: black;
+    }
+
 </style>
 <div class="wrapper" id="app">
 
@@ -112,7 +117,7 @@
                     </li>
 
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="" class="nav-link">
                             <i class="nav-icon fas fa-book"></i>
                             <p>
                                 Quản lý Sách
@@ -127,9 +132,9 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/UI/icons.html" class="nav-link">
+                                <a href="admin/book/nxb" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>Icons</p>
+                                    <p>Nhà Xuất Bản</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -249,5 +254,14 @@
 
 
 @yield('script')
+<script>
+    var url = window.location;
+    var element = $('.mt-2 ul li  a').filter(function() {
+        return this.href == url;
+    }).addClass('active1').parent().parent().parent().addClass('menu-open').parent();
+    if (element.is('li')) {
+        element.addClass('active1');
+    }
+</script>
 </body>
 </html>

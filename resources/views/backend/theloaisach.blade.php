@@ -172,7 +172,7 @@
                 data: {id:$(this).val()},
                 success:function(data){
                     $('#TheLoaiModal').modal('show');
-                    $('.modal-title').text('Edit '+data.name);
+                    $('.modal-title').text('Edit '+data.name_tl);
                     $('.submitbutton').text('Update');
                     $('#action').val('Edit');
                     $('#name').val(data.name_tl);
