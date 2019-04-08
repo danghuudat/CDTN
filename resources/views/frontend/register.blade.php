@@ -123,14 +123,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <input type="password" required id="password" name="password"  placeholder="Password">
                 </div>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 cfpw">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
                     </div>
                     <input type="password" required id="confirmpassword" name="confirmpassword"  placeholder="Confirm Password">
+
                 </div>
-                <span id="error" style="color: red"></span>
-                <div class="input-group mb-3 a">
+                <span id="errorcf" style="position: relative;
+    /* width: 100%; */
+    top: -16px;
+    /* text-align: center; */
+    font-size: 18px;
+    color: red;
+    color: red;
+    left: 4em;
+}"></span>
+                <div class="input-group mb-3 cmt">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="far fa-credit-card"></i></span>
                     </div>
@@ -160,39 +169,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script>
 
-   // function valipw(pw) {
-   //      $('#confirmpassword').blur(function () {
-   //          var cfpw=$('#confirmpassword').val();
-   //          if (pw !=cfpw){
-   //              $('#error').text('Password nhap lai sai')
-   //              return false;
-   //          }else{
-   //              $('#error').text('')
-   //              return true;
-   //          }
-   //      })
-   //  }
-
-    // function valiCMT(CMT) {
-    //
-    //     // if (CMT.length==0){
-    //     //     $('#errorCMT').text('');
-    //     //     $('#CMT').removeClass('is-invalid');
-    //     // }else
-    //     if(isNaN(CMT)) {
-    //         $('#errorCMT').text('CMT phải là số');
-    //         $('#CMT').addClass('is-invalid');
-    //     }
-    //     // }else
-    //     // if (CMT.length>10 || CMT.length<9){
-    //     //     $('#errorCMT').text('Độ dài CMT không đúng')
-    //     //     $('#CMT').addClass('is-invalid');
-    //     // } else{
-    //     //     $('#errorCMT').text('')
-    //     //     $('#CMT').removeClass('is-invalid');
-    //     // }
-    // }
+   //
     $(document).ready(function () {
+        var pass=false;
+        var cfpass=false;
+        var passport=false;
+        // $('#password').focusout(function () {
+        //     alert($(this).val())
+        // });
+        $('#confirmpassword').focusout(function () {
+            var cfpw=$(this).val();
+            var pw=$('#password').val();
+            if(pw != cfpw){
+                $('#errorcf').text('Nhập password khong khop');
+                $('.cfpw').addClass('a');
+                cfpass = true;
+            }else{
+                $('#errorcf').text('');
+                $('.cfpw').removeClass('a');
+            }
+        });
+        $('#CMT').focusout(function () {
+            var CMT=$(this).val();
+
+
+        });
         $('#submit').submit(function (e) {
             e.preventDefault();
             var name=$('#name').val();
@@ -201,21 +202,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             var email=$('#email').val();
             var CMT=$('#CMT').val();
             var _token=$('input[name="_token"]').val();
-           if(pw !=cfpw){
-               alert('nhap lai pass word sai');
-           }else{
+           if(pass==false&&cfpass==false){
                $.ajax({
-                   url:'{{asset("postregister")}}',
-                   type:'POST',
-                   dataType:'json',
-                   data:{name:name,pw:pw,email:email,CMT:CMT,_token:_token},
-                   success:function (data) {
-                       if (data.success!=''){
-                           alert(data.success);
-                           window.location='{{asset('login')}}'
-                       }
-                   }
+               url:'{{asset("postregister")}}',
+               type:'POST',
+               dataType:'json',
+               data:{name:name,pw:pw,email:email,CMT:CMT,_token:_token},
+               success:function (data) {
+               if (data.success!=''){
+               alert(data.success);
+               window.location='{{asset('login')}}'
+               }
+               }
                })
+           }else{
+               alert('kiem tra')
+
            }
 
 

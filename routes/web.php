@@ -35,8 +35,24 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::post('/add','Admin\UserController@store');
         Route::post('/active','Admin\UserController@active');
         Route::post('/resetpass','Admin\UserController@resetpass');
-
-
+    });
+    Route::group(['prefix'=>'book'],function (){
+        Route::group(['prefix'=>'theloai'],function (){
+            Route::get('/','Admin\TheLoaiSachController@index');
+            Route::get('/data','Admin\TheLoaiSachController@getData');
+            Route::get('/edit','Admin\TheLoaiSachController@edit');
+            Route::get('/delete','Admin\TheLoaiSachController@destroy');
+            Route::post('/update','Admin\TheLoaiSachController@update');
+            Route::post('/add','Admin\TheLoaiSachController@store');
+        });
+        Route::group(['prefix'=>'nxb'],function (){
+            Route::get('/','Admin\NXBController@index');
+            Route::get('/data','Admin\NXBController@getData');
+            Route::get('/edit','Admin\NXBController@edit');
+            Route::get('/delete','Admin\NXBController@destroy');
+            Route::post('/update','Admin\NXBController@update');
+            Route::post('/add','Admin\NXBController@store');
+        });
 
     });
     Route::group(['prefix'=>'menu'],function (){

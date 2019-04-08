@@ -177,6 +177,7 @@
                 paging: true,
                 processing:false,
 
+
                 ajax:'{{asset('admin/user/data')}}',
                 columns:[
                     {data:'name'},
@@ -293,7 +294,7 @@
                 $('#formsubmit').show();
                 $('.information').hide();
                 $('#modaluser').removeClass('modal-lg');
-                $('#resetpassword').hide();
+                $('.resetpassword').hide();
                 $('.modal-title').text('Thêm mới');
                 $('.submitbutton').text('Thêm mới');
                 $('#action').val('Add');
@@ -344,7 +345,7 @@
                         $('.modal-title').text('Edit '+data.name);
                         $('.submitbutton').text('Update');
                         $('#action').val('Edit');
-                        $('#resetpassword').show();
+                        $('.resetpassword').show();
                         $('#CMT').prop('readonly', true);
                         $('#email').prop('readonly', true);
                         $('#name').val(data.name);
