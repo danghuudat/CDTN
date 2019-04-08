@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Theloai_Douong;
+use Illuminate\Support\Str;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,7 +16,7 @@ class Theloai_DouongController extends Controller
     }
     public function getData(){
         return response([
-            'data'=> Theloai_Douong::where('id','<>',Auth::user()->id)->get(),
+            'data'=> Theloai_Douong::get(),
         ]);
     }
     public function store(Request $request){
@@ -37,7 +38,8 @@ class Theloai_DouongController extends Controller
 //            }
         }else{
             $theloai=new Theloai_Douong();
-            $theloai->name=$request->name;
+            $theloai->theloai_douong_name=$request->name;
+            $theloai->theloai_douong_name_khongdau=Str::slug($request->name,'-');
             $theloai->save();
             $success='Bạn đã tạo thể loại thành công';
         }

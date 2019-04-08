@@ -50,6 +50,7 @@
         <tr>
             <th>ID</th>
             <th>Tên thể loại</th>
+            <th></th>
         </tr>
         </thead>
     </table>
@@ -101,12 +102,59 @@
             ajax:'{{asset('admin/theloai_douong/data')}}',
             columns:[
                 {data:'id'},
-                {data:'theloai_douong_name'}
+                {data:'theloai_douong_name'},
+                {data:'Modifly',
+                    "render": function (){
+                        return '</button>&nbsp;<button class="btn btn-outline-primary edit" ><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete" ><i class="fas fa-trash"></i></button>'
+                }},
             ]
         });
         $(document).on('click','.add',function () {
             $('#TheLoaiModal').modal('show');
+            $('#errorname').text("");
 
+
+        });
+        $(document).on('click','.edit',function () {
+            $('.submitbutton').val($(this).val());
+
+            $.ajax({
+                url: '{{asset("admin/user/edit")}}',
+                type: 'GET',
+                dataType: 'json',
+                data: {id:$(this).val()},
+                success:function(data){
+                    $('#modaluser').removeClass('modal-lg');
+                    $('#UserModal').modal('show');
+                    $('#formsubmit').show();
+                    $('.information').hide();
+                    if (data.level==1||data.level==2){
+                        $('#displaystatus').hide();
+                    }else{
+                        $('#displaystatus').show();
+                    }
+                    $('.modal-title').text('Edit '+data.name);
+                    $('.submitbutton').text('Update');
+                    $('#action').val('Edit');
+                    $('#resetpassword').show();
+                    $('#CMT').prop('readonly', true);
+                    $('#email').prop('readonly', true);
+                    $('#name').val(data.name);
+                    $('#email').val(data.email);
+                    $('#CMT').val(data.CMT);
+                    $('#level').val(data.level);
+                    $('#status').val(data.status);
+                    $('#name').removeClass('is-invalid');
+                    $('#errorname').text('');
+                    $('#email').removeClass('is-invalid');
+                    $('#erroremail').text('');
+                    $('#CMT').removeClass('is-invalid');
+                    $('#errorCMT').text('');
+
+
+
+                }
+            })
 
 
         });
