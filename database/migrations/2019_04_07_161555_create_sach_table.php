@@ -22,8 +22,8 @@ class CreateSachTable extends Migration
             $table->integer('soluong');
             $table->integer('nxb_id')->unsigned();
             $table->foreign('nxb_id')->references('id')->on('nhaxuatban')->onDelete('CASCADE');
-            $table->integer('docgia_id')->unsigned();
-            $table->foreign('docgia_id')->references('id')->on('docgia')->onDelete('CASCADE');
+            $table->integer('tacgia_id')->unsigned();
+            $table->foreign('tacgia_id')->references('id')->on('tacgia')->onDelete('CASCADE');
             $table->integer('theloai_id')->unsigned();
             $table->foreign('theloai_id')->references('id')->on('theloaisach')->onDelete('CASCADE');
 
