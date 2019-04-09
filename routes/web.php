@@ -53,6 +53,14 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
             Route::post('/update','Admin\NXBController@update');
             Route::post('/add','Admin\NXBController@store');
         });
+        Route::group(['prefix'=>'tacgia'],function (){
+            Route::get('/','Admin\TacGiaController@index');
+            Route::get('/data','Admin\TacGiaController@getData');
+            Route::get('/edit','Admin\TacGiaController@edit');
+            Route::get('/delete','Admin\TacGiaController@destroy');
+            Route::post('/update','Admin\TacGiaController@update');
+            Route::post('/add','Admin\TacGiaController@store');
+        });
 
     });
     Route::group(['prefix'=>'menu'],function (){

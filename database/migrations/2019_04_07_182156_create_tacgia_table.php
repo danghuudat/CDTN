@@ -13,12 +13,12 @@ class CreateDocgiaTable extends Migration
      */
     public function up()
     {
-        Schema::create('docgia', function (Blueprint $table) {
+        Schema::create('tacgia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name_docgia');
-            $table->string('slug_name_dg');
+            $table->string('name_tacgia');
+            $table->string('slug_name_tg');
             $table->string('hinhanh')->nullable();
-            $table->string('diachi')->nullable();
+            $table->text('gioithieu')->nullable();
             $table->timestamps();
         });
     }
