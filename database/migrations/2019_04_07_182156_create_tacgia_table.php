@@ -30,6 +30,6 @@ class CreateDocgiaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('docgia');
+        Schema::dropIfExists('tacgia');
     }
 }

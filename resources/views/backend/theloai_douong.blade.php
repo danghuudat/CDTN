@@ -102,7 +102,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" id="action" value="">
-                    <button  class="btn btn-primary submitbutton" id="EditDrinks" onclick="EditDrinks()" >Edit</button>
+                    <button  class="btn btn-primary submitbutton" id="EditDrinks" >Edit</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -143,6 +143,7 @@
 
         });
         $(document).on('click','.edit',function () {
+            var _token=$('input[name="_token"]').val();
             $('.submitbutton').val($(this).val());
             var placeholder =$(this).attr('placeholder');
             $('#edittheloai').attr("placeholder",placeholder);
@@ -152,7 +153,8 @@
                 url: '{{asset("admin/theloai_douong/edit")}}',
                 type: 'POST',
                 dataType: 'json',
-                data: {id:$(this).val()},
+                data: {id:$(this).val(),
+                        _token:_token},
                 success:function(data){
 
                 }
