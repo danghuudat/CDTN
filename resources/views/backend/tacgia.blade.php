@@ -37,7 +37,7 @@
 
     <div class="row mt-3">
         <div class="col-md-9">
-            <h1 class="page-header ">Độc giả
+            <h1 class="page-header ">Tác Giả
                 <small>List</small>
             </h1>
         </div>
@@ -52,7 +52,7 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>Tên Độc giả</th>
+            <th>Tên Tác Giả</th>
             <th>Miêu tả</th>
             <th>Modifly</th>
 
@@ -74,7 +74,7 @@
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label  class="col-form-label">Tên Độc Giả:</label>
+                            <label  class="col-form-label">Tên Tác Giả:</label>
                             <input type="text" class="form-control " id="name" name="name">
                             <span id="errorname" style="color: red"></span>
                         </div>
