@@ -82,6 +82,33 @@
         </div>
 
     </div>
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " id="modaltheloai" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sửa thể loại</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label  class="col-form-label">Tên thể loại</label>
+                        <input type="email"  class="form-control" id="edittheloai" >
+                        <span id="errorname" style="color: red"></span>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" id="action" value="">
+                    <button  class="btn btn-primary submitbutton" id="EditDrinks" onclick="EditDrinks()" >Edit</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 @endsection
 @section('script')
@@ -104,8 +131,8 @@
                 {data:'id'},
                 {data:'theloai_douong_name'},
                 {data:'Modifly',
-                    "render": function (){
-                        return '</button>&nbsp;<button class="btn btn-outline-primary edit" ><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete" ><i class="fas fa-trash"></i></button>'
+                    "render": function (data, type, row){
+                        return '</button>&nbsp;<button class="btn btn-outline-primary edit"  placeholder="'+row.theloai_douong_name+'" value="' + row.id + '" ><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete"  placeholder="'+row.theloai_douong_name+'" value="' + row.id + '" ><i class="fas fa-trash"></i></button>'
                 }},
             ]
         });
@@ -117,41 +144,16 @@
         });
         $(document).on('click','.edit',function () {
             $('.submitbutton').val($(this).val());
-
+            var placeholder =$(this).attr('placeholder');
+            $('#edittheloai').attr("placeholder",placeholder);
+            alert($(this).val());
+            $('#EditModal').modal('show');
             $.ajax({
-                url: '{{asset("admin/user/edit")}}',
-                type: 'GET',
+                url: '{{asset("admin/theloai_douong/edit")}}',
+                type: 'POST',
                 dataType: 'json',
                 data: {id:$(this).val()},
                 success:function(data){
-                    $('#modaluser').removeClass('modal-lg');
-                    $('#UserModal').modal('show');
-                    $('#formsubmit').show();
-                    $('.information').hide();
-                    if (data.level==1||data.level==2){
-                        $('#displaystatus').hide();
-                    }else{
-                        $('#displaystatus').show();
-                    }
-                    $('.modal-title').text('Edit '+data.name);
-                    $('.submitbutton').text('Update');
-                    $('#action').val('Edit');
-                    $('#resetpassword').show();
-                    $('#CMT').prop('readonly', true);
-                    $('#email').prop('readonly', true);
-                    $('#name').val(data.name);
-                    $('#email').val(data.email);
-                    $('#CMT').val(data.CMT);
-                    $('#level').val(data.level);
-                    $('#status').val(data.status);
-                    $('#name').removeClass('is-invalid');
-                    $('#errorname').text('');
-                    $('#email').removeClass('is-invalid');
-                    $('#erroremail').text('');
-                    $('#CMT').removeClass('is-invalid');
-                    $('#errorCMT').text('');
-
-
 
                 }
             })

@@ -62,6 +62,7 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::get('/','Admin\Theloai_DouongController@index');
         Route::get('/data','Admin\Theloai_DouongController@getData');
         Route::post('/add','Admin\Theloai_DouongController@store');
+        Route::get('/edit','Admin\Theloai_DouongController@edit');
     });
 //
 });
