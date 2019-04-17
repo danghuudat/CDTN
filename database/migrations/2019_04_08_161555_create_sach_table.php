@@ -15,11 +15,13 @@ class CreateSachTable extends Migration
     {
         Schema::create('sach', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tensach');
-            $table->string('tensach_slug');
-            $table->string('hinhanh');
+            $table->string('name_sach');
+            $table->string('name_slug_sach');
+            $table->string('hinhanh')->nullable();
             $table->string('namxb');
             $table->integer('soluong');
+            $table->text('mieuta')->nullable();
+            $table->integer('gia');
             $table->integer('nxb_id')->unsigned();
             $table->foreign('nxb_id')->references('id')->on('nhaxuatban')->onDelete('CASCADE');
             $table->integer('tacgia_id')->unsigned();

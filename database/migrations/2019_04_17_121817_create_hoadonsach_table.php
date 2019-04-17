@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenuTable extends Migration
+class CreateHoadonsachTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateMenuTable extends Migration
      */
     public function up()
     {
-        Schema::create('menu', function (Blueprint $table) {
+        Schema::create('hoadonsach', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('muontra_id')->unsigned();
+            $table->integer('tienphat');
+            $table->integer('total');
+            $table->integer('user_id_tt');
+
             $table->timestamps();
-            $table->string('tendouong');
-            $table->integer('gia');
-            $table->string('anh');
-            $table->integer('theloai_douong');
-            $table->string('douong_khongdau');
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -30,6 +31,6 @@ class CreateMenuTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu');
+        Schema::dropIfExists('hoadonsach');
     }
 }

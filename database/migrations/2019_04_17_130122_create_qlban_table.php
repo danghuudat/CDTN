@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDouongTheloaiTable extends Migration
+class CreateQlbanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateDouongTheloaiTable extends Migration
      */
     public function up()
     {
-        Schema::create('douong_theloai', function (Blueprint $table) {
+        Schema::create('qlban', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('tenban');
+            $table->string('tenban_slug');
+            $table->integer('status');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
-            $table->string('theloai_douong_name');
-            $table->string('theloai_douong_name_khongdau');
         });
     }
 
@@ -28,6 +32,6 @@ class CreateDouongTheloaiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('douong_theloai');
+        Schema::dropIfExists('qlban');
     }
 }

@@ -20,11 +20,15 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('level');
-            $table->integer('status')->nullable();
-            $table->integer('activated');
             $table->integer('CMT');
-            $table->date('beginstatus')->nullable();
-            $table->date('endstatus')->nullable();
+            $table->float('tien');
+            $table->integer('hinhanh')->nullable();
+            $table->integer('loaiTK')->nullable();
+            $table->integer('activated');
+
+
+            $table->date('beginLoaiTK')->nullable();
+            $table->date('endLoaiTK')->nullable();
 
             $table->rememberToken();
             $table->timestamps();
