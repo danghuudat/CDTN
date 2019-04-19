@@ -58,10 +58,12 @@ class LogController extends Controller
         $user->email=$request->email;
         $user->CMT=$request->CMT;
         $user->level=0;
-        $user->status=null;
-        $user->beginstatus=null;
-        $user->endstatus=null;
+        $user->loaiTK=null;
+        $user->beginloaiTK=null;
+        $user->endloaiTK=null;
         $user->activated=0;
+        $user->hinhanh='profile.png';
+        $user->tien=0;
         $user->password=bcrypt($request->pw);
         $user->save();
         $success='Bạn đã đăng ký thành công.Vui lòng liên hệ quản lý để kích hoạt tài khoản.';

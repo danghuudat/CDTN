@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 
-class Usercontroller extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -69,19 +69,21 @@ class Usercontroller extends Controller
             $user->CMT=$request->CMT;
             if ($request->level==1||$request->level==2){
                 $user->level=$request->level;
-                $user->status=null;
-                $user->beginstatus=null;
-                $user->endstatus=null;
+                $user->loaiTK=null;
+                $user->beginloaiTK=null;
+                $user->endloaiTK=null;
 
             }else{
                 $user->level=$request->level;
-                $user->status=$request->status;
-                $user->beginstatus=Carbon::now()->toDateString();
-                $user->endstatus=Carbon::now()->addDays(30)->toDateString();
+                $user->loaiTK=$request->loaiTK;
+                $user->beginloaiTK=Carbon::now()->toDateString();
+                $user->endloaiTK=Carbon::now()->addDays(30)->toDateString();
 
             }
             $user->activated=1;
             $user->password=bcrypt('1');
+            $user->hinhanh='profile.png';
+            $user->tien=0;
             $user->save();
             $success='Bạn đã đãng ký thành công';
         }
@@ -111,7 +113,10 @@ class Usercontroller extends Controller
      */
     public function edit(Request $request)
     {
-        return User::find($request->id);
+        return response([
+            'data'=>User::find($request->id),
+            'vitien'=>User::find($request->id)->vitien->all()
+        ]);
     }
 
     /**
@@ -144,16 +149,16 @@ class Usercontroller extends Controller
 
             if ($request->level==1||$request->level==2){
                 $user->level=$request->level;
-                $user->status=null;
-                $user->beginstatus=null;
-                $user->endstatus=null;
+                $user->loaiTK=null;
+                $user->beginloaiTK=null;
+                $user->endloaiTK=null;
 
             }else{
                 $user->level=$request->level;
-                if ($user->status!= $request->status){
-                    $user->status=$request->status;
-                    $user->beginstatus=Carbon::now()->toDateString();
-                    $user->endstatus=Carbon::now()->addDays(30)->toDateString();
+                if ($user->loaiTK!= $request->loaiTK){
+                    $user->loaiTK=$request->loaiTK;
+                    $user->beginloaiTK=Carbon::now()->toDateString();
+                    $user->endloaiTK=Carbon::now()->addDays(30)->toDateString();
                 }
 
             }

@@ -95,14 +95,14 @@
                     <div class="form-group">
                         <label  class="col-form-label">Tên thể loại</label>
                         <input type="email"  class="form-control" id="edittheloai" >
-                        <span id="errorname2" style="color: red"></span>
+                        <span id="errorname" style="color: red"></span>
 
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" id="action" value="">
-                    <button  class="btn btn-primary submitbutton" id="EditDrinks" onclick="editDrink()" >Edit</button>
+                    <button  class="btn btn-primary submitbutton" id="EditDrinks" >Edit</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -113,14 +113,13 @@
 @endsection
 @section('script')
 <script>
-    var table="";
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
     $( document ).ready(function() {
-         table= $('#example').DataTable({
+        var table= $('#example').DataTable({
             "columnDefs": [
                 {"className": "dt-center", "targets": "_all"}
             ],
@@ -133,7 +132,7 @@
                 {data:'theloai_douong_name'},
                 {data:'Modifly',
                     "render": function (data, type, row){
-                        return '</button>&nbsp;<button class="btn btn-outline-primary edit"  placeholder="'+row.theloai_douong_name+'" value="' + row.id + '" ><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete"   value="' + row.id + '" ><i class="fas fa-trash"></i></button>'
+                        return '</button>&nbsp;<button class="btn btn-outline-primary edit"  placeholder="'+row.theloai_douong_name+'" value="' + row.id + '" ><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete"  placeholder="'+row.theloai_douong_name+'" value="' + row.id + '" ><i class="fas fa-trash"></i></button>'
                 }},
             ]
         });
@@ -144,56 +143,27 @@
 
         });
         $(document).on('click','.edit',function () {
-
+            var _token=$('input[name="_token"]').val();
             $('.submitbutton').val($(this).val());
             var placeholder =$(this).attr('placeholder');
             $('#edittheloai').attr("placeholder",placeholder);
+            alert($(this).val());
             $('#EditModal').modal('show');
+            $.ajax({
+                url: '{{asset("admin/theloai_douong/edit")}}',
+                type: 'POST',
+                dataType: 'json',
+                data: {id:$(this).val(),
+                        _token:_token},
+                success:function(data){
 
-
-
-        });
-        $(document).on('click','.delete',function () {
-            if (confirm('Bạn muốn xóa?')){
-                $.ajax({
-                    url:'{{asset("admin/theloai_douong/delete")}}',
-                    type:'GET',
-                    data:{id:$(this).val()},
-                    success:function (data) {
-                        alert(data.success);
-                        table.ajax.reload();
-                    }
-                })
-            }
+                }
+            })
 
 
         });
 
     });
-
-    function editDrink(){
-        var _token=$('input[name="_token"]').val();
-        $.ajax({
-            url: '{{asset("admin/theloai_douong/edit")}}',
-            type: 'POST',
-            dataType: 'json',
-            data: {id:$("#EditDrinks").val(),
-                _token:_token,
-                name:$("#edittheloai").val()
-            },
-            success:function (data) {
-                if(data.errors.length >0){
-                    $('#name').addClass('is-invalid');
-                    $('#errorname2').text(data.errors[0].name);
-                }else{
-                    alert(data.success);
-                    table.ajax.reload();
-                    $('#EditModal').modal('hide');
-                }
-
-            }
-        })
-    }
     function addDrink() {
         var _token=$('input[name="_token"]').val();
         $.ajax({
@@ -207,9 +177,9 @@
                     $('#errorname').text(data.errors[0].name);
                 }else{
                     alert(data.success);
-                    table.ajax.reload();
-                    $('#TheLoaiModal').modal('hide');
-
+                    /*table.ajax.reload();
+                    $('#UserModal').modal('hide');
+                    $('#formsubmit')[0].reset();*/
                 }
 
             }

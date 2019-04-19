@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTacGiaTable extends Migration
+class CreateVitienTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateTacGiaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tacgia', function (Blueprint $table) {
+        Schema::create('vitien', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name_tg');
-            $table->string('slug_name_tg');
-            $table->string('hinhanh')->nullable();
-            $table->text('gioithieu')->nullable();
+            $table->integer('user_id')->unsigned();
+            $table->date('ngaynap');
+            $table->integer('tiennap');
+            $table->string('nguoinap');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateTacGiaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tacgia');
+        Schema::dropIfExists('vitien');
     }
 }

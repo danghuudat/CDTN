@@ -52,8 +52,8 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Level</th>
-                <th>CMT</th>
-                <th>Status</th>
+                <th>Số tiền</th>
+                <th>Trạng thái</th>
                 <th>Modifly</th>
 
             </tr>
@@ -69,10 +69,29 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <div class="modal-body shownaptien">
+
+                    <form id="formnaptien">
+                        <div class="form-group">
+                            <label  class="col-form-label">Số tiền:</label>
+                            <input type="text" class="form-control " id="tiennap">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary buttonnt" value="" ></button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+
+
+                </div>
                 <div class="information">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-deltais">
+                        <div class="col-md-5">
+                            <img src="" class="avatar" width="250px" alt="" style="margin: 10px 30px;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="infouser">
 
                             </div>
                         </div>
@@ -105,16 +124,16 @@
                             <label  class="col-form-label">Level:</label>
                             <select class="form-control" id="level" onchange="ChangeLevel(this.value)">
                                 <option value="0">User</option>
-                                <option value="1">Admin</option>
-                                <option value="2">Quản Lý</option>
+                                <option value="1">Quản lý</option>
+                                <option value="2">Nhân viên</option>
                             </select>
                         </div>
                         <div class="form-group" id="displaystatus">
                             <label  class="col-form-label">Loại TK:</label>
-                            <select class="form-control" id="status">
+                            <select class="form-control" id="loaiTK">
                                 <option value="1">Thường</option>
-                                <option value="2">Vàng</option>
-                                <option value="3">Kim Cương</option>
+                                <option value="2">Vip I</option>
+                                <option value="3">Vip II</option>
 
                             </select>
                         </div>
@@ -171,6 +190,7 @@
 
 
             var table= $('#example').DataTable({
+                "order": [[ 2, "asc" ]],
                 "columnDefs": [
                     {"className": "dt-center", "targets": "_all"}
                 ],
@@ -185,22 +205,37 @@
                     {data:'level',"render": function (data, type, row) {
 
                             if (row.level === 1) {
-                                return 'Admin';
+                                return 'Quản lý';
                             }else if(row.level === 0){
                                 return 'User';
                             }else if(row.level === 2){
-                                return 'Quản lý';
+                                return 'Nhân viên';
                             };
 
                         }},
-                    {data:'CMT'},
+                    {data:'tien',"render": function (data, type, row) {
+
+                            if (row.level === 1||row.level===2 ){
+                                    return '';
+                            }else{
+                                return'<p>'+data.toString().replace(
+                                    /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ <button class="btn btn-outline-warning naptien" title="nạp tiền" style="float: right" value="'+row.id+'"><i class="fas fa-dollar-sign"></i> Nạp tiền</button></p>';
+
+                            };
+
+                        }},
                     {data:'activated',"render": function (data, type, row) {
 
-                            if (row.activated === 1) {
-                                return '<p style="color: #31b131">Đã kích hoạt</p>';
-                            }else if(row.level === 0){
-                                return '<p style="color: red">Chưa kích hoạt</p>';
+                            if (row.activated === 1 ){
+                                if(row.level===1||row.level===2){
+                                    return '';
+                                }else {
+                                    return '<p style="color: #31b131">Đã kích hoạt</p>';
+                                }
+                            }else{
+                                return'<p style="color: red">Chưa kích hoạt</p>';
                             };
+
                     }},
                     {data:'Modifly',
                         "searchable": false,
@@ -215,62 +250,122 @@
 
                 ]
             });
-
-            $(document).on('click','.info',function () {
-                $('#modaluser').addClass('modal-lg');
+            $(document).on('click','.naptien',function () {
                 $.ajax({
                     url: '{{asset("admin/user/edit")}}',
                     type: 'GET',
                     dataType: 'json',
                     data: {id:$(this).val()},
                     success:function(data){
-
+                        $('#modaluser').removeClass('modal-lg');
                         $('#UserModal').modal('show');
-                        $('.modal-title').text('Infomation '+data.name);
+                        $('.shownaptien').show();
+                        $('#formsubmit').hide();
+                        $('.information').hide();
+                        $('.buttonnt').text('Nạp tiền');
+                        $('.buttonnt').val(data.id);
+
+                        $('.modal-title').text('Nạp tiền tài khoản: '+data.name);
+
+                    }
+                })
+            });
+            $('#formnaptien').submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url:'{{asset("admin/naptien/add")}}',
+                    type:'POST',
+                    dataType:'json',
+                    data:{id:$('.buttonnt').val(),tiennap:$('#tiennap').val()},
+                    success:function (data) {
+                        alert(data.success);
+                        $('#UserModal').modal('hide');
+                        table.ajax.reload();
+                    }
+                })
+            });
+            $(document).on('click','.info',function () {
+                $('#modaluser').addClass('modal-lg');
+                $('.shownaptien').hide();
+                $.ajax({
+                    url: '{{asset("admin/user/edit")}}',
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {id:$(this).val()},
+                    success:function(data){
+                        $('#UserModal').modal('show');
+                        $('.modal-title').text('Infomation '+data.data.name);
                         $('#formsubmit').hide();
                         $('.information').show();
+                        $('.avatar').attr('src','images/'+data.data.hinhanh);
+                        var abc='';
+                        abc='<nav>\n' +
+                            '<div class="nav nav-tabs" id="nav-tab" role="tablist">\n' +
+                            '<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Profile</a>';
+                        if(data.data.level===0) {
+                            abc += '<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Lịch sử nạp tiền</a>';
+                        }
+                        abc+='</div>\n' +
+                            '</nav>\n' +
+                            '<div class="tab-content" id="nav-tabContent">\n' +
+                            '<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><div class="text-deltais"></div></div>\n' +
+                            '<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><div class="text-lsnaptien"></div></div>\n' +
+                            '</div>'
+                        $('.infouser').html(abc);
                         var html='';
-                        html+='<p><i class="nav-icon fas fa-ad teal"></i> <b>Name:</b> '+data.name +' </p>';
-                        html+='<p><i class="nav-icon fas fa-envelope "></i> <b>Email:</b> '+data.email+'</p>';
-                        html+='<p><i class="fas fa-id-card"></i> <b>Chứng minh thư:</b> '+data.CMT+'</p>';
-                        if (data.level===1){
-                            html+='<p><i class="far fa-star"></i> <b>Chức vụ:</b> Admin</p>';
-                        };
-                        if (data.level===0){
-                            html+='<p><i class="far fa-star"></i> <b>Chức vụ:</b> User</p>';
-                        };
-                        if (data.level===2){
+                        html+='<p><i class="nav-icon fas fa-ad teal"></i> <b>Name:</b> '+data.data.name +' </p>';
+                        html+='<p><i class="nav-icon fas fa-envelope "></i> <b>Email:</b> '+data.data.email+'</p>';
+                        html+='<p><i class="fas fa-id-card"></i> <b>Chứng minh thư:</b> '+data.data.CMT+'</p>';
+                        if (data.data.level===1){
                             html+='<p><i class="far fa-star"></i> <b>Chức vụ:</b> Quản lý</p>';
                         };
+                        if (data.data.level===0){
+                            html+='<p><i class="far fa-star"></i> <b>Chức vụ:</b> User</p>';
+                        };
+                        if (data.data.level===2){
+                            html+='<p><i class="far fa-star"></i> <b>Chức vụ:</b> Nhân viên</p>';
+                        };
 
-                        if(data.beginstatus!==null && data.endstatus!==null){
-                            if (data.status===1){
+                        if(data.data.beginloaiTK!=null && data.data.endloaiTK!=null){
+                            if (data.data.loaiTK===1){
                                 html+='<p><i class="fas fa-chess-knight"></i> <b>Loại tài khoản:</b> Thường</p>';
-                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Thường:</b> '+data.beginstatus+'</p>';
-                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Thường:</b> '+data.endstatus+'</p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Thường:</b> '+data.data.beginloaiTK+'</p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Thường:</b> '+data.data.endloaiTK+'</p>';
 
                             };
-                            if (data.status===2){
-                                html+='<p><i class="fas fa-chess-knight"></i><b>Loại tài khoản:</b> Vàng</p>';
-                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Vàng:</b> '+data.beginstatus+'</p>';
-                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Vàng:</b> '+data.endstatus+'</p>';
+                            if (data.data.loaiTK===2){
+                                html+='<p><i class="fas fa-chess-knight"></i><b>Loại tài khoản:</b> Vip I</p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Vip I:</b> '+data.data.beginloaiTK+'</p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Vip I:</b> '+data.data.endloaiTK+'</p>';
 
                             };
-                            if (data.status===3){
-                                html+='<p><i class="fas fa-chess-knight"></i> <b>Loại tài khoản:</b> Kim Cương</p>';
-                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Kim Cương</b> '+data.beginstatus+'</p>';
-                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Kim Cương:</b> '+data.endstatus+'</p>';
+                            if (data.data.loaiTK===3){
+                                html+='<p><i class="fas fa-chess-knight"></i> <b>Loại tài khoản:</b>Vip II</p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Vip II</b> '+data.data.beginloaiTK+'</p>';
+                                html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Vip II:</b> '+data.data.endloaiTK+'</p>';
 
 
                             };
                         }else{
-                            if (data.level===0){
+                            if (data.data.level===0){
                                 html+='<p><i class="fas fa-chess-knight"></i> <b>Loại tài khoản:</b> <span style="color: red">Đợi kích hoạt</span> </p>';
                                 html+='<p><i class="far fa-clock"></i> <b>Ngày đăng ký TK Thường:</b> <span style="color: red">Đợi kích hoạt</span></p>';
                                 html+='<p><i class="far fa-clock"></i> <b>Ngày hết hạn TK Thường:</b> <span style="color: red">Đợi kích hoạt</span></p>';
                             };
                         }
+                        if(data.data.level===0){
+                            html+='<p><i class="fas fa-dollar-sign"></i><b> Số tiền hiện có:</b> '+data.data.tien.toString().replace(
+                                /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ</p>';
+                        }
                         $('.text-deltais').html(html);
+                        var lsnt='';
+                        $.each(data.vitien,function (key,value) {
+                            lsnt='<ul class="list-group">\n' +
+                                '  <li class="list-group-item"><i class="far fa-clock"></i> '+value.ngaynap+': Đã nạp '+value.tiennap.toString().replace(
+                                    /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ <span style="float: right">'+value.nguoinap+'</span></li>\n' +
+                                '</ul>';
+                        })
+                        $('.text-lsnaptien').html(lsnt);
                     }
                 })
 
@@ -290,7 +385,7 @@
 
             $(document).on('click','.add',function () {
                 $('#UserModal').modal('show');
-
+                $('.shownaptien').hide();
                 $('#formsubmit').show();
                 $('.information').hide();
                 $('#modaluser').removeClass('modal-lg');
@@ -326,7 +421,7 @@
             $(document).on('click','.edit',function () {
                 $('.submitbutton').val($(this).val());
                 $('.resetpassword').val($(this).val());
-                
+                $('.shownaptien').hide();
                 $.ajax({
                     url: '{{asset("admin/user/edit")}}',
                     type: 'GET',
@@ -352,7 +447,7 @@
                         $('#email').val(data.email);
                         $('#CMT').val(data.CMT);
                         $('#level').val(data.level);
-                        $('#status').val(data.status);
+                        $('#loaiTK').val(data.loaiTK);
                         $('#name').removeClass('is-invalid');
                         $('#errorname').text('');
                         $('#email').removeClass('is-invalid');
@@ -387,14 +482,14 @@
                     var email=$('#email').val();
                     var CMT=$('#CMT').val();
                     var level=$('#level').val();
-                    var status=$('#status').val();
+                    var loaiTK=$('#loaiTK').val();
                     var _token=$('input[name="_token"]').val();
 
                     $.ajax({
                         url:'{{asset("admin/user/add")}}',
                         type: 'POST',
                         dataType: 'json',
-                        data: {name: name,email:email,CMT:CMT,level:level,status:status,_token:_token},
+                        data: {name: name,email:email,CMT:CMT,level:level,loaiTK:loaiTK,_token:_token},
                         success:function (data) {
                             if(data.errors.length >0){
                                 if(data.errors[0].name){
@@ -431,13 +526,13 @@
                 }else if($('#action').val()==='Edit'){
                     var name=$('#name').val();
                     var level=$('#level').val();
-                    var status=$('#status').val();
+                    var loaiTK=$('#loaiTK').val();
                     var _token=$('input[name="_token"]').val();
                     $.ajax({
                         url:'{{asset('admin/user/update')}}',
                         type:'POST',
                         dataType:'json',
-                        data: {id:$('.submitbutton').val(),name: name,level:level,status:status,_token:_token},
+                        data: {id:$('.submitbutton').val(),name: name,level:level,loaiTK:loaiTK,_token:_token},
                         success:function (data) {
                             if(data.errors.length >0){
                                 if(data.errors[0].name){

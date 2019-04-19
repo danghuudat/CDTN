@@ -36,6 +36,9 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::post('/active','Admin\UserController@active');
         Route::post('/resetpass','Admin\UserController@resetpass');
     });
+    Route::group(['prefix'=>'naptien'],function (){
+        Route::post('/add','Admin\VitienController@store');
+    });
     Route::group(['prefix'=>'book'],function (){
         Route::group(['prefix'=>'theloai'],function (){
             Route::get('/','Admin\TheLoaiSachController@index');
@@ -70,10 +73,7 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::get('/','Admin\Theloai_DouongController@index');
         Route::get('/data','Admin\Theloai_DouongController@getData');
         Route::post('/add','Admin\Theloai_DouongController@store');
-        Route::post('/edit','Admin\Theloai_DouongController@edit');
-        Route::get('/delete','Admin\Theloai_DouongController@destroy');
-
-
+        Route::get('/edit','Admin\Theloai_DouongController@edit');
     });
 //
 });

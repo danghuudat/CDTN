@@ -28,16 +28,13 @@
             margin-left: 0px;
         }
         .text-deltais p span {
-            color: #e3342f;
-        }
-        #clickimage{
-            width: 6em; border: 1px dashed;background: snow;cursor: pointer; margin-left: 10px
+            color:#e3342f;
         }
     </style>
 
     <div class="row mt-3">
         <div class="col-md-9">
-            <h1 class="page-header ">Độc giả
+            <h1 class="page-header ">Thể loại Sách
                 <small>List</small>
             </h1>
         </div>
@@ -52,16 +49,15 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>Tên Độc giả</th>
-            <th>Miêu tả</th>
+            <th>Tên Thể Loại</th>
             <th>Modifly</th>
 
         </tr>
         </thead>
     </table>
     <!-- Modal -->
-    <div class="modal fade" id="TGModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog " id="MoDalTG" role="document">
+    <div class="modal fade" id="TheLoaiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " id="Modaltheloai" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title"></h5>
@@ -70,25 +66,13 @@
                     </button>
                 </div>
 
-                <form id="formsubmit" enctype="multipart/form-data">
+                <form id="formsubmit">
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label  class="col-form-label">Tên Độc Giả:</label>
-                            <input type="text" class="form-control " id="name" name="name">
+                            <label  class="col-form-label">Tên thể loại:</label>
+                            <input type="text" class="form-control " id="name">
                             <span id="errorname" style="color: red"></span>
-                        </div>
-                        <div class="form-group">
-                            <label  class="col-form-label">Giới thiệu:</label>
-                            <textarea id="gioithieu" name="gioithieu" rows="5" class="form-control" placeholder="Viết"></textarea>
-
-                            <span id="errorgioithieu" style="color: red"></span>
-                        </div>
-                        <div class="form-group">
-                            <label  class="col-form-label">Hình Ảnh:</label>
-                            <input type="file" class="form-control hide " id="hinhanh" name="hinhanh" >
-                            <img src="1.png" alt="" id="clickimage" >
-                            <span id="errorhinhanh" style="color: red"></span>
                         </div>
 
                     </div>
@@ -107,34 +91,37 @@
 @endsection
 @section('script')
     <script>
-        
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+        function valiCMT(value) {
+            if (value.length==0){
+                $('#errorCMT').text('');
+                $('#CMT').removeClass('is-invalid');
+            }else
+            if(isNaN(value)){
+                $('#errorCMT').text('CMT phải là số')
+                $('#CMT').addClass('is-invalid');
+            }else
+            if (value.length>10 || value.length<9){
+                $('#errorCMT').text('Độ dài CMT không đúng')
+                $('#CMT').addClass('is-invalid');
+            } else{
+                $('#errorCMT').text('')
+                $('#CMT').removeClass('is-invalid');
+            }
+        }
+        function ChangeLevel(level){
+            if (level==1||level==2){
+                $('#displaystatus').hide();
+            }else{
+                $('#displaystatus').show();
+            }
+        };
         $(document).ready(function() {
-            $('#clickimage').click(function () {
-                $('#hinhanh').click();
-            })
-            $('#hinhanh').change(function (e) {
-                console.log(e)
-                if (e.target.files && e.target.files[0]){
-                    if (e.target.files[0].type =='image/jpg' || e.target.files[0].type =='image/png'||e.target.files[0].type =='image/jpeg'){
-                        var reader = new FileReader();
-                            //Sự kiện file đã được load vào website
-                            reader.onload = function(e){
-                                //Thay đổi đường dẫn ảnh
-                                $('#clickimage').attr('src',e.target.result);
-
-                            }
-                            reader.readAsDataURL(e.target.files[0]);
-                    }else{
-                        alert('Hình Ảnh không đúng định dạng')
-                    }
-                }
-
-            });
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -148,13 +135,10 @@
                 paging: true,
                 processing:false,
 
-                ajax:'{{asset("admin/book/tacgia/data")}}',
+                ajax:'{{asset('admin/book/theloai/data')}}',
                 columns:[
                     {data:'id',"width":"5%"},
-                    {data:'name_tacgia',"width":"20%",'render':function (data,type,row) {
-                            return '<img width="130px" src="images/'+row.hinhanh+'"/><p>'+row.name_tacgia+'</p>';
-                        }},
-                    {data:'gioithieu',"orderable":false,"width":"60%"},
+                    {data:'name_tl'},
                     {data:'Modifly',
                         "searchable": false,
                         "orderable":false,
@@ -165,19 +149,14 @@
                 ]
             });
             $(document).on('click','.add',function () {
-                $('#TGModal').modal('show');
+                $('#TheLoaiModal').modal('show');
 
                 $('.modal-title').text('Thêm mới');
                 $('.submitbutton').text('Thêm mới');
                 $('#action').val('Add');
                 $('#name').removeClass('is-invalid');
                 $('#errorname').text('');
-                $('#gioithieu').removeClass('is-invalid');
-                $('#errorgioithieu').text('');
-                $('#clickimage').attr('src','1.png');
-                $('#hinhanh').removeClass('is-invalid');
-                $('#errorhinhanh').text('');
-                $('#hinhanh').val('');
+
                 $('#formsubmit')[0].reset();
 
 
@@ -187,16 +166,16 @@
 
 
                 $.ajax({
-                    url: '{{asset("admin/book/tacgia/edit")}}',
+                    url: '{{asset("admin/book/theloai/edit")}}',
                     type: 'GET',
                     dataType: 'json',
                     data: {id:$(this).val()},
                     success:function(data){
-                        $('#TGModal').modal('show');
-                        $('.modal-title').text('Edit '+data.name_tacgia);
+                        $('#TheLoaiModal').modal('show');
+                        $('.modal-title').text('Edit '+data.name_tl);
                         $('.submitbutton').text('Update');
                         $('#action').val('Edit');
-                        $('#name').val(data.name_tacgia);
+                        $('#name').val(data.name_tl);
                         $('#name').removeClass('is-invalid');
                         $('#errorname').text('');
 
@@ -211,7 +190,7 @@
             $(document).on('click','.delete',function () {
                 if (confirm('Bạn muốn xóa?')){
                     $.ajax({
-                        url:'{{asset("admin/book/tacgia/delete")}}',
+                        url:'{{asset("admin/book/theloai/delete")}}',
                         type:'GET',
                         data:{id:$(this).val()},
                         success:function (data) {
@@ -224,14 +203,13 @@
             $('#formsubmit').submit(function (e) {
                 e.preventDefault();
                 if($('#action').val()==='Add'){
+                    var name=$('#name').val();
+                    var _token=$('input[name="_token"]').val();
                     $.ajax({
-                        url:'{{asset("admin/book/tacgia/add")}}',
+                        url:'{{asset("admin/book/theloai/add")}}',
                         type: 'POST',
                         dataType: 'json',
-                        data: new FormData(this),
-                        contentType:false,
-                        cache:false,
-                        processData:false,
+                        data: {name: name},
                         success:function (data) {
                             if(data.errors.length >0){
                                 if(data.errors[0].name){
@@ -244,7 +222,7 @@
                             }else{
                                 alert(data.success);
                                 table.ajax.reload();
-                                $('#TGModal').modal('hide');
+                                $('#TheLoaiModal').modal('hide');
                                 $('#formsubmit')[0].reset();
                             }
 
@@ -256,7 +234,7 @@
 
                     var _token=$('input[name="_token"]').val();
                     $.ajax({
-                        url:'{{asset('admin/book/tacgia/update')}}',
+                        url:'{{asset('admin/book/theloai/update')}}',
                         type:'POST',
                         dataType:'json',
                         data: {id:$('.submitbutton').val(),name: name,_token:_token},
@@ -273,7 +251,7 @@
                             }else{
                                 alert(data.success);
                                 table.ajax.reload();
-                                $('#TGModal').modal('hide');
+                                $('#TheLoaiModal').modal('hide');
                                 $('#formsubmit')[0].reset();
                             }
 
