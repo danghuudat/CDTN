@@ -187,7 +187,7 @@
             }
         };
         $(document).ready(function() {
-
+            $('.text-lsnaptien').scroll();
 
             var table= $('#example').DataTable({
                 "order": [[ 2, "asc" ]],
@@ -257,6 +257,7 @@
                     dataType: 'json',
                     data: {id:$(this).val()},
                     success:function(data){
+                        data=data.data;
                         $('#modaluser').removeClass('modal-lg');
                         $('#UserModal').modal('show');
                         $('.shownaptien').show();
@@ -360,11 +361,12 @@
                         $('.text-deltais').html(html);
                         var lsnt='';
                         $.each(data.vitien,function (key,value) {
-                            lsnt='<ul class="list-group">\n' +
+                            lsnt+='<ul class="list-group">\n' +
                                 '  <li class="list-group-item"><i class="far fa-clock"></i> '+value.ngaynap+': Đã nạp '+value.tiennap.toString().replace(
                                     /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ <span style="float: right">'+value.nguoinap+'</span></li>\n' +
                                 '</ul>';
-                        })
+                        });
+
                         $('.text-lsnaptien').html(lsnt);
                     }
                 })
@@ -428,6 +430,7 @@
                     dataType: 'json',
                     data: {id:$(this).val()},
                     success:function(data){
+                        data=data.data;
                         $('#modaluser').removeClass('modal-lg');
                         $('#UserModal').modal('show');
                         $('#formsubmit').show();

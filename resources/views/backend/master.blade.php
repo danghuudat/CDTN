@@ -81,11 +81,11 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    <img src="{{asset('images/'.Auth::user()->hinhanh)}}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="admin/user/profile" class="d-block">{{Auth::user()->email}}</a>
-                    <a href="#" class="d-block">{{Auth::user()->level==1 ? 'Admin' : 'Quản lý'}}</a>
+                    <a href="#" class="d-block">{{Auth::user()->level==1 ? 'Quản lý' : 'Nhân viên'}}</a>
 
                 </div>
 
@@ -153,7 +153,7 @@
                     </li>
                     <li class="nav-item">
 
-                        <a href="/admin//profile" class="nav-link">
+                        <a href="/admin/profile" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
                             <p>
                                 ProFile
@@ -161,29 +161,15 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-coffee"></i>
+                    <li class="nav-item">
+
+                        <a href="admin/naptien/lichsu" class="nav-link">
+                            <i class="nav-icon  fas fa-dollar-sign"></i>
                             <p>
-                                Đồ uống
-                                <i class="fa fa-angle-left right"></i>
+                                Lịch sử nạp tiền
+
                             </p>
                         </a>
-                        <ul class="nav nav-treeview" style="display: block;">
-                            <li class="nav-item">
-                                <a href="pages/UI/general.html" class="nav-link">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>Danh sách đồ uống</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/UI/icons.html" class="nav-link">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>Thể loại đồ uống</p>
-                                </a>
-                            </li>
-
-                        </ul>
                     </li>
                     <li class="nav-item">
 

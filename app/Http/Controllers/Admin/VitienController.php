@@ -51,7 +51,12 @@ class VitienController extends Controller
             'success'=>'Bạn đã nạp tiền thành công.'
         ]);
     }
-
+    public function history(){
+        $ngaynap=ViTien::orderBy('ngaynap','DESC')->get()->groupBy(function ($item){
+            return date('d-m-Y',strtotime($item->ngaynap));
+        });
+        return view('backend.lichsunt',compact('ngaynap'));
+    }
     /**
      * Display the specified resource.
      *

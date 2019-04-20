@@ -26,6 +26,12 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
     route::get('/',function (){
         return view('backend.dashboard');
     });//
+    Route::group(['prefix'=>'profile'],function (){
+        Route::get('/','Admin\UserController@show');
+        Route::post('editimage','Admin\UserController@editImage');
+        Route::post('editinfo','Admin\UserController@editInfo');
+
+    });
     Route::group(['prefix'=>'user'],function (){
         Route::get('/','Admin\UserController@index');
         Route::get('/data','Admin\UserController@getData');
@@ -38,6 +44,7 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
     });
     Route::group(['prefix'=>'naptien'],function (){
         Route::post('/add','Admin\VitienController@store');
+        Route::get('/lichsu','Admin\VitienController@history');
     });
     Route::group(['prefix'=>'book'],function (){
         Route::group(['prefix'=>'theloai'],function (){

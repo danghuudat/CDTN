@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use App\ViTien;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -100,9 +102,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $lichsu=ViTien::orderBy('ngaynap','DESC')->where('nguoinap','=',Auth::user()->email)->get()->groupBy('ngaynap');
+
+//        $user=User::orderBy('ngaykichhoat','DESC')->where('nguoitao','=',Auth::user()->email)->get()->groupBy('ngaykichhoat')->toArray();
+//        $lichsu=array_merge($a,$user);
+//       dd($lichsu);
+        return view('backend.profile',compact('lichsu'));
     }
 
     /**
@@ -113,9 +120,10 @@ class UserController extends Controller
      */
     public function edit(Request $request)
     {
+        $vitien=ViTien::where('user_id','=',$request->id)->orderBy('created_at','DESC')->get();
         return response([
             'data'=>User::find($request->id),
-            'vitien'=>User::find($request->id)->vitien->all()
+            'vitien'=>$vitien
         ]);
     }
 
@@ -204,6 +212,41 @@ class UserController extends Controller
         $user->save();
         return response([
             'success'=>'Thành công.ResetPassword thành 1.'
+        ]);
+    }
+    public function editImage(Request $request){
+        $user=User::find($request->id);
+        if($request->hasFile('hinhanh')){
+
+            $image = $request->hinhanh;
+            $new_name =str_random() . '.' . $image->getClientOriginalExtension();
+            if($user->hinhanh!='notimage.png'){
+                unlink('images/'.$user->hinhanh);
+            }
+            $user->hinhanh=$new_name;
+        }
+        $image->move(public_path('images'), $new_name);
+        $user->save();
+        return response([
+            'success'=>'Bạn đã update thành công'
+        ]);
+    }
+    public function editInfo(Request $request){
+        $error='';
+        $success='';
+        $user=User::find(Auth::user()->id);
+        if ($request->oldpw !=null){
+            if (Hash::check($request->oldpw,Auth::user()->password)){
+                $user->password=bcrypt($request->newpw);
+                $success='Bạn đã cập nhật thành công';
+            }else{
+                $error='Mật khẩu hiện tại không đúng vui lòng kiểm tra lại.';
+            }
+        }
+        $user->save();
+        return response([
+            'success'=>$success,
+            'errors'=>$error
         ]);
     }
 }

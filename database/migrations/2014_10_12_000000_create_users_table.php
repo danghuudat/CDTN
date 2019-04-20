@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('level');
             $table->integer('CMT')->nullable();
+            $table->string('diachi')->nullable();
+            $table->integer('SDT')->nullable();
             $table->integer('tien')->nullable();
             $table->string('hinhanh')->nullable();
             $table->integer('loaiTK')->nullable();
