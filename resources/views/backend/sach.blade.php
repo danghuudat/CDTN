@@ -47,9 +47,11 @@
                 <small>List</small>
             </h1>
         </div>
+        @if(Auth::user()->level==1)
         <div class="col-md-3">
             <button class="btn btn-outline-secondary refresh" onclick="window.location.reload()"><i class="fas fa-sync-alt"></i> Refresh</button>&nbsp;<button class="btn btn-success add"><i class="far fa-plus-square"></i> Thêm mới</button>
         </div>
+            @endif
     </div>
 
 
@@ -60,6 +62,8 @@
             <th>ID</th>
             <th>Tên Sách</th>
             <th>Tác Giả</th>
+            <th>Thể loại</th>
+
             <th>Năm xuất bản</th>
             <th>Số lượng</th>
             <th>Modifly</th>
@@ -119,7 +123,7 @@
                                     <div class="col-sm-8">
                                         <select name="tacgia_id" class="form-control" id="tacgia_id">
                                             @foreach($tacgia as $tg)
-                                                <option value="{{$tg->id}}">{{$tg->name_tacgia}}</option>
+                                                <option value="{{$tg->id}}">{{$tg->name_tg}}</option>
                                             @endforeach
                                         </select>
 
@@ -161,7 +165,7 @@
                         </div>
                         <div class="form-group row">
                             <label  class="col-sm-2 col-form-label">Năm xuất bản:</label>
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <select  class="form-control" id="namxb" name="namxb">
 
                                     <?php
@@ -172,12 +176,11 @@
                                     <?php }?>
                                 </select>
                             </div>
-                            <label  class="col-sm-2 col-form-label">Số Lượng:</label>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" name="soluong" id="soluong">
-                                <span id="errorsoluong" style="color: red"></span>
-
+                            <label  class="col-sm-2 col-form-label">Giá:</label>
+                            <div class="col-sm-4">
+                                <input type="text" name="gia" id="gia" class="form-control">
                             </div>
+
                         </div>
                         <div class="form-group">
                             <label  class="col-form-label">Giới thiệu:</label>
@@ -199,7 +202,35 @@
         </div>
 
     </div>
+    <!--ModalTanggiam-->
+    <div class="modal fade" id="SLModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
+                    <form class="form-inline" id="qlSLSach">
+                        <div class="form-group">
+                            <label>Nhập Số lượng:</label>
+                            <input type="text"  id="soluong" class="form-control mx-sm-3" >
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" id="actiontg" value=""></input>
+                    <button type="submit" class="btn btn-primary buttontg" value=""></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
 @section('script')
     <script>
@@ -251,22 +282,84 @@
                 ajax:'{{asset("admin/book/data")}}',
                 columns:[
                     {data:'id',"width":"5%"},
-                    {data:'tensach',"width":"20%",'render':function (data,type,row) {
-                            return '<img width="80px" src="images/sach/'+row.hinhanh+'"/><p style="text-transform: capitalize">'+row.tensach+'</p>';
+                    {data:'name_sach',"width":"20%",'render':function (data,type,row) {
+                            return '<img width="80px" src="images/sach/'+row.hinhanh+'"/><p style="text-transform: capitalize">'+row.name_sach+'</p>';
                         }},
                     {data:'name_tg'},
+                    {data:'name_tl'},
 
                     {data:'namxb'},
-                    {data:'soluong'},
+                    {data:'soluong',"render": function (data, type, row) {
+                        if (row.soluong<=0){
+                            return '@if(Auth::user()->level==1)<button class="btn btn-outline-warning up" title="Tăng" value="'+row.id+'"><i class="fas fa-long-arrow-alt-up"></i></button>&emsp;@endif'+row.soluong+' ';
+
+                        }else{
+                            return '@if(Auth::user()->level==1)<button class="btn btn-outline-warning up" title="Tăng" value="'+row.id+'"><i class="fas fa-long-arrow-alt-up"></i></button>&emsp;@endif'+row.soluong+'@if(Auth::user()->level==1)&emsp;<button class="btn btn-outline-warning dow" value="' + row.id + '" title="Giảm" "><i class="fas fa-long-arrow-alt-down"></i></button>@endif'
+
+                        }
+                        }},
 
                     {data:'Modifly',
                         "searchable": false,
                         "orderable":false,
                         "render": function (data, type, row) {
-                            return '<button class="btn btn-outline-warning muonsach ">Mượn sách</button>&nbsp;<button class="btn btn-outline-info info" title="info" value="'+row.id+'"><i class="fas fa-info-circle"></i></button>&nbsp;<button class="btn btn-outline-primary edit" value="' + row.id + '"><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete" value="' + row.id + '"><i class="fas fa-trash"></i></button>'
+                            return '<button class="btn btn-outline-info info" title="info" value="'+row.id+'"><i class="fas fa-info-circle"></i></button>&nbsp;@if(Auth::user()->level==1)<button class="btn btn-outline-primary edit" value="' + row.id + '"><i class="fas fa-edit"></i></button>&nbsp;<button class="btn btn-outline-danger delete" value="' + row.id + '"><i class="fas fa-trash"></i></button>@endif'
                         }},
 
                 ]
+            });
+            $(document).on('click','.up',function () {
+                $('#SLModal').modal('show')
+                $('#SLModal .modal-title').text('Nhập thêm Số lượng sách');
+                $('#actiontg').val('add');
+                $('.buttontg').text('Thêm');
+                $('.buttontg').val($(this).val());
+                $('#qlSLSach')[0].reset();
+            });
+            $(document).on('click','.dow',function () {
+                $('#SLModal').modal('show');
+                $('#SLModal .modal-title').text('Giảm Số lượng sách');
+                $('#actiontg').val('edit');
+                $('.buttontg').text('Giảm');
+                $('.buttontg').val($(this).val());
+                $('#qlSLSach')[0].reset();
+
+
+            });
+            $(document).on('submit','#qlSLSach',function (e) {
+
+                e.preventDefault();
+                if($('#actiontg').val()=='add'){
+                    $.ajax({
+                        url:'{{asset("admin/book/themsl")}}',
+                        type:'POST',
+                        dataType:'json',
+                        data:{id:$('.buttontg').val(),soluong:$('#soluong').val()},
+                        success:function(data){
+                            alert(data.success);
+                            table.ajax.reload();
+                            $('#SLModal').modal('hide');
+                        }
+                    })
+                }else{
+                    $.ajax({
+                        url:'{{asset("admin/book/giamsl")}}',
+                        type:'POST',
+                        dataType:'json',
+                        data:{id:$('.buttontg').val(),soluong:$('#soluong').val()},
+                        success:function(data){
+                            if(data.success!=''){
+                                alert(data.success);
+                                table.ajax.reload();
+                                $('#SLModal').modal('hide');
+                            }else{
+                                alert(data.error);
+                            }
+
+                        }
+                    })
+                }
+
             });
             $(document).on('click','.info',function () {
                 $.ajax({
@@ -276,17 +369,18 @@
                     data:{id:$(this).val()},
                     success:function (data) {
                         $('#SachModal').modal('show');
-                        $('.modal-title').text(data.tensach);
+                        $('.modal-title').text(data.name_sach);
                         $('.information').show();
                         $('#formsubmit').hide();
                         $('#imagebook').attr('src','images/sach/'+data.hinhanh);
                         var html='';
-                        html+='<p><i class="nav-icon fas fa-book"></i> <b>Tên Sách:</b> '+data.tensach +' </p>';
-                        html+='<p><i class="nav-icon fas fa-user "></i> <b>Tác Giả:</b> '+data.tacgia.name_tacgia+'</p>';
+                        html+='<p><i class="nav-icon fas fa-book"></i> <b>Tên Sách:</b> '+data.name_sach +' </p>';
+                        html+='<p><i class="nav-icon fas fa-user "></i> <b>Tác Giả:</b> '+data.tacgia.name_tg+'</p>';
                         html+='<p><i class="far fa-list-alt"></i> <b>Thể Loại:</b> '+data.theloai.name_tl+'</p>';
                         html+='<p><i class="fab fa-fort-awesome"></i> <b>Nhà Xuất Bản:</b> '+data.nhaxuatban.name_nxb+'</p>';
                         html+='<p><i class="fas fa-calendar-alt"></i> <b>Năm Xuất Bản:</b> '+data.namxb+'</p>';
                         html+='<p><i class="fas fa-box-open"></i> <b>Hiện còn:</b> '+data.soluong+' quyển</p>';
+                        html+='<p><i class="fas fa-dollar-sign"></i> <b>Giá sách</b> '+data.gia+' VNĐ</p>';
 
                         $('.text-deltais').html(html);
                         $('.mieuta').html('<p><b style="font-size: 2em">Giới thiệu:</b> '+data.mieuta+' </p>');
@@ -305,8 +399,6 @@
                 $('#action').val('Add');
                 $('#name').removeClass('is-invalid');
                 $('#errorname').text('');
-                $('#soluong').removeClass('is-invalid');
-                $('#errorsoluong').text('');
                 $('#gioithieu').removeClass('is-invalid');
                 $('#errorgioithieu').text('');
                 $('#clickimage').attr('src','1.png');
@@ -332,16 +424,17 @@
                         $('#formsubmit').show();
                         $('.information').hide();
 
-                        $('.modal-title').text('Edit '+data.tensach);
+                        $('.modal-title').text('Edit '+data.name_sach);
                         $('.submitbutton').text('Update');
                         $('#action').val('Edit');
-                        $('#name').val(data.tensach);
+                        $('#name').val(data.name_sach);
                         $("#tacgia_id option[value="+data.tacgia_id+"]").attr('selected','selected');
                         $("#nxb_id option[value="+data.nxb_id+"]").attr('selected','selected');
                         $("#theloai_id option[value="+data.theloai_id+"]").attr('selected','selected');
                         $("#namxb option[value="+data.namxb+"]").attr('selected','selected');
                         $('#gioithieu').val(data.mieuta);
-                        $('#soluong').val(data.soluong);
+                        $('#gia').val(data.gia);
+
 
                         $('#clickimage').attr('src','images/sach/'+data.hinhanh);
                         $('#name').removeClass('is-invalid');

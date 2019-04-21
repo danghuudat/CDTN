@@ -37,7 +37,7 @@
 
     <div class="row mt-3">
         <div class="col-md-9">
-            <h1 class="page-header ">Độc giả
+            <h1 class="page-header ">Tác giả
                 <small>List</small>
             </h1>
         </div>
@@ -52,7 +52,7 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>Tên Độc giả</th>
+            <th>Tên Tác giả</th>
             <th>Miêu tả</th>
             <th>Modifly</th>
 
@@ -74,7 +74,7 @@
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label  class="col-form-label">Tên Độc Giả:</label>
+                            <label  class="col-form-label">Tên Tác giả:</label>
                             <input type="text" class="form-control " id="name" name="name">
                             <span id="errorname" style="color: red"></span>
                         </div>
@@ -114,6 +114,11 @@
             }
         });
         $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $('#clickimage').click(function () {
                 $('#hinhanh').click();
             })
@@ -151,8 +156,8 @@
                 ajax:'{{asset("admin/book/tacgia/data")}}',
                 columns:[
                     {data:'id',"width":"5%"},
-                    {data:'name_tacgia',"width":"20%",'render':function (data,type,row) {
-                            return '<img width="130px" src="images/'+row.hinhanh+'"/><p>'+row.name_tacgia+'</p>';
+                    {data:'name_tg',"width":"20%",'render':function (data,type,row) {
+                            return '<img width="130px" src="images/'+row.hinhanh+'"/><p>'+row.name_tg+'</p>';
                         }},
                     {data:'gioithieu',"orderable":false,"width":"60%"},
                     {data:'Modifly',
@@ -193,10 +198,12 @@
                     data: {id:$(this).val()},
                     success:function(data){
                         $('#TGModal').modal('show');
-                        $('.modal-title').text('Edit '+data.name_tacgia);
+                        $('.modal-title').text('Edit '+data.name_tg);
                         $('.submitbutton').text('Update');
                         $('#action').val('Edit');
-                        $('#name').val(data.name_tacgia);
+                        $('#name').val(data.name_tg);
+                        $('#gioithieu').val(data.gioithieu);
+                        $('#clickimage').attr('src','{{asset('images')}}'+'/'+data.hinhanh)
                         $('#name').removeClass('is-invalid');
                         $('#errorname').text('');
 
@@ -252,14 +259,16 @@
                     });
 
                 }else if($('#action').val()==='Edit'){
-                    var name=$('#name').val();
-
-                    var _token=$('input[name="_token"]').val();
+                    var formData=new FormData(this);
+                    formData.append('id',$('.submitbutton').val());
                     $.ajax({
-                        url:'{{asset('admin/book/tacgia/update')}}',
-                        type:'POST',
-                        dataType:'json',
-                        data: {id:$('.submitbutton').val(),name: name,_token:_token},
+                        url:'{{asset("admin/book/tacgia/update")}}',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: formData,
+                        contentType:false,
+                        cache:false,
+                        processData:false,
                         success:function (data) {
                             if(data.errors.length >0){
                                 if(data.errors[0].name){
@@ -269,7 +278,6 @@
                                     $('#name').removeClass('is-invalid');
                                     $('#errorname').text('');
                                 }
-
                             }else{
                                 alert(data.success);
                                 table.ajax.reload();
@@ -278,7 +286,6 @@
                             }
 
                         }
-
                     });
                 }
             })

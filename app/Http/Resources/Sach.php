@@ -16,7 +16,7 @@ class Sach extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'tensach'=>$this->tensach,
+            'name_sach'=>$this->name_sach,
             'hinhanh'=>$this->hinhanh,
             'namxb'=>$this->namxb,
             'soluong'=>$this->soluong,
@@ -25,7 +25,8 @@ class Sach extends JsonResource
             'tacgia_id'=>$this->tacgia_id,
             'theloai_id'=>$this->theloai_id,
             'user_id'=>$this->user_id,
-            'name_tg'=>$this->tacgia->name_tacgia
+            'name_tg'=>$this->tacgia->name_tg,
+            'name_tl'=>$this->theloai->name_tl
 
         ];
     }

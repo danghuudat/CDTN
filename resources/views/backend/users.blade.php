@@ -124,8 +124,11 @@
                             <label  class="col-form-label">Level:</label>
                             <select class="form-control" id="level" onchange="ChangeLevel(this.value)">
                                 <option value="0">User</option>
+                                @if(Auth::user()->level==1)
+
                                 <option value="1">Quản lý</option>
                                 <option value="2">Nhân viên</option>
+                                    @endif
                             </select>
                         </div>
                         <div class="form-group" id="displaystatus">

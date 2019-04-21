@@ -24,9 +24,17 @@ class UserController extends Controller
         return view('backend.users',compact('users'));
     }
     public function getData(){
-        return response([
-            'data'=> User::where('id','<>',Auth::user()->id)->get(),
-        ]);
+        if(Auth::user()->level==2){
+            return response([
+                'data'=> User::where('id','<>',Auth::user()->id)->where('level','<>','1')->get(),
+            ]);
+        }
+        if (Auth::user()->level==1){
+            return response([
+                'data'=> User::where('id','<>',Auth::user()->id)->get(),
+            ]);
+        }
+
     }
 
     /**
@@ -105,6 +113,14 @@ class UserController extends Controller
     public function show()
     {
         $lichsu=ViTien::orderBy('ngaynap','DESC')->where('nguoinap','=',Auth::user()->email)->get()->groupBy('ngaynap');
+        $user=User::orderBy('created_at','DESC')->get()->groupBy(function ($item){
+            return $item->created_at->format('d-m-Y');
+        })->toArray();
+        $user2=User::orderBy('updated_at','DESC')->get()->groupBy(function ($item){
+            return $item->updated_at->format('d-m-Y');
+        })->toArray();
+        $a=array_merge($user,$user2);
+//        dd($a);
 
 //        $user=User::orderBy('ngaykichhoat','DESC')->where('nguoitao','=',Auth::user()->email)->get()->groupBy('ngaykichhoat')->toArray();
 //        $lichsu=array_merge($a,$user);

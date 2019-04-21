@@ -71,6 +71,19 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
             Route::post('/update','Admin\TacGiaController@update');
             Route::post('/add','Admin\TacGiaController@store');
         });
+            Route::get('/','Admin\SachController@index');
+            Route::get('/data','Admin\SachController@getData');
+            Route::get('/edit','Admin\SachController@edit');
+            Route::get('/delete','Admin\SachController@destroy');
+            Route::post('/update','Admin\SachController@update');
+            Route::post('/add','Admin\SachController@store');
+            Route::post('/info','Admin\SachController@Info');
+            Route::post('/themsl','Admin\SachController@ThemSL');
+            Route::post('/giamsl','Admin\SachController@GiamSL');
+            Route::get('/lsnhaphuy','Admin\SachController@history');
+
+
+
 
     });
     Route::group(['prefix'=>'menu'],function (){

@@ -45,7 +45,7 @@ class TacGiaController extends Controller
         $error_array=[];
         $success='';
         $validation = Validator::make($request->all(), [
-            'name'=>'unique:tacgia,name_tacgia'
+            'name'=>'unique:tacgia,name_tg'
         ]);
         if ($validation->fails()) {
             $error_array[]=$validation->messages();
@@ -64,7 +64,7 @@ class TacGiaController extends Controller
                 $tacgia->hinhanh='profile.png';
             }
 
-            $tacgia->name_tacgia=$request->name;
+            $tacgia->name_tg=$request->name;
             $tacgia->slug_name_tg=str_slug($request->name,'-');
             $tacgia->gioithieu=$request->gioithieu;
             $tacgia->save();
@@ -95,9 +95,9 @@ class TacGiaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        return TacGia::find($request->id);
     }
 
     /**
@@ -107,9 +107,42 @@ class TacGiaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $tacgia=TacGia::find($request->id);
+        $error_array=[];
+        $success='';
+        $validation = Validator::make($request->all(), [
+            'name'=>'unique:tacgia,name_tg,'.$request->id.',id'
+        ]);
+        if ($validation->fails()) {
+            $error_array[]=$validation->messages();
+//            foreach (  $validation->messages()->getMessages() as  $messages) {
+//                $error_array[]=$messages;
+//            }
+        }else{
+            if($request->hasFile('hinhanh')){
+                $image = $request->file('hinhanh');
+                $new_name =str_slug($request->name,'-').'-'.str_random() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images'), $new_name);
+                if ($tacgia->hinhanh!='profile.png'){
+                    unlink('images/'.$tacgia->hinhanh);
+                }
+                $tacgia->hinhanh=$new_name;
+
+            }
+
+            $tacgia->name_tg=$request->name;
+            $tacgia->slug_name_tg=str_slug($request->name,'-');
+            $tacgia->gioithieu=$request->gioithieu;
+            $tacgia->save();
+            $success='Bạn đã update thành công';
+        }
+        return response([
+            'success'=>$success,
+            'errors'=>$error_array
+
+        ]);
     }
 
     /**

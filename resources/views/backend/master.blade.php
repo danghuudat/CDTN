@@ -144,6 +144,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="admin/book" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>Sách</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="pages/UI/sliders.html" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>Sliders</p>
@@ -161,6 +167,7 @@
                             </p>
                         </a>
                     </li>
+                    @if(Auth::user()->level==1)
                     <li class="nav-item">
 
                         <a href="admin/naptien/lichsu" class="nav-link">
@@ -171,6 +178,17 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+
+                        <a href="admin/book/lsnhaphuy" class="nav-link">
+                            <i class="nav-icon  fas fa-dollar-sign"></i>
+                            <p>
+                                Lịch sử nhập/hủy sách
+
+                            </p>
+                        </a>
+                    </li>
+                    @endif
                     <li class="nav-item">
 
                         <a href="/logout" class="nav-link">
