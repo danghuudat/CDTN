@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Menu;
 use App\Theloai_Douong;
 use Illuminate\Support\Str;
 use Validator;
@@ -52,7 +53,40 @@ class Theloai_DouongController extends Controller
     public function edit(Request $request)
     {
         $data=$request->all();
+        $error_array=[];
+        $success='';
+        $validation=Validator::make($request->all(),[
+            'data'=>'required|',
+
+        ],[
+            'data.required'=>'Tên thể loại không được để trống',
+
+        ]);
         \Log::info($data);
+
+        if ($validation->fails()) {
+            $error_array[]=$validation->messages();
+//            foreach (  $validation->messages()->getMessages() as  $messages) {
+//                $error_array[]=$messages;
+//            }
+        }else{
+            $theloai=Theloai_Douong::find($request->id);
+            $theloai->theloai_douong_name=$request->data;
+            $theloai->save();
+            $success='Bạn đã tạo thể loại thành công';
+        };
+        return response([
+            'success'=>$success,
+            'errors'=>$error_array
+
+        ]);
+    }
+    public function delete(Request $request){
+        Theloai_Douong::destroy($request->id);
+        Menu::where('theloai_douong','=',$request->id)->delete();
+        return response([
+            'success'=>'Bạn đã xóa thành công'
+        ]);
     }
 
     /**
