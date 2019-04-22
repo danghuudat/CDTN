@@ -133,12 +133,12 @@
                         </div>
                         <div class="form-group" id="displaystatus">
                             <label  class="col-form-label">Loại TK:</label>
-                            <select class="form-control" id="loaiTK">
+                            {{--<select class="form-control" id="loaiTK">
                                 <option value="1">Thường</option>
                                 <option value="2">Vip I</option>
                                 <option value="3">Vip II</option>
 
-                            </select>
+                            </select>--}}
                         </div>
 
 
@@ -488,14 +488,14 @@
                     var email=$('#email').val();
                     var CMT=$('#CMT').val();
                     var level=$('#level').val();
-                    var loaiTK=$('#loaiTK').val();
+                    //var loaiTK=$('#loaiTK').val();
                     var _token=$('input[name="_token"]').val();
 
                     $.ajax({
                         url:'{{asset("admin/user/add")}}',
                         type: 'POST',
                         dataType: 'json',
-                        data: {name: name,email:email,CMT:CMT,level:level,loaiTK:loaiTK,_token:_token},
+                        data: {name: name,email:email,CMT:CMT,level:level,_token:_token},
                         success:function (data) {
                             if(data.errors.length >0){
                                 if(data.errors[0].name){

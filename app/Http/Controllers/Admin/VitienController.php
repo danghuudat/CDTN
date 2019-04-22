@@ -7,6 +7,8 @@ use App\ViTien;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
 
 class VitienController extends Controller
 {
@@ -46,7 +48,22 @@ class VitienController extends Controller
         $naptien->save();
         $user=User::find($request->id);
         $user->tien+=$request->tiennap;
+
+
+        Carbon::parse($user->endloaiTK)->addDays(30)->toDateString();
         $user->save();
+        $users=User::find($request->id);
+
+        if($users->tiennap>=100000){
+            $users->loaiTK=3;
+        }
+        if($users->tiennap<100000&&$users->tiennap>=50000){
+            $users->loaiTK=2;
+        }
+        if($users->tiennap<50000){
+            $users->loaiTK=1;
+        }
+        $users->save();
         return response([
             'success'=>'Bạn đã nạp tiền thành công.'
         ]);
