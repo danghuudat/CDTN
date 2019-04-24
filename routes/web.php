@@ -88,6 +88,12 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
     });
     Route::group(['prefix'=>'menu'],function (){
        Route::get('/','Admin\MenuController@index');
+        Route::get('/data','Admin\MenuController@getData');
+        Route::get('/delete','Admin\MenuController@delete');
+        Route::post('/add','Admin\MenuController@store');
+        Route::get('/getdouong','Admin\MenuController@getdouong');
+        Route::post('/edit','Admin\MenuController@edit');
+
     });
     Route::group(['prefix'=>'theloai_douong'],function (){
         Route::get('/','Admin\Theloai_DouongController@index');

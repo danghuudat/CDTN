@@ -42,6 +42,7 @@ class TacGiaController extends Controller
      */
     public function store(Request $request)
     {
+        \Log::info($request);
         $error_array=[];
         $success='';
         $validation = Validator::make($request->all(), [
