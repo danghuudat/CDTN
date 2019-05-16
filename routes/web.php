@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','PageController@index');
+Route::get('/thuvien','PageController@thuvien');
+Route::post('/loadmore_tv','PageController@loadmore_tv');
+Route::get('/thuvien/{name}.html','PageController@sachinfo');
+Route::get('/tacgia/{name}.html','PageController@tacgia');
+Route::get('/nhaxuatban/{name}.html','PageController@nhaxuatban');
+Route::get('/namxb/{name}.html','PageController@namxb');
+Route::get('/theloaisach/{name}.html','PageController@theloaisach');
+
+
 Route::get('/register','Admin\LogController@getRegister');
 Route::post('/postregister','Admin\LogController@postRegister');
 
@@ -81,10 +88,27 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
             Route::post('/themsl','Admin\SachController@ThemSL');
             Route::post('/giamsl','Admin\SachController@GiamSL');
             Route::get('/lsnhaphuy','Admin\SachController@history');
-
-
-
-
+            route::post('/noibat','Admin\SachController@noibat');
+    });
+    Route::group(['prefix'=>'muontrasach'],function (){
+        Route::get('/','Admin\MSTSController@index');
+        Route::get('/data','Admin\MSTSController@getData');
+        Route::post('/searchuser','Admin\MSTSController@searchuser');
+        Route::get('/add','Admin\MSTSController@create');
+        Route::post('/datcoc','Admin\MSTSController@datcoc');
+        Route::post('/muonsach','Admin\MSTSController@store');
+        Route::post('/phieumuon','Admin\MSTSController@show');
+        Route::get('/edit','Admin\MSTSController@edit');
+        Route::post('/update','Admin\MSTSController@update');
+        Route::post('/delete','Admin\MSTSController@destroy');
+        Route::get('/trasach','Admin\MSTSController@gettrasach');
+        Route::post('/searchpm','Admin\MSTSController@searchpm');
+        Route::post('/trasach','Admin\MSTSController@posttrasach');
+    });
+    Route::group(['prefix'=>'hoadon'],function (){
+        Route::get('/','Admin\HoaDonSachController@index');
+        route::get('/hdct','Admin\HoaDonSachController@showhdct');
+        Route::post('/','Admin\HoaDonSachController@show');
     });
     Route::group(['prefix'=>'menu'],function (){
        Route::get('/','Admin\MenuController@index');
@@ -95,5 +119,10 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::post('/add','Admin\Theloai_DouongController@store');
         Route::get('/edit','Admin\Theloai_DouongController@edit');
     });
-//
+    Route::group(['prefix'=>'thongke'],function (){
+        Route::get('/','Admin\ThongKeController@index');
+    });
+    route::get('/email',function (){
+        return view('backend.emailnaptien');
+    });
 });

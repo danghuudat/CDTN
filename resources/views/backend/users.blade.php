@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('content')
+@section('style')
     <style>
         th.dt-center, td.dt-center { text-align: center; }
         small{
@@ -15,7 +15,7 @@
 
         }
         .text-deltais p{
-           text-transform: capitalize;
+            text-transform: capitalize;
 
         }
         .text-deltais p i {
@@ -31,6 +31,9 @@
             color:#e3342f;
         }
     </style>
+@endsection
+@section('content')
+
 
             <div class="row mt-3">
                 <div class="col-md-9">
@@ -222,7 +225,7 @@
                                     return '';
                             }else{
                                 return'<p>'+data.toString().replace(
-                                    /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ <button class="btn btn-outline-warning naptien" title="nạp tiền" style="float: right" value="'+row.id+'"><i class="fas fa-dollar-sign"></i> Nạp tiền</button></p>';
+                                    /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ <button class="btn btn-outline-warning naptien" title="nạp tiền" style="float: right" value="'+row.email+'"><i class="fas fa-dollar-sign"></i> Nạp tiền</button></p>';
 
                             };
 
@@ -254,25 +257,17 @@
                 ]
             });
             $(document).on('click','.naptien',function () {
-                $.ajax({
-                    url: '{{asset("admin/user/edit")}}',
-                    type: 'GET',
-                    dataType: 'json',
-                    data: {id:$(this).val()},
-                    success:function(data){
-                        data=data.data;
-                        $('#modaluser').removeClass('modal-lg');
-                        $('#UserModal').modal('show');
-                        $('.shownaptien').show();
-                        $('#formsubmit').hide();
-                        $('.information').hide();
-                        $('.buttonnt').text('Nạp tiền');
-                        $('.buttonnt').val(data.id);
+                $('#modaluser').removeClass('modal-lg');
+                $('#UserModal').modal('show');
+                $('.shownaptien').show();
+                $('#formsubmit').hide();
+                $('.information').hide();
+                $('.buttonnt').text('Nạp tiền');
+                $('.buttonnt').val($(this).val());
+                $('#tiennap').val('');
 
-                        $('.modal-title').text('Nạp tiền tài khoản: '+data.name);
+                $('.modal-title').text('Nạp tiền tài khoản: '+$(this).val());
 
-                    }
-                })
             });
             $('#formnaptien').submit(function (e) {
                 e.preventDefault();

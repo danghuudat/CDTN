@@ -16,9 +16,11 @@ class CreateHoadonsachTable extends Migration
         Schema::create('hoadonsach', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('muontra_id')->unsigned();
-            $table->integer('tienphat');
-            $table->integer('total');
-            $table->integer('user_id_tt');
+            $table->integer('tienquahan');
+            $table->integer('tienthanhtoan');
+            $table->integer('songayquahan');
+            $table->string('nguoitt');
+            $table->foreign('muontra_id')->references('id')->on('muontrasach')->onDelete('CASCADE');
 
             $table->timestamps();
         });

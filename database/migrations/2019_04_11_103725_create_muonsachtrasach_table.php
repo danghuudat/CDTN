@@ -13,16 +13,18 @@ class CreateMuonsachtrasachTable extends Migration
      */
     public function up()
     {
-        Schema::create('muonsahtrasach', function (Blueprint $table) {
+        Schema::create('muontrasach', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('sach_id')->unsigned();
+
             $table->integer('user_id')->unsigned();
             $table->date('ngaymuon');
-            $table->date('ngaytra');
+            $table->date('hantra');
+            $table->integer('songaymuon');
+
             $table->integer('tiendatcoc');
             $table->integer('tienthue');
             $table->integer('active');
-            $table->foreign('sach_id')->references('id')->on('sach');
+            $table->string('nguoidk');
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();

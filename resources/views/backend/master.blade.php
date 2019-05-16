@@ -32,6 +32,8 @@
 
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet" />
+    @yield('style')
 
 
 
@@ -84,7 +86,7 @@
                     <img src="{{asset('images/'.Auth::user()->hinhanh)}}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="admin/user/profile" class="d-block">{{Auth::user()->email}}</a>
+                    <a href="admin/profile" class="d-block">{{Auth::user()->email}}</a>
                     <a href="#" class="d-block">{{Auth::user()->level==1 ? 'Quản lý' : 'Nhân viên'}}</a>
 
                 </div>
@@ -149,14 +151,48 @@
                                     <p>Sách</p>
                                 </a>
                             </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Mượn trả && Trả Sách
+                                <i class="fa fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/UI/sliders.html" class="nav-link">
+                                <a href="admin/muontrasach" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>Sliders</p>
+                                    <p>Danh sách</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="admin/muontrasach/add" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>Mượn Sách</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="admin/muontrasach/trasach" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>Trả sách</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+
+                        <a href="/admin/hoadon" class="nav-link">
+                            <i class="nav-icon fas fa-coins"></i>
+                            <p>
+                                Quản lý hóa đơn
+
+                            </p>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
 
                         <a href="/admin/profile" class="nav-link">
@@ -188,7 +224,18 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+
+                        <a href="admin/thongke" class="nav-link">
+                            <i class="nav-icon  fas fa-box-open"></i>
+                            <p>
+                                Thống kê
+
+                            </p>
+                        </a>
+                    </li>
                     @endif
+
                     <li class="nav-item">
 
                         <a href="/logout" class="nav-link">
@@ -225,8 +272,7 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-        All rights reserved.
+        <strong>Copyright &copy; 2019 <a href="{{asset('/')}}">LightBook</a>.</strong>
         <div class="float-right d-none d-sm-inline-block">
             <b>Version</b> 3.0.0-alpha
         </div>
@@ -244,6 +290,7 @@
 {{--<script src="js/vue.js"></script>--}}
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -274,11 +321,13 @@
 <script src="plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{--<script src="dist/js/pages/dashboard.js"></script>--}}
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="js/select2.min.js"></script>
 
 
 @yield('script')

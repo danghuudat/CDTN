@@ -15,11 +15,11 @@ class CreateVitienTable extends Migration
     {
         Schema::create('vitien', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->string('tentaikhoan');
             $table->date('ngaynap');
             $table->integer('tiennap');
             $table->string('nguoinap');
-            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }

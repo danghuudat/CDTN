@@ -24,7 +24,7 @@
                         @foreach($values as $value)
 
                             <table class=" table table-bordered">
-                                <td width="30%">Tài khoản: {{$value->user->email}}</td>
+                                <td width="30%">Tài khoản: {{$value->tentaikhoan}}</td>
                                 <td width="20%">Số tiền: {{number_format($value->tiennap,0,'.','.')}} VNĐ</td>
                                 <td width="25%">Người nạp TK: {{$value->nguoinap}}</td>
                                 <td width="25%">Ngày nạp: {{date_format($value->created_at,'d-m-Y H:i A')}}</td>

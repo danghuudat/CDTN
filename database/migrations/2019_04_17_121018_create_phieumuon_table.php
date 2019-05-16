@@ -17,6 +17,8 @@ class CreatePhieumuonTable extends Migration
             $table->integer('muontra_id')->unsigned();
             $table->foreign('muontra_id')->references('id')->on('muontrasach')->onDelete('CASCADE');
             $table->integer('sach_id')->unsigned();
+            $table->integer('active');
+            $table->date('ngaytra')->nullable();
             $table->primary(['muontra_id','sach_id']);
             $table->timestamps();
         });

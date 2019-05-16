@@ -1,36 +1,39 @@
 @extends('backend.master')
+@section('style')
+    <style>
+        th.dt-center, td.dt-center { text-align: center; }
+        small{
+            font-size: 60%;
+            font-weight: 400;
+            color: #6e6b6b;
+        }
+        .text-deltais{
+            text-align: justify-all;
+
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+        .text-deltais p{
+            text-transform: capitalize;
+
+        }
+        .text-deltais p i {
+            color:red;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .text-deltais p b {
+            margin-right: 10px;
+            margin-left: 0px;
+        }
+        .text-deltais p span {
+            color:#e3342f;
+        }
+    </style>
+    @endsection
 @section('content')
-<style>
-    th.dt-center, td.dt-center { text-align: center; }
-    small{
-        font-size: 60%;
-        font-weight: 400;
-        color: #6e6b6b;
-    }
-    .text-deltais{
-        text-align: justify-all;
 
-        margin-top: 20px;
-        margin-left: 20px;
-
-    }
-    .text-deltais p{
-        text-transform: capitalize;
-
-    }
-    .text-deltais p i {
-        color:red;
-        font-weight: bold;
-        margin-right: 10px;
-    }
-    .text-deltais p b {
-        margin-right: 10px;
-        margin-left: 0px;
-    }
-    .text-deltais p span {
-        color:#e3342f;
-    }
-</style>
 
 <div class="row mt-3">
     <div class="col-md-9">

@@ -65,7 +65,7 @@ class SachController extends Controller
             $sach=new Sach();
             if($request->file('hinhanh')){
                 $image = $request->file('hinhanh');
-                $new_name =str_slug($request->name,'-') . '.' . $image->getClientOriginalExtension();
+                $new_name =str_slug($request->name,'-'). '.jpg';
                 $image->move(public_path('images/sach'), $new_name);
                 $sach->hinhanh=$new_name;
 
@@ -78,6 +78,8 @@ class SachController extends Controller
             $sach->mieuta=$request->gioithieu;
             $sach->namxb=$request->namxb;
             $sach->gia=$request->gia;
+            $sach->solanmuon=0;
+            $sach->noibat=0;
             $sach->soluong=0;
             $sach->nxb_id=$request->nxb_id;
             $sach->tacgia_id=$request->tacgia_id;
@@ -144,12 +146,16 @@ class SachController extends Controller
             $sach=Sach::find($request->id);
             if ($request->hasFile('hinhanh')){
                 $image = $request->file('hinhanh');
-                $new_name =str_slug($request->name,'-') . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/sach'), $new_name);
-                $sach->hinhanh=$new_name;
+                $new_name =str_slug($request->name,'-'). '.jpg';
+
+
                 if($sach->hinhanh!='notimage.png'){
                     unlink('images/sach/'.$sach->hinhanh);
                 }
+                $image->move(public_path('images/sach'), $new_name);
+                $sach->hinhanh=$new_name;
+
+
             }
             $sach->name_sach=$request->name;
             $sach->name_slug_sach=str_slug($request->name,'-');
@@ -177,18 +183,18 @@ class SachController extends Controller
      */
     public function destroy(Request $request)
     {
-        $sach=Sach::find($request->id);
-        $xoa=new LSNhapHuy();
-        $xoa->sach_id=$request->id;
-        $xoa->status=3;
-        $xoa->ngay=date('Y-m-d');
-        $xoa->ghichu= 'Đã xóa sách '.$sach->name_sach;
-        $xoa->save();
-        Sach::destroy($request->id);
-
-        return response([
-            'success'=>'Bạn đã xóa thành công'
-        ]);
+//        $sach=Sach::find($request->id);
+//        $xoa=new LSNhapHuy();
+//        $xoa->sach_id=$request->id;
+//        $xoa->status=3;
+//        $xoa->ngay=date('Y-m-d');
+//        $xoa->ghichu= 'Đã xóa sách '.$sach->name_sach;
+//        $xoa->save();
+//        Sach::destroy($request->id);
+//
+//        return response([
+//            'success'=>'Bạn đã xóa thành công'
+//        ]);
     }
     public function ThemSL(Request $request){
         $nhapsach=new LSNhapHuy();
@@ -232,5 +238,19 @@ class SachController extends Controller
         $lichsu=LSNhapHuy::orderBy('created_at','DESC')->get()->groupBy('ngay');
 //        dd($lichsu);
         return view('backend.lsnhaphuy',compact('lichsu'));
+    }
+    public function noibat(Request $request){
+        $sach=Sach::find($request->id);
+        switch ($request->action)
+        {
+            case 'yes':
+                $sach->noibat=1;
+                break;
+            case 'no':
+                $sach->noibat=0;
+                break;
+        }
+        $sach->save();
+
     }
 }

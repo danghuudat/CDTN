@@ -21,6 +21,9 @@ class CreateSachTable extends Migration
             $table->string('namxb');
             $table->integer('soluong');
             $table->text('mieuta')->nullable();
+            $table->integer('solanmuon');
+            $table->integer('noibat');
+
             $table->integer('gia');
             $table->integer('nxb_id')->unsigned();
             $table->foreign('nxb_id')->references('id')->on('nhaxuatban')->onDelete('CASCADE');

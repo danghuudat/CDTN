@@ -1,7 +1,15 @@
 @extends('backend.master')
-@section('content')
+@section('style')
     <style>
         th.dt-center, td.dt-center { text-align: center; }
+        table tbody tr td li{
+            list-style: none;
+        }
+
+        td.tensach{
+            text-align: left;
+            text-transform: capitalize;
+        }
         small{
             font-size: 60%;
             font-weight: 400;
@@ -39,7 +47,15 @@
 
             text-align: justify;
         }
+        img{
+            box-shadow: 0px 2px 5px 5px #dfd3d3;
+            margin-top: 10px;
+        }
+
     </style>
+    @endsection
+@section('content')
+
 
     <div class="row mt-3">
         <div class="col-md-9">
@@ -56,15 +72,15 @@
 
 
     <hr>
-    <table id="example" class="table display cell-border mt-2" style="width:100%">
+    <table id="example" class="table hover cell-border mt-2" style="width:100%">
         <thead>
         <tr>
             <th>ID</th>
             <th>Tên Sách</th>
-            <th>Tác Giả</th>
-            <th>Thể loại</th>
+            <th>Hình ảnh</th>
+            <th>Lượt mượn sách</th>
 
-            <th>Năm xuất bản</th>
+            <th>Nổi bật</th>
             <th>Số lượng</th>
             <th>Modifly</th>
 
@@ -212,21 +228,20 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-
-                    <form class="form-inline" id="qlSLSach">
+                <form class="form-inline" id="qlSLSach">
+                    <div class="modal-body">
                         <div class="form-group">
                             <label>Nhập Số lượng:</label>
                             <input type="text"  id="soluong" class="form-control mx-sm-3" >
                         </div>
 
-                </div>
-                <div class="modal-footer">
-                    <input type="hidden" id="actiontg" value=""></input>
-                    <button type="submit" class="btn btn-primary buttontg" value=""></button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="actiontg" value=""></input>
+                        <button type="submit" class="btn btn-primary buttontg" value=""></button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -271,8 +286,10 @@
             });
 
             var table= $('#example').DataTable({
+                responsive: true,
                 "columnDefs": [
-                    {"className": "dt-center", "targets": "_all"}
+                    {"className": "dt-center", "targets": [0,2,3,4,5,6]},
+                    {"className": "tensach", targets: 1 }
                 ],
 
 
@@ -282,13 +299,26 @@
                 ajax:'{{asset("admin/book/data")}}',
                 columns:[
                     {data:'id',"width":"5%"},
-                    {data:'name_sach',"width":"20%",'render':function (data,type,row) {
-                            return '<img width="80px" src="images/sach/'+row.hinhanh+'"/><p style="text-transform: capitalize">'+row.name_sach+'</p>';
+                    {data:'name_sach',"width":"25%",'render':function (data,type,row) {
+                            return '<span style="font-size: 20px; font-weight: bold">'+row.name_sach+'</span><li><i class="fas fa-user-secret"></i> Tác giả: '+row.name_tg+'</li>' +
+                                '<li><i class="far fa-list-alt"></i> Thể loại: '+row.name_tl+'</li>' +
+                                '<li><i class="fab fa-fort-awesome"></i> NXB: '+row.nxb_name+'</li>' +
+                                '<li><i class="fas fa-calendar-alt"></i> Năm XB: '+row.namxb+'</li>';
                         }},
-                    {data:'name_tg'},
-                    {data:'name_tl'},
+                    {data:'hinhanh',
+                        "searchable": false,
+                        "orderable":false,
+                        "render":function (data,type,row) {
+                            return '<img width="100px" src="images/sach/'+row.hinhanh+'" />';
+                        }},
+                    {data:'luotmuonsach'},
 
-                    {data:'namxb'},
+
+                    {data:'noibat',
+                        "orderable":false,
+                        render:function (data,type,row) {
+                            return (row.noibat==1) ? '<button class="btn btn-outline-success noibat" data-noibat="no" data-id="'+row.id+'">Có</button>' : '<button class="btn btn-outline-danger noibat" data-noibat="yes" data-id="'+row.id+'">Không</button>';
+                        }},
                     {data:'soluong',"render": function (data, type, row) {
                         if (row.soluong<=0){
                             return '@if(Auth::user()->level==1)<button class="btn btn-outline-warning up" title="Tăng" value="'+row.id+'"><i class="fas fa-long-arrow-alt-up"></i></button>&emsp;@endif'+row.soluong+' ';
@@ -326,6 +356,17 @@
 
 
             });
+            $(document).on('click','.noibat',function () {
+                $.ajax({
+                    url:'{{asset('admin/book/noibat')}}',
+                    type:'POST',
+                    data:{action:$(this).attr('data-noibat'),id:$(this).attr('data-id')},
+                    success:function (data) {
+                        table.ajax.reload(null, false);
+                    }
+                    
+                })
+            });
             $(document).on('submit','#qlSLSach',function (e) {
 
                 e.preventDefault();
@@ -337,7 +378,7 @@
                         data:{id:$('.buttontg').val(),soluong:$('#soluong').val()},
                         success:function(data){
                             alert(data.success);
-                            table.ajax.reload();
+                            table.ajax.reload(null, false);
                             $('#SLModal').modal('hide');
                         }
                     })
@@ -350,7 +391,7 @@
                         success:function(data){
                             if(data.success!=''){
                                 alert(data.success);
-                                table.ajax.reload();
+                                table.ajax.reload(null, false);
                                 $('#SLModal').modal('hide');
                             }else{
                                 alert(data.error);
@@ -390,6 +431,7 @@
 
             });
             $(document).on('click','.add',function () {
+                $('#formsubmit')[0].reset();
                 $('#SachModal').modal('show');
                 $('#formsubmit').show();
                 $('.information').hide();
@@ -405,21 +447,20 @@
                 $('#hinhanh').removeClass('is-invalid');
                 $('#errorhinhanh').text('');
                 $('#hinhanh').val('');
-                $('#formsubmit')[0].reset();
+
 
 
             });
             $(document).on('click','.edit',function () {
 
                 $('.submitbutton').val($(this).val());
-
-
                 $.ajax({
                     url: '{{asset("admin/book/edit")}}',
                     type: 'GET',
                     dataType: 'json',
                     data: {id:$(this).val()},
                     success:function(data){
+                        $('#formsubmit')[0].reset();
                         $('#SachModal').modal('show');
                         $('#formsubmit').show();
                         $('.information').hide();
@@ -428,10 +469,11 @@
                         $('.submitbutton').text('Update');
                         $('#action').val('Edit');
                         $('#name').val(data.name_sach);
-                        $("#tacgia_id option[value="+data.tacgia_id+"]").attr('selected','selected');
-                        $("#nxb_id option[value="+data.nxb_id+"]").attr('selected','selected');
-                        $("#theloai_id option[value="+data.theloai_id+"]").attr('selected','selected');
-                        $("#namxb option[value="+data.namxb+"]").attr('selected','selected');
+
+                        $("#tacgia_id >option[value="+data.tacgia_id+"]").attr('selected','selected').siblings().removeAttr('selected');
+                        $("#nxb_id >option[value="+data.nxb_id+"]").attr('selected','selected').siblings().removeAttr('selected');
+                        $("#theloai_id >option[value="+data.theloai_id+"]").attr('selected','selected').siblings().removeAttr('selected');
+                        $("#namxb >option[value="+data.namxb+"]").attr('selected','selected').siblings().removeAttr('selected');
                         $('#gioithieu').val(data.mieuta);
                         $('#gia').val(data.gia);
 
@@ -457,7 +499,7 @@
                         data:{id:$(this).val()},
                         success:function (data) {
                             alert(data.success);
-                            table.ajax.reload();
+                            table.ajax.reload(null, false);
                         }
                     })
                 }
@@ -484,7 +526,7 @@
                                 }
                             }else{
                                 alert(data.success);
-                                table.ajax.reload();
+                                table.ajax.reload(null, false);
                                 $('#SachModal').modal('hide');
                                 $('#formsubmit')[0].reset();
                             }
@@ -516,7 +558,7 @@
 
                             }else{
                                 alert(data.success);
-                                table.ajax.reload();
+                                table.ajax.reload(null, false);
                                 $('#SachModal').modal('hide');
                                 $('#formsubmit')[0].reset();
                             }

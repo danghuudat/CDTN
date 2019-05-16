@@ -113,13 +113,13 @@ class UserController extends Controller
     public function show()
     {
         $lichsu=ViTien::orderBy('ngaynap','DESC')->where('nguoinap','=',Auth::user()->email)->get()->groupBy('ngaynap');
-        $user=User::orderBy('created_at','DESC')->get()->groupBy(function ($item){
-            return $item->created_at->format('d-m-Y');
-        })->toArray();
-        $user2=User::orderBy('updated_at','DESC')->get()->groupBy(function ($item){
-            return $item->updated_at->format('d-m-Y');
-        })->toArray();
-        $a=array_merge($user,$user2);
+//        $user=User::orderBy('created_at','DESC')->get()->groupBy(function ($item){
+//            return $item->created_at->format('d-m-Y');
+//        })->toArray();
+//        $user2=User::orderBy('updated_at','DESC')->get()->groupBy(function ($item){
+//            return $item->updated_at->format('d-m-Y');
+//        })->toArray();
+//        $a=array_merge($user,$user2);
 //        dd($a);
 
 //        $user=User::orderBy('ngaykichhoat','DESC')->where('nguoitao','=',Auth::user()->email)->get()->groupBy('ngaykichhoat')->toArray();
@@ -136,7 +136,9 @@ class UserController extends Controller
      */
     public function edit(Request $request)
     {
-        $vitien=ViTien::where('user_id','=',$request->id)->orderBy('created_at','DESC')->get();
+        $a=User::find($request->id);
+        $vitien=ViTien::where('tentaikhoan','=',$a->email)->orderBy('created_at','DESC')->get();
+
         return response([
             'data'=>User::find($request->id),
             'vitien'=>$vitien
@@ -179,6 +181,7 @@ class UserController extends Controller
 
             }else{
                 $user->level=$request->level;
+
                 if ($user->loaiTK!= $request->loaiTK){
                     $user->loaiTK=$request->loaiTK;
                     $user->beginloaiTK=Carbon::now()->toDateString();

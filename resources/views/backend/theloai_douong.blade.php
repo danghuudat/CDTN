@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('content')
+@section('style')
     <style>
         th.dt-center, td.dt-center { text-align: center; }
         small{
@@ -31,6 +31,9 @@
             color:#e3342f;
         }
     </style>
+    @endsection
+@section('content')
+
 
     <div class="row mt-3">
         <div class="col-md-9">

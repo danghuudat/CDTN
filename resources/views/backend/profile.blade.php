@@ -1,30 +1,33 @@
 @extends('backend.master')
+@section('style')
+    <style>
+        .foter{
+            margin-left: 92px;
+        }
+        #editavatar{
+            cursor: pointer;
+            position: absolute;
+            left: 100px;
+            top: 150px;
+            display: none;
+        }
+        .avartar{
+            position: relative;
+        }
+
+        .avartar:hover img{
+            opacity: 0.2;
+            cursor: pointer;
+
+        }
+        .avartar:hover #editavatar{
+            display: block;
+        }
+    </style>
+    @endsection
 @section('content')
     <div class="container">
-        <style>
-            .foter{
-                margin-left: 92px;
-            }
-            #editavatar{
-                cursor: pointer;
-                position: absolute;
-                left: 100px;
-                top: 150px;
-                display: none;
-            }
-            .avartar{
-                position: relative;
-            }
 
-            .avartar:hover img{
-                opacity: 0.2;
-                cursor: pointer;
-
-            }
-            .avartar:hover #editavatar{
-                display: block;
-            }
-        </style>
         <div class="abcde" >
 
             <div class="row justify-content-center" >
@@ -147,7 +150,7 @@
 
                                                         <div class="timeline-body">
                                                             <table class=" table table-bordered">
-                                                                <td width="30%">TK:{{$value->user->email}}</td>
+                                                                <td width="30%">TK:{{$value->tentaikhoan}}</td>
                                                                 <td>Số tiền: {{$value->tiennap}} VNĐ</td>
                                                             </table>
                                                         </div>

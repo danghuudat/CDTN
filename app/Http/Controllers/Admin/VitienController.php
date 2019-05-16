@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\User;
 use App\ViTien;
+use Mail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -39,14 +40,25 @@ class VitienController extends Controller
     public function store(Request $request)
     {
         $naptien=new ViTien();
-        $naptien->user_id=$request->id;
+        $naptien->tentaikhoan=$request->id;
         $naptien->tiennap=$request->tiennap;
         $naptien->ngaynap=date('Y-m-d');
         $naptien->nguoinap=Auth::user()->email;
         $naptien->save();
-        $user=User::find($request->id);
+        $info=ViTien::find($naptien->id);
+        $user=User::where('email','=',$request->id)->first();
         $user->tien+=$request->tiennap;
         $user->save();
+        $email=$user->email;
+
+        Mail::send('backend.emailnaptien',compact('info'), function ($message) use($email) {
+            $message->from('cafe.booklight@gmail.com', 'cafebooklight');
+
+            $message->to($email,$email);
+
+            $message->subject('Xác nhận tài khoản nạp tiền của Café Booklight');
+
+        });
         return response([
             'success'=>'Bạn đã nạp tiền thành công.'
         ]);
