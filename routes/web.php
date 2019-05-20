@@ -102,5 +102,14 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::post('/edit','Admin\Theloai_DouongController@edit');
         Route::get('/delete','Admin\Theloai_DouongController@delete');
     });
+    Route::group(['prefix'=>'ban'],function (){
+        Route::get('/','Admin\banController@index');
+        Route::get('/data','Admin\banController@getData');
+        Route::post('/orderdrink','Admin\banController@orderdrink');
+        Route::post('/checkcmt','Admin\banController@checkcmt');
+    });
+    Route::group(['prefix'=>'thanhtoan'],function (){
+        Route::get('','Admin\banController@listThanhtoan');
+    });
 //
 });
