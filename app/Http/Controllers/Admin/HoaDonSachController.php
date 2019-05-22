@@ -6,6 +6,7 @@ use App\ChiTietHoaDonSach;
 use App\HoaDonSach;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use PDF;
 
 class HoaDonSachController extends Controller
 {
@@ -67,6 +68,15 @@ class HoaDonSachController extends Controller
         $hoadon=HoaDonSach::find($request->id);
 //        return $hoadon;
         return view('backend.hoadonsachct',compact('hoadon'));
+    }
+    public function pdf($id){
+        $pdf=\App::make('dompdf.wrapper');
+        $pdf->loadHTML($this->hoadonct_html($id));
+        return $pdf->stream();
+    }
+    function hoadonct_html($id){
+        $hoadon=HoaDonSach::find($id);
+        return view('backend.pdf_hoadon',compact('hoadon'));
     }
 
 

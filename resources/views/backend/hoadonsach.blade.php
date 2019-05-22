@@ -65,11 +65,13 @@
                     </tr>
                     </tbody>
                 </table>
+                <a href="{{asset('admin/hoadon/hoadonpdf/'.$hoadon->id)}}" target="_blank" class="btn btn-danger">Convert PDF</a>
             </div>
         </li>
 
 
     </ul>
+
     @endforeach
 <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -104,11 +104,13 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::get('/trasach','Admin\MSTSController@gettrasach');
         Route::post('/searchpm','Admin\MSTSController@searchpm');
         Route::post('/trasach','Admin\MSTSController@posttrasach');
+        Route::get('/phieumuonpdf/{id}','Admin\MSTSController@pdf');
     });
     Route::group(['prefix'=>'hoadon'],function (){
         Route::get('/','Admin\HoaDonSachController@index');
         route::get('/hdct','Admin\HoaDonSachController@showhdct');
         Route::post('/','Admin\HoaDonSachController@show');
+        Route::get('/hoadonpdf/{id}','Admin\HoaDonSachController@pdf');
     });
     Route::group(['prefix'=>'menu'],function (){
        Route::get('/','Admin\MenuController@index');

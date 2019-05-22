@@ -93,25 +93,7 @@
         <div class="col-sm-2"></div>
 
     </div>
-    <div class="modal fade" id="HoaDonModal"  role="dialog"  aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="hoadonsach">
 
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-
-                        <button type="button" class="btn btn-secondary " id="closehd" >Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 @endsection
@@ -144,15 +126,15 @@
                 $('#TraSachModal').modal('show');
                 $('.err').hide();
             });
-            $(document).on('click','#close',function () {
-                $('.err').hide();
-            });
+            // $(document).on('click','#close',function () {
+            //     $('.err').hide();
+            // });
             $('#closehd').click(function () {
                 window.location.href='{{asset("admin/muontrasach")}}';
             });
-            $('#HoaDonModal').on('hidden.bs.modal', function (e) {
-                window.location.href='{{asset("admin/muontrasach")}}';
-            })
+            {{--$('#HoaDonModal').on('hidden.bs.modal', function (e) {--}}
+                {{--window.location.href='{{asset("admin/muontrasach")}}';--}}
+            {{--})--}}
             $(document).one('click','#clicksubmit',function (e) {
                 e.preventDefault();
 
@@ -183,8 +165,9 @@
                                 data:{id:id},
                                 success:function (data) {
 
-                                    $('#HoaDonModal').modal('show');
-                                    $('#hoadonsach').html(data);
+                                    // $('#HoaDonModal').modal('show');
+                                    $('#phieumuon').html(data);
+                                    $('#convert-pdf').html('<a href="{{asset('admin/hoadon/hoadonpdf')}}'+'/'+id+'" target="_blank" class="btn btn-danger"> Convert PDF</a>')
                                 }
                             });
 

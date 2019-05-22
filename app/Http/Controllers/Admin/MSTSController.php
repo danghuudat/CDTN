@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 class MSTSController extends Controller
 {
@@ -322,5 +323,15 @@ class MSTSController extends Controller
 
 
 
+    }
+    public function pdf($id){
+        $pdf=\App::make('dompdf.wrapper');
+        $pdf->loadHTML($this->phieumuonct_html($id));
+        return $pdf->stream();
+    }
+    function phieumuonct_html($id){
+        $phieumuon=MuonSachTraSach::find($id);
+
+        return view('backend.pdf_phieumuon',compact('phieumuon'));
     }
 }
