@@ -8,6 +8,24 @@
 /* color */
 /* Font size */
 /* mixin */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'UVNKIEU';
+  src: url('../fonts/UVNKIEU_R_1.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'UVNKIEU';
+  src: url('../fonts/UVNKIEU_0.TTF') format('truetype');
+  font-weight: bold;
+}
 body {
   margin: 0px;
   padding: 0px;

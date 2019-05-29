@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" type="text/css" href="frontend/css/owl.carousel.min.css">
     <link rel="stylesheet" href="frontend/css/styles.css">
+    <link rel="stylesheet" href="frontend/css/slick.css">
+    <link rel="stylesheet" href="frontend/css/slick-theme.css">
     @yield('style')
 </head>
 
@@ -23,7 +25,7 @@
     <div class="main-menu">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="/"><img src="frontend/images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="/"><img width="250px" src="images/logo2.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -140,6 +142,8 @@
 <script src="frontend/js/jquery.min.js"></script>
 <script src="frontend/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="frontend/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="frontend/js/slick.min.js"></script>
+<script type="text/javascript" src="frontend/js/slick.js"></script>
 <script src="frontend/js/custom.js"></script>
     @yield('script')
 </body>

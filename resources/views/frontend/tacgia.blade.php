@@ -10,7 +10,7 @@
         .c-img{
             position: absolute;
             left: 15%;
-            top: 180px;
+            top: 240px;
             z-index: 2;
         }
         .c-img img{
@@ -55,6 +55,10 @@
         .sachtacgia{
             text-align: center;
             padding-bottom: 20px;
+        }
+        .sachtacgia img{
+
+            box-shadow: 10px 0px 5px 5px #c3c3c3;
         }
         .tensach>h3>a{
             margin-top: 10px;

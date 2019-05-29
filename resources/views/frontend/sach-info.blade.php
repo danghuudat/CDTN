@@ -31,13 +31,16 @@
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
                             <div class="active item carousel-item" data-slide-number="0">
-                                <img src="{{asset('images/sach/'.$sach->hinhanh)}}"  class="img-fluid">
+                                <img src="{{asset('images/sach/'.$sach->hinhanh)}}"  style="
+    box-shadow: 10px 0px 5px 5px #c3c3c3;" class="img-fluid">
                             </div>
                             <div class="item carousel-item" data-slide-number="1">
-                                <img src="{{asset('images/sach/'.$sach->hinhanh)}}" class="img-fluid">
+                                <img src="{{asset('images/sach/'.$sach->hinhanh)}}" style="
+    box-shadow: 10px 0px 5px 5px #c3c3c3;" class="img-fluid">
                             </div>
                             <div class="item carousel-item" data-slide-number="2">
-                                <img src="{{asset('images/sach/'.$sach->hinhanh)}}" class="img-fluid">
+                                <img src="{{asset('images/sach/'.$sach->hinhanh)}}" style="
+    box-shadow: 10px 0px 5px 5px #c3c3c3;" class="img-fluid">
                             </div>
                         </div>
                         <!-- main slider carousel nav controls -->

@@ -123,6 +123,7 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
     });
     Route::group(['prefix'=>'thongke'],function (){
         Route::get('/','Admin\ThongKeController@index');
+        Route::post('/','Admin\ThongKeController@thongke');
     });
     route::get('/email',function (){
         return view('backend.emailnaptien');

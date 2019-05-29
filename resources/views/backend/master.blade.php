@@ -290,6 +290,8 @@
 {{--<script src="js/vue.js"></script>--}}
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/moment.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>

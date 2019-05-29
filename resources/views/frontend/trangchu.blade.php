@@ -76,6 +76,7 @@
             <div class="title">
                 <h2>Những cuốn sách được mượn nhiều</h2>
                 <hr>
+                <img src="images/bor.png" alt="" style=" position: relative;z-index: 1;top: 20px;">
             </div>
             <div class="row">
                 @foreach($sach as $s)
@@ -87,14 +88,14 @@
                         </div>
 
 
-                        <h3 style=" font-family: Arial;text-align: center"><a href="#" style="text-transform: capitalize;">{{$s->name_sach}}</a></h3>
+                        <h3 style=" font-family: Arial;text-align: center"><a href="{{asset('thuvien/'.$s->name_slug_sach.'.html')}}" style="text-transform: capitalize;">{{$s->name_sach}}</a></h3>
 
                     </div>
                 </div>
                 @endforeach
             </div>
             <div class="btn-sec">
-                <a href="#" class="btn gray-btn">Xem thêm</a>
+                <a href="{{asset('thuvien')}}" class="btn gray-btn">Xem thêm</a>
             </div>
         </div>
     </section>

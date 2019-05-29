@@ -16,7 +16,7 @@ class PageController extends Controller
         return view('frontend.trangchu',compact('sach'));
     }
     public function thuvien(){
-        $sachnoibat=Sach::where('noibat','=','1')->inRandomOrder()->take(10)->get();
+        $sachnoibat=Sach::where('noibat','=','1')->inRandomOrder()->get();
         $sach=Sach::orderBy('solanmuon','DESC')->limit(5)->get();
         return view('frontend.thuvien',compact('sachnoibat','sach'));
     }
@@ -24,7 +24,7 @@ class PageController extends Controller
         if ($request->ajax()){
             if ($request->id>0){
                 if ($request->action=='tatcasach'){
-                    $data=Sach::where('id','<',$request->id)->orderBy('id','DESC')->limit(5)->get();
+                    $data=Sach::where('id','<',$request->id)->orderBy('id','DESC')->limit(4)->get();
                 }
                 if ($request->action=='sachtacgia'){
                     $data=Sach::where('id','<',$request->id)->where('tacgia_id','=',$request->id_tg)->orderBy('id','DESC')->limit(4)->get();
@@ -44,7 +44,7 @@ class PageController extends Controller
 
             }else{
                 if ($request->action=='tatcasach'){
-                    $data=Sach::orderBy('id','DESC')->limit(5)->get();
+                    $data=Sach::orderBy('id','DESC')->limit(4)->get();
                 }
                 if ($request->action=='sachtacgia'){
                     $data=Sach::where('tacgia_id','=',$request->id_tg)->orderBy('id','DESC')->limit(4)->get();
@@ -73,7 +73,7 @@ class PageController extends Controller
                         $output.='
                     <div class="col-md-3">
                         <a href="'.asset('thuvien/'.$row->name_slug_sach.'.html').'"><div class="item">
-                            <img src="'.asset('images/sach/'.$row->hinhanh).'" alt="img">
+                            <img src="'.asset('images/sach/'.$row->hinhanh).'" width="150px" height="250px" alt="img">
                             <h3 style="text-transform: capitalize"><a href="'.asset('thuvien/'.$row->name_slug_sach.'.html').'">'.$row->name_sach.'</a></h3>
                         </div></a>
                     </div>
