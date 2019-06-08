@@ -111,5 +111,12 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
     Route::group(['prefix'=>'thanhtoan'],function (){
         Route::get('','Admin\banController@listThanhtoan');
     });
+    Route::group(['prefix'=>'hoadon'],function (){
+        Route::get('/','Admin\HoaDonCafeController@index');
+        route::get('/hdct','Admin\HoaDonCafeController@showhdct');
+        Route::get('/pdf/{id}','Admin\HoaDonCafeController@pdf');
+
+
+    });
 //
 });

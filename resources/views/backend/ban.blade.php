@@ -246,7 +246,7 @@
                             newdate = year + "/" + month + "/" + day;
                             document.getElementById("timein").innerHTML = newdate;
                             var tongcong=0;
-                            $('#bodyhoadon').val('');
+                            $('#bodyhoadon').html('');
                             $.each( douong_soluong, function( index, value ) {
                                 $( "#bodyhoadon" ).append( "<tr><td>"+value['ten']+"</td><td>"+value['soluong']+"</td><td>"+value['gia']+"</td><td>"+value['gia']*value['soluong']+"</td></tr>" );
                                 tongcong=tongcong+(value['gia']*value['soluong']);
@@ -261,6 +261,7 @@
                                 $('#'+value.id).prop("checked", false);
                             })
                             ordering=[];
+                            douong_soluong=[]
 
                         }
                     }
@@ -293,7 +294,7 @@
                             document.getElementById("timein").innerHTML = newdate;
                             var tongcong=0;
 
-                            $('#bodyhoadon').val('');
+                            $('#bodyhoadon').html('');
 
                             $.each( douong_soluong, function( index, value ) {
                                 $( "#bodyhoadon" ).append( "<tr><td>"+value['ten']+"</td><td>"+value['soluong']+"</td><td>"+value['gia']+"</td><td>"+value['gia']*value['soluong']+"</td></tr>" );
@@ -335,6 +336,11 @@
                 for(i=0;i<ordering.length;i++){
                     if(ordering[i]['id']==id){
                         ordering.splice(i,1)
+                    }
+                }
+                for(i=0;i<douong_soluong.length;i++){
+                    if(douong_soluong[i]['ten']==$('#'+id).val()){
+                        douong_soluong.splice(i,1)
                     }
                 }
             }
