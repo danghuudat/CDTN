@@ -65,7 +65,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <a href="{{asset('admin/hoadon/hoadonpdf/'.$hoadon->id)}}" target="_blank" class="btn btn-danger">Convert PDF</a>
+                <a href="{{asset('admin/hoadonsach/hoadonpdf/'.$hoadon->id)}}" target="_blank" class="btn btn-danger">Convert PDF</a>
             </div>
         </li>
 

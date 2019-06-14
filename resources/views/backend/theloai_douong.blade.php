@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('style')
+@section('content')
     <style>
         th.dt-center, td.dt-center { text-align: center; }
         small{
@@ -31,9 +31,6 @@
             color:#e3342f;
         }
     </style>
-    @endsection
-@section('content')
-
 
     <div class="row mt-3">
         <div class="col-md-9">
@@ -58,7 +55,8 @@
         </thead>
     </table>
     <!-- Modal -->
-    <div class="modal fade" id="TheLoaiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form id="modal1">
+        <div class="modal fade" id="TheLoaiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog " id="modaltheloai" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -70,7 +68,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label  class="col-form-label">Tên thể loại</label>
-                        <input type="email"  class="form-control" id="theloai" placeholder="Tên thể loại">
+                        <input   class="form-control" id="theloai" placeholder="Tên thể loại">
                         <span id="errorname" style="color: red"></span>
 
                     </div>
@@ -78,14 +76,16 @@
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" id="action" value="">
-                    <button  class="btn btn-primary submitbutton" id="addDrinks" onclick="addDrink()" >Thêm mới</button>
+                    <button type="submit" class="btn btn-primary submitbutton" id="addDrinks" >Thêm mới</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </form>
+    <form id="modal2">
+        <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog " id="modaltheloai" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -97,7 +97,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label  class="col-form-label">Tên thể loại</label>
-                        <input type="email"  class="form-control" id="edittheloai" >
+                        <input   class="form-control" id="edittheloai" >
                         <span id="errorname" style="color: red"></span>
 
                     </div>
@@ -105,14 +105,14 @@
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" id="action" value="">
-                    <button  class="btn btn-primary submitbutton" id="EditDrinks" >Edit</button>
+                    <button type="submit" class="btn btn-primary submitbutton" id="EditDrinks" >Edit</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
 
     </div>
-
+    </form>
 @endsection
 @section('script')
 <script>
@@ -122,6 +122,7 @@
         }
     });
     $( document ).ready(function() {
+        var thisId=0;
         var table= $('#example').DataTable({
             "columnDefs": [
                 {"className": "dt-center", "targets": "_all"}
@@ -145,51 +146,82 @@
 
 
         });
-        $(document).on('click','.edit',function () {
+        $(document).on('click','.delete',function () {
+            if (confirm('Bạn muốn xóa thể loại đồ uống và tất cả các đồ uống thuộc thể loại')){
+                $.ajax({
+                    url:'{{asset("'admin/theloai_douong/delete'")}}',
+                    type:'GET',
+                    data:{id:$(this).val()},
+                    success:function (data) {
+                        alert(data.success);
+                        table.ajax.reload();
+                    }
+                })
+            }
+        });
+        $('#modal2').submit(function (e) {
+            e.preventDefault();
             var _token=$('input[name="_token"]').val();
-            $('.submitbutton').val($(this).val());
-            var placeholder =$(this).attr('placeholder');
-            $('#edittheloai').attr("placeholder",placeholder);
-            alert($(this).val());
-            $('#EditModal').modal('show');
             $.ajax({
                 url: '{{asset("admin/theloai_douong/edit")}}',
                 type: 'POST',
                 dataType: 'json',
-                data: {id:$(this).val(),
-                        _token:_token},
+                data: {id:thisId,
+                    _token:_token,
+                    data: $('#edittheloai').val()
+                },
                 success:function(data){
+                    if(data.errors.length >0){
+                    $('#name').addClass('is-invalid');
+                    $('#errorname').text(data.errors[0].name);
+
+                }else{
+                    alert(data.success);
+                    table.ajax.reload();
+                    $('#EditModal').modal('hide');
+                    $('#modal2')[0].reset();
+                }
 
                 }
             })
+        });
+        $('#modal1').submit(function (e) {
+            e.preventDefault();
+            var _token=$('input[name="_token"]').val();
+            $.ajax({
+                url:'{{asset("admin/theloai_douong/add")}}',
+                type: 'POST',
+                dataType: 'json',
+                data: {name: $("#theloai").val(),_token:_token},
+                success:function (data) {
+                    if(data.errors.length >0){
+                        $('#name').addClass('is-invalid');
+                        $('#errorname').text(data.errors[0].name);
+
+                    }else{
+                        alert(data.success);
+                        table.ajax.reload();
+                        $('#TheLoaiModal').modal('hide');
+                        $('#modal1')[0].reset();
+                    }
+
+                }
+            });
+
+        })
+        $(document).on('click','.edit',function () {
+            $('.submitbutton').val($(this).val());
+            var placeholder =$(this).attr('placeholder');
+            $('#edittheloai').attr("placeholder",placeholder);
+            thisId=$(this).val();
+            $('#EditModal').modal('show');
+
 
 
         });
 
     });
-    function addDrink() {
-        var _token=$('input[name="_token"]').val();
-        $.ajax({
-            url:'{{asset("admin/theloai_douong/add")}}',
-            type: 'POST',
-            dataType: 'json',
-            data: {name: $("#theloai").val(),_token:_token},
-            success:function (data) {
-                if(data.errors.length >0){
-                    $('#name').addClass('is-invalid');
-                    $('#errorname').text(data.errors[0].name);
-                }else{
-                    alert(data.success);
-                    /*table.ajax.reload();
-                    $('#UserModal').modal('hide');
-                    $('#formsubmit')[0].reset();*/
-                }
 
-            }
-        });
-
-
-    }
 
 </script>
 @stop

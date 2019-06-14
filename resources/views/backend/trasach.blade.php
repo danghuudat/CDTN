@@ -160,14 +160,14 @@
                             $('#TraSachModal').modal('hide');
                             var id=data.hoadon;
                             $.ajax({
-                                url:'{{asset("admin/hoadon/hdct")}}',
+                                url:'{{asset("admin/hoadonsach/hdct")}}',
                                 type:'GET',
                                 data:{id:id},
                                 success:function (data) {
 
                                     // $('#HoaDonModal').modal('show');
                                     $('#phieumuon').html(data);
-                                    $('#convert-pdf').html('<a href="{{asset('admin/hoadon/hoadonpdf')}}'+'/'+id+'" target="_blank" class="btn btn-danger"> Convert PDF</a>')
+                                    $('#convert-pdf').html('<a href="{{asset('admin/hoadonsach/hoadonpdf')}}'+'/'+id+'" target="_blank" class="btn btn-danger"> Convert PDF</a>')
                                 }
                             });
 

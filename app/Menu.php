@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Menu extends Model
 {
     protected $table="menu";
-    public function douong_theloai()
+    public function theloai()
     {
-        $this->belongsTo('App\Theloai_Douong');
+        return $this->belongsTo('App\Theloai_Douong','theloai_douong','id');
     }
 }

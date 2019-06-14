@@ -299,7 +299,7 @@
 
 
                 $.ajax({
-                    url:'{{asset("admin/hoadon")}}',
+                    url:'{{asset("admin/hoadonsach")}}',
                     type:'POST',
                     data:{id:$(this).attr('id')},
                     success:function (data) {

@@ -184,10 +184,10 @@
                     </li>
                     <li class="nav-item">
 
-                        <a href="/admin/hoadon" class="nav-link">
+                        <a href="/admin/hoadonsach" class="nav-link">
                             <i class="nav-icon fas fa-coins"></i>
                             <p>
-                                Quản lý hóa đơn
+                                Quản lý hóa đơn Sách
 
                             </p>
                         </a>

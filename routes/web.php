@@ -106,26 +106,52 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
         Route::post('/trasach','Admin\MSTSController@posttrasach');
         Route::get('/phieumuonpdf/{id}','Admin\MSTSController@pdf');
     });
-    Route::group(['prefix'=>'hoadon'],function (){
+    Route::group(['prefix'=>'hoadonsach'],function (){
         Route::get('/','Admin\HoaDonSachController@index');
         route::get('/hdct','Admin\HoaDonSachController@showhdct');
         Route::post('/','Admin\HoaDonSachController@show');
         Route::get('/hoadonpdf/{id}','Admin\HoaDonSachController@pdf');
     });
-    Route::group(['prefix'=>'menu'],function (){
-       Route::get('/','Admin\MenuController@index');
-    });
-    Route::group(['prefix'=>'theloai_douong'],function (){
-        Route::get('/','Admin\Theloai_DouongController@index');
-        Route::get('/data','Admin\Theloai_DouongController@getData');
-        Route::post('/add','Admin\Theloai_DouongController@store');
-        Route::get('/edit','Admin\Theloai_DouongController@edit');
-    });
+
     Route::group(['prefix'=>'thongke'],function (){
         Route::get('/','Admin\ThongKeController@index');
         Route::post('/','Admin\ThongKeController@thongke');
     });
     route::get('/email',function (){
         return view('backend.emailnaptien');
+    });
+    Route::group(['prefix'=>'menu'],function (){
+        Route::get('/','Admin\MenuController@index');
+        Route::get('/data','Admin\MenuController@getData');
+        Route::get('/delete','Admin\MenuController@delete');
+        Route::post('/add','Admin\MenuController@store');
+        Route::get('/getdouong','Admin\MenuController@getdouong');
+        Route::post('/edit','Admin\MenuController@edit');
+
+    });
+    Route::group(['prefix'=>'theloai_douong'],function (){
+        Route::get('/','Admin\Theloai_DouongController@index');
+        Route::get('/data','Admin\Theloai_DouongController@getData');
+        Route::post('/add','Admin\Theloai_DouongController@store');
+        Route::post('/edit','Admin\Theloai_DouongController@edit');
+        Route::get('/delete','Admin\Theloai_DouongController@delete');
+    });
+    Route::group(['prefix'=>'ban'],function (){
+        Route::get('/','Admin\banController@index');
+        Route::get('/data','Admin\banController@getData');
+        Route::post('/orderdrink','Admin\banController@orderdrink');
+        Route::post('/checkcmt','Admin\banController@checkcmt');
+    });
+    Route::group(['prefix'=>'thanhtoan'],function (){
+        Route::get('','Admin\banController@listThanhtoan');
+    });
+    Route::group(['prefix'=>'hoadon'],function (){
+        Route::get('/','Admin\HoaDonCafeController@index');
+        route::get('/hdct','Admin\HoaDonCafeController@showhdct');
+        Route::get('/pdf/{id}','Admin\HoaDonCafeController@pdf');
+    });
+    Route::group(['prefix'=>'thongkecafe'],function (){
+        Route::get('/','Admin\ThongKeCafeController@index');
+        /*        Route::post('/','Admin\ThongKeCafeController@thongke');*/
     });
 });
