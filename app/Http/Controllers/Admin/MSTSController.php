@@ -8,6 +8,7 @@ use App\Http\Resources\MuonTraSach as MTResource;
 use App\MuonSachTraSach;
 use App\Sach;
 use App\User;
+use App\ViTien;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -261,8 +262,15 @@ class MSTSController extends Controller
         $hoadon->nguoitt=Auth::user()->email;
 
         $user=User::find($phieumuon->user_id);
+        $vitien=new ViTien();
         if (($user->tien - $hoadon->tienthanhtoan) >=0){
             $user->tien-=$hoadon->tienthanhtoan;
+            $vitien->tentaikhoan=$user->email;
+            $vitien->ngaynap=date('Y-m-d');
+            $vitien->tiennap=$hoadon->tienthanhtoan;
+            $vitien->status=1;
+            $vitien->nguoinap=Auth::user()->email;
+            $vitien->save();
             $hoadon->save();
             $user->save();
             foreach ($a as $key=> $b){
@@ -316,13 +324,6 @@ class MSTSController extends Controller
             'hoadon'=>$hoadon->id,
             'errors'=>''
         ]);
-
-
-
-
-
-
-
     }
     public function pdf($id){
         $pdf=\App::make('dompdf.wrapper');

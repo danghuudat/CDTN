@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="frontend/css/styles.css">
     <link rel="stylesheet" href="frontend/css/slick.css">
     <link rel="stylesheet" href="frontend/css/slick-theme.css">
+    <!-- DataTables CSS -->
+    <link href="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
     @yield('style')
 </head>
 
@@ -43,9 +49,17 @@
                         <li class="navbar-item">
                             <a href="/cafe" class="nav-link">Cafe</a>
                         </li>
+                        @if(Auth::check())
+                            <li class="navbar-item">
+                                <img width="20px" height="20px" style="border-radius: 50%;border: 1px solid;display: inline-block" src="{{asset('images/'.Auth::user()->hinhanh)}}" alt="">
+                                <a href="@if(Auth::user()->level==0) /profile.html @else / @endif" class="nav-link" style="display: inline-block">{{Auth::user()->name}}</a>
+                                <a href="logoutuser"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            </li>
+                        @else
                         <li class="navbar-item">
                             <a href="/login" class="nav-link">Login</a>
                         </li>
+                            @endif
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
@@ -145,6 +159,10 @@
 <script type="text/javascript" src="frontend/js/slick.min.js"></script>
 <script type="text/javascript" src="frontend/js/slick.js"></script>
 <script src="frontend/js/custom.js"></script>
+<!-- DataTables JavaScript -->
+<script src="bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
     @yield('script')
 </body>
 

@@ -14,6 +14,8 @@ class MuonSachTraSach extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
-
+	public function hoadon(){
+        return $this->hasMany('App\HoaDonSach','muontra_id','id');
+    }
 
 }

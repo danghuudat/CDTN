@@ -2,857 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d6d7dab-d39a-4ab9-a61e-29e4090f6a17" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change beforePath="$PROJECT_DIR$/.env.example" afterPath="$PROJECT_DIR$/.env.example" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/cafethuvien.iml" afterPath="$PROJECT_DIR$/.idea/cafethuvien.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/ChiTietHoaDonSach.php" afterPath="$PROJECT_DIR$/app/ChiTietHoaDonSach.php" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-      <change beforePath="$PROJECT_DIR$/app/HoaDonSach.php" afterPath="$PROJECT_DIR$/app/HoaDonSach.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LogController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LogController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MSTSController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MSTSController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/NXBController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/NXBController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SachController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SachController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TacGiaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TacGiaController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TheLoaiSachController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TheLoaiSachController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Theloai_DouongController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Theloai_DouongController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ThongKeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ThongKeController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Usercontroller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Usercontroller.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VitienController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VitienController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/AuthOrigin.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthOrigin.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/LoggedIn.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/LoggedIn.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/LoggedOut.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/LoggedOut.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/MuonTraSach.php" afterPath="$PROJECT_DIR$/app/Http/Resources/MuonTraSach.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Sach.php" afterPath="$PROJECT_DIR$/app/Http/Resources/Sach.php" />
-      <change beforePath="$PROJECT_DIR$/app/LSNhapHuy.php" afterPath="$PROJECT_DIR$/app/LSNhapHuy.php" />
-      <change beforePath="$PROJECT_DIR$/app/Menu.php" afterPath="$PROJECT_DIR$/app/Menu.php" />
-      <change beforePath="$PROJECT_DIR$/app/MuonSachTraSach.php" afterPath="$PROJECT_DIR$/app/MuonSachTraSach.php" />
-      <change beforePath="$PROJECT_DIR$/app/NhaXuatBan.php" afterPath="$PROJECT_DIR$/app/NhaXuatBan.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
-      <change beforePath="$PROJECT_DIR$/app/Sach.php" afterPath="$PROJECT_DIR$/app/Sach.php" />
-      <change beforePath="$PROJECT_DIR$/app/TacGia.php" afterPath="$PROJECT_DIR$/app/TacGia.php" />
-      <change beforePath="$PROJECT_DIR$/app/TheLoaiSach.php" afterPath="$PROJECT_DIR$/app/TheLoaiSach.php" />
-      <change beforePath="$PROJECT_DIR$/app/Theloai_Douong.php" afterPath="$PROJECT_DIR$/app/Theloai_Douong.php" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change beforePath="$PROJECT_DIR$/app/ViTien.php" afterPath="$PROJECT_DIR$/app/ViTien.php" />
-      <change beforePath="$PROJECT_DIR$/artisan" afterPath="$PROJECT_DIR$/artisan" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" afterPath="$PROJECT_DIR$/config/broadcasting.php" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" afterPath="$PROJECT_DIR$/config/cache.php" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" afterPath="$PROJECT_DIR$/config/hashing.php" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" afterPath="$PROJECT_DIR$/config/logging.php" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" afterPath="$PROJECT_DIR$/config/mail.php" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" afterPath="$PROJECT_DIR$/config/queue.php" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" afterPath="$PROJECT_DIR$/config/session.php" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" afterPath="$PROJECT_DIR$/config/view.php" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" afterPath="$PROJECT_DIR$/database/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_06_174117_create_theloaisach_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_06_174117_create_theloaisach_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_07_182156_create_tacgia_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_07_182156_create_tacgia_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_07_182220_create_nhaxuatban_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_07_182220_create_nhaxuatban_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_08_161555_create_sach_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_08_161555_create_sach_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_11_103725_create_muonsachtrasach_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_11_103725_create_muonsachtrasach_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_121018_create_phieumuon_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_121018_create_phieumuon_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_121817_create_hoadonsach_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_121817_create_hoadonsach_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_124232_create_theloaidouong_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_124232_create_theloaidouong_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_125441_create_douong_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_125441_create_douong_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_130122_create_qlban_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_130122_create_qlban_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_130444_create_ban_douong_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_130444_create_ban_douong_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_17_131014_create_hoadoncafe_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_17_131014_create_hoadoncafe_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_19_173459_create_vitien_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_19_173459_create_vitien_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_21_114130_create_nhaphuysach_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_21_114130_create_nhaphuysach_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_24_153531_create_chitiethds_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_04_24_153531_create_chitiethds_table.php" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change beforePath="$PROJECT_DIR$/public/datatables.css" afterPath="$PROJECT_DIR$/public/datatables.css" />
-      <change beforePath="$PROJECT_DIR$/public/datatables.js" afterPath="$PROJECT_DIR$/public/datatables.js" />
-      <change beforePath="$PROJECT_DIR$/public/datatables.min.css" afterPath="$PROJECT_DIR$/public/datatables.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/datatables.min.js" afterPath="$PROJECT_DIR$/public/datatables.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/adminlte.css" afterPath="$PROJECT_DIR$/public/dist/css/adminlte.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/adminlte.css.map" afterPath="$PROJECT_DIR$/public/dist/css/adminlte.css.map" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/adminlte.min.css" afterPath="$PROJECT_DIR$/public/dist/css/adminlte.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/adminlte.js" afterPath="$PROJECT_DIR$/public/dist/js/adminlte.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/adminlte.min.js" afterPath="$PROJECT_DIR$/public/dist/js/adminlte.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/demo.js" afterPath="$PROJECT_DIR$/public/dist/js/demo.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/pages/dashboard.js" afterPath="$PROJECT_DIR$/public/dist/js/pages/dashboard.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/pages/dashboard2.js" afterPath="$PROJECT_DIR$/public/dist/js/pages/dashboard2.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/pages/dashboard3.js" afterPath="$PROJECT_DIR$/public/dist/js/pages/dashboard3.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chart.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chart.js2" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chart.js2" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.bundle.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.bundle.min.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.min.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/category.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/category.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/linear.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/linear.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/logarithmic.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/logarithmic.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/time.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/cartesian/time.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/labelling.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/labelling.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/radial/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/radial/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/radial/linear.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/radial/linear.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/styling.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/axes/styling.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/area.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/area.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/bar.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/bar.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/bubble.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/bubble.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/doughnut.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/doughnut.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/line.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/line.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/mixed.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/mixed.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/polar.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/polar.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/radar.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/radar.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/scatter.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/charts/scatter.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/animations.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/animations.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/elements.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/elements.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/layout.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/layout.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/legend.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/legend.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/title.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/title.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/tooltip.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/configuration/tooltip.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/api.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/api.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/axes.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/axes.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/charts.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/charts.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/contributing.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/contributing.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/plugins.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/plugins.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/updates.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/developers/updates.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/colors.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/colors.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/device-pixel-ratio.md" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/device-pixel-ratio.md" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/fonts.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/fonts.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/interactions/events.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/interactions/events.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/interactions/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/interactions/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/interactions/modes.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/interactions/modes.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/options.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/options.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/responsive.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/general/responsive.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/installation.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/installation.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/integration.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/integration.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/usage.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/getting-started/usage.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/fonts/fontawesome/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-anchorjs/anchor-style.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-anchorjs/anchor-style.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.min.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.min.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.min.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/style.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-chartjs/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-fontsettings/website.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-fontsettings/website.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-ga/plugin.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-ga/plugin.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-highlight/ebook.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-highlight/ebook.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-highlight/website.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-highlight/website.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-search-plus/jquery.mark.min.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-search-plus/jquery.mark.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-search-plus/search.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-search-plus/search.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-search-plus/search.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-search-plus/search.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-sharing/buttons.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook-plugin-sharing/buttons.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/gitbook.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/style.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/theme.js" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/gitbook/theme.js" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/comparison.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/comparison.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/extensions.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/extensions.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/index.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/license.html" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/notes/license.html" />
-      <change beforePath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/style.css" afterPath="$PROJECT_DIR$/public/dist/js/plugins/chartjs2/docs/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/LICENSE.txt" afterPath="$PROJECT_DIR$/public/fontawesome/LICENSE.txt" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/all.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/all.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/all.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/all.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/brands.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/brands.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/brands.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/brands.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/fontawesome.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/fontawesome.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/fontawesome.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/fontawesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/regular.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/regular.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/regular.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/regular.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/solid.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/solid.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/solid.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/solid.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/svg-with-js.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/svg-with-js.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/svg-with-js.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/svg-with-js.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/v4-shims.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/v4-shims.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/css/v4-shims.min.css" afterPath="$PROJECT_DIR$/public/fontawesome/css/v4-shims.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/all.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/all.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/all.min.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/all.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/brands.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/brands.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/brands.min.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/brands.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/fontawesome.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/fontawesome.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/fontawesome.min.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/fontawesome.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/regular.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/regular.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/regular.min.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/regular.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/solid.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/solid.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/solid.min.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/solid.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/v4-shims.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/v4-shims.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/js/v4-shims.min.js" afterPath="$PROJECT_DIR$/public/fontawesome/js/v4-shims.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_animated.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_animated.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_bordered-pulled.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_bordered-pulled.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_core.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_core.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_fixed-width.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_fixed-width.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_icons.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_icons.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_larger.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_larger.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_list.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_list.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_mixins.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_mixins.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_rotated-flipped.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_rotated-flipped.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_screen-reader.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_screen-reader.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_shims.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_shims.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_stacked.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_stacked.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/_variables.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/_variables.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/brands.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/brands.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/fontawesome.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/fontawesome.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/regular.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/regular.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/solid.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/solid.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/less/v4-shims.less" afterPath="$PROJECT_DIR$/public/fontawesome/less/v4-shims.less" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/metadata/categories.yml" afterPath="$PROJECT_DIR$/public/fontawesome/metadata/categories.yml" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/metadata/icons.json" afterPath="$PROJECT_DIR$/public/fontawesome/metadata/icons.json" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/metadata/icons.yml" afterPath="$PROJECT_DIR$/public/fontawesome/metadata/icons.yml" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/metadata/shims.json" afterPath="$PROJECT_DIR$/public/fontawesome/metadata/shims.json" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/metadata/shims.yml" afterPath="$PROJECT_DIR$/public/fontawesome/metadata/shims.yml" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/metadata/sponsors.yml" afterPath="$PROJECT_DIR$/public/fontawesome/metadata/sponsors.yml" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_animated.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_bordered-pulled.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_core.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_core.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_fixed-width.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_icons.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_larger.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_list.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_list.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_rotated-flipped.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_screen-reader.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_shims.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_shims.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_stacked.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/brands.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/brands.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/fontawesome.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/fontawesome.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/regular.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/regular.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/solid.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/solid.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/scss/v4-shims.scss" afterPath="$PROJECT_DIR$/public/fontawesome/scss/v4-shims.scss" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/sprites/brands.svg" afterPath="$PROJECT_DIR$/public/fontawesome/sprites/brands.svg" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/sprites/regular.svg" afterPath="$PROJECT_DIR$/public/fontawesome/sprites/regular.svg" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/sprites/solid.svg" afterPath="$PROJECT_DIR$/public/fontawesome/sprites/solid.svg" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/webfonts/fa-brands-400.svg" afterPath="$PROJECT_DIR$/public/fontawesome/webfonts/fa-brands-400.svg" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/webfonts/fa-regular-400.svg" afterPath="$PROJECT_DIR$/public/fontawesome/webfonts/fa-regular-400.svg" />
-      <change beforePath="$PROJECT_DIR$/public/fontawesome/webfonts/fa-solid-900.svg" afterPath="$PROJECT_DIR$/public/fontawesome/webfonts/fa-solid-900.svg" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/frontend/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/owl.carousel.min.css" afterPath="$PROJECT_DIR$/public/frontend/css/owl.carousel.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/slick-theme.css" afterPath="$PROJECT_DIR$/public/frontend/css/slick-theme.css" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/slick.css" afterPath="$PROJECT_DIR$/public/frontend/css/slick.css" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/frontend/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/js/jquery.min.js" afterPath="$PROJECT_DIR$/public/frontend/js/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/public/frontend/js/owl.carousel.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/js/slick.js" afterPath="$PROJECT_DIR$/public/frontend/js/slick.js" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/js/slick.min.js" afterPath="$PROJECT_DIR$/public/frontend/js/slick.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/public/js/vue.js" afterPath="$PROJECT_DIR$/public/js/vue.js" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/css/style.css" afterPath="$PROJECT_DIR$/public/login-asset/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab.htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab.htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/cb=gapi.loaded_0" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/cb=gapi.loaded_0" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/dn.js" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/dn.js" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/rs=AItRSTME1S6kXvtQH9VG79Cg4ZjugnGEbQ" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/rs=AItRSTME1S6kXvtQH9VG79Cg4ZjugnGEbQ" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/rs=AItRSTMKqc5EiNNaX4OO0TyVLnbu3Vc0Ag" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/rs=AItRSTMKqc5EiNNaX4OO0TyVLnbu3Vc0Ag" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/rs=AItRSTMKqc5EiNNaX4OO0TyVLnbu3Vc0Ag(1)" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/rs=AItRSTMKqc5EiNNaX4OO0TyVLnbu3Vc0Ag(1)" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/saved_resource.htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/saved_resource.htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(1).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(1).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(2).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(2).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(3).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(3).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(4).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(4).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(5).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(5).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(6).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(6).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(7).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail(7).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail.htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/thumbnail.htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(1).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(1).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(2).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(2).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(3).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(3).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(4).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(4).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(5).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(5).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(6).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(6).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(7).htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title(7).htm" />
-      <change beforePath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title.htm" afterPath="$PROJECT_DIR$/public/login-asset/images/New Tab_files/title.htm" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" afterPath="$PROJECT_DIR$/public/mix-manifest.json" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap-slider/bootstrap-slider.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap-slider/bootstrap-slider.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap-slider/slider.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap-slider/slider.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-grid.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-grid.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-reboot.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap-reboot.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.bundle.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.bundle.min.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/Chart.bundle.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/Chart.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/Chart.bundle.min.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/Chart.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/Chart.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/Chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/Chart.min.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/category.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/category.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/linear.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/linear.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/logarithmic.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/logarithmic.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/time.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/cartesian/time.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/labelling.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/labelling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/radial/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/radial/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/radial/linear.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/radial/linear.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/styling.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/axes/styling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/area.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/area.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/bar.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/bar.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/bubble.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/bubble.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/doughnut.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/doughnut.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/line.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/line.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/mixed.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/mixed.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/polar.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/polar.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/radar.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/radar.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/scatter.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/charts/scatter.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/animations.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/animations.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/elements.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/elements.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/layout.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/layout.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/legend.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/legend.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/title.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/title.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/tooltip.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/configuration/tooltip.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/api.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/api.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/axes.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/axes.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/charts.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/charts.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/contributing.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/contributing.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/plugins.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/plugins.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/updates.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/developers/updates.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/colors.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/colors.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/device-pixel-ratio.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/device-pixel-ratio.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/device-pixel-ratio.md" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/device-pixel-ratio.md" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/fonts.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/fonts.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/interactions/events.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/interactions/events.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/interactions/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/interactions/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/interactions/modes.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/interactions/modes.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/options.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/options.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/responsive.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/general/responsive.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/installation.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/installation.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/integration.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/integration.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/usage.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/getting-started/usage.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/fonts/fontawesome/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/fonts/fontawesome/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-anchorjs/anchor-style.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-anchorjs/anchor-style.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.min.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.bundle.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.min.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.min.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/chartjs-plugin-deferred.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/style.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-chartjs/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-fontsettings/fontsettings.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-fontsettings/website.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-fontsettings/website.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-ga/plugin.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-ga/plugin.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-highlight/ebook.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-highlight/ebook.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-highlight/website.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-highlight/website.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-search-plus/jquery.mark.min.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-search-plus/jquery.mark.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-search-plus/search.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-search-plus/search.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-search-plus/search.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-search-plus/search.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-sharing/buttons.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook-plugin-sharing/buttons.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/gitbook.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/style.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/theme.js" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/gitbook/theme.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/comparison.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/comparison.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/extensions.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/extensions.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/index.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/license.html" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/notes/license.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chart.js/docs/style.css" afterPath="$PROJECT_DIR$/public/plugins/chart.js/docs/style.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chartjs-old/Chart.js" afterPath="$PROJECT_DIR$/public/plugins/chartjs-old/Chart.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/chartjs-old/Chart.min.js" afterPath="$PROJECT_DIR$/public/plugins/chartjs-old/Chart.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/ckeditor/ckeditor.js" afterPath="$PROJECT_DIR$/public/plugins/ckeditor/ckeditor.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/colorpicker/bootstrap-colorpicker.css" afterPath="$PROJECT_DIR$/public/plugins/colorpicker/bootstrap-colorpicker.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/colorpicker/bootstrap-colorpicker.js" afterPath="$PROJECT_DIR$/public/plugins/colorpicker/bootstrap-colorpicker.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/colorpicker/bootstrap-colorpicker.min.css" afterPath="$PROJECT_DIR$/public/plugins/colorpicker/bootstrap-colorpicker.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/dataTables.bootstrap4.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/dataTables.bootstrap4.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/dataTables.bootstrap4.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/dataTables.bootstrap4.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/Readme.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/Readme.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/css/dataTables.autoFill.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/css/dataTables.autoFill.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/css/dataTables.autoFill.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/css/dataTables.autoFill.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/columns.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/columns.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/complete-callback.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/complete-callback.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/fill-both.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/fill-both.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/fill-horizontal.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/fill-horizontal.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/scrolling.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/scrolling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/step-callback.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/examples/step-callback.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/js/dataTables.autoFill.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/js/dataTables.autoFill.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/js/dataTables.autoFill.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/AutoFill/js/dataTables.autoFill.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/License.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/License.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/Readme.md" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/Readme.md" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/alt_insert.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/alt_insert.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/col_filter.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/col_filter.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/colvis.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/colvis.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/fixedcolumns.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/fixedcolumns.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/fixedheader.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/fixedheader.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/jqueryui.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/jqueryui.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/new_init.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/new_init.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/predefined.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/predefined.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/realtime.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/realtime.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/reset.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/reset.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/scrolling.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/scrolling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/server_side.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/server_side.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/state_save.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/examples/state_save.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/License.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/License.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/Readme.md" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/Readme.md" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/css/dataTables.colVis.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/css/dataTables.colVis.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/css/dataTables.colVis.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/css/dataTables.colVis.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/css/dataTables.colvis.jqueryui.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/css/dataTables.colvis.jqueryui.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/button_order.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/button_order.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/exclude_columns.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/exclude_columns.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/group_columns.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/group_columns.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/jqueryui.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/jqueryui.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/mouseover.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/mouseover.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/new_init.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/new_init.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/restore.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/restore.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/text.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/text.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/title_callback.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/title_callback.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/two_tables.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/two_tables.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/two_tables_identical.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/examples/two_tables_identical.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/js/dataTables.colVis.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/js/dataTables.colVis.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/js/dataTables.colVis.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/ColVis/js/dataTables.colVis.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/License.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/License.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/Readme.md" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/Readme.md" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/css/dataTables.fixedColumns.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/css/dataTables.fixedColumns.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/bootstrap.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/bootstrap.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/col_filter.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/col_filter.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/colvis.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/colvis.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/css_size.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/css_size.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/index_column.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/index_column.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/left_right_columns.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/left_right_columns.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/right_column.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/right_column.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/rowspan.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/rowspan.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/server-side-processing.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/server-side-processing.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/size_fixed.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/size_fixed.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/size_fluid.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/size_fluid.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/two_columns.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/examples/two_columns.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/Readme.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/Readme.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/header_footer.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/header_footer.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/top_left_right.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/top_left_right.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/two_tables.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/two_tables.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/zIndexes.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/examples/zIndexes.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/Readme.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/Readme.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/css/dataTables.keyTable.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/css/dataTables.keyTable.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/css/dataTables.keyTable.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/css/dataTables.keyTable.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/events.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/events.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/html.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/html.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/scrolling.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/scrolling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/js/dataTables.keyTable.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/js/dataTables.keyTable.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/js/dataTables.keyTable.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/KeyTable/js/dataTables.keyTable.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/License.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/License.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/css/dataTables.responsive.scss" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/css/dataTables.responsive.scss" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/column-control.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/column-control.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/custom-renderer.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/custom-renderer.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/disable-child-rows.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/disable-child-rows.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/right-column.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/right-column.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/whole-row-control.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/child-rows/whole-row-control.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/auto.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/auto.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/classes.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/classes.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/complexHeader.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/complexHeader.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/fixedHeader.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/fixedHeader.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/init-classes.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/display-control/init-classes.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/ajax.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/ajax.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/className.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/className.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/default.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/default.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/new.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/new.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/option.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/initialisation/option.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/bootstrap.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/bootstrap.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/compact.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/compact.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/foundation.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/foundation.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/scrolling.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/examples/styling/scrolling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/Readme.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/Readme.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/css/dataTables.scroller.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/css/dataTables.scroller.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/api_scrolling.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/api_scrolling.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/data/2500.txt" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/data/2500.txt" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/data/ssp.php" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/data/ssp.php" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/large_js_source.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/large_js_source.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/server-side_processing.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/server-side_processing.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/state_saving.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/examples/state_saving.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/js/dataTables.scroller.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/js/dataTables.scroller.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/Readme.md" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/Readme.md" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/ajax.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/ajax.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/alter_buttons.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/alter_buttons.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/bootstrap.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/bootstrap.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/button_text.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/button_text.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/collection.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/collection.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/defaults.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/defaults.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/index.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/jqueryui.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/jqueryui.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/multi_instance.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/multi_instance.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/multiple_tables.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/multiple_tables.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/new_init.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/new_init.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/pdf_message.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/pdf_message.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/plug-in.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/plug-in.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_column.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_column.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_multi.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_multi.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_os.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_os.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_single.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/select_single.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/simple.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/simple.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/swf_path.html" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/examples/swf_path.html" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.min.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables_themeroller.css" afterPath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables_themeroller.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/bootstrap-datepicker.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/bootstrap-datepicker.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/datepicker3.css" afterPath="$PROJECT_DIR$/public/plugins/datepicker/datepicker3.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ar.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ar.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.az.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.az.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.bg.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.bg.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ca.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ca.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.cs.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.cs.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.cy.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.cy.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.da.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.da.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.de.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.de.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.el.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.el.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.es.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.es.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.et.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.et.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.fa.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.fa.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.fi.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.fi.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.fr.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.fr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.gl.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.gl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.he.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.he.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.hr.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.hr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.hu.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.hu.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.id.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.id.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.is.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.is.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.it.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.it.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ja.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ja.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ka.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ka.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.kk.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.kk.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.kr.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.kr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.lt.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.lt.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.lv.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.lv.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.mk.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.mk.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ms.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ms.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.nb.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.nb.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.nl-BE.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.nl-BE.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.nl.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.nl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.no.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.no.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.pl.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.pl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.pt-BR.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.pt-BR.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.pt.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.pt.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ro.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ro.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.rs-latin.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.rs-latin.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.rs.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.rs.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ru.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ru.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sk.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sk.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sl.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sq.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sq.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sv.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sv.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sw.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.sw.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.th.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.th.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.tr.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.tr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ua.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.ua.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.vi.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.vi.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.zh-TW.js" afterPath="$PROJECT_DIR$/public/plugins/datepicker/locales/bootstrap-datepicker.zh-TW.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/daterangepicker/daterangepicker-bs3.css" afterPath="$PROJECT_DIR$/public/plugins/daterangepicker/daterangepicker-bs3.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/daterangepicker/daterangepicker.js" afterPath="$PROJECT_DIR$/public/plugins/daterangepicker/daterangepicker.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/daterangepicker/moment.js" afterPath="$PROJECT_DIR$/public/plugins/daterangepicker/moment.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/daterangepicker/moment.min.js" afterPath="$PROJECT_DIR$/public/plugins/daterangepicker/moment.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/fastclick/fastclick.js" afterPath="$PROJECT_DIR$/public/plugins/fastclick/fastclick.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/excanvas.js" afterPath="$PROJECT_DIR$/public/plugins/flot/excanvas.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.colorhelpers.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.colorhelpers.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.canvas.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.canvas.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.categories.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.categories.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.crosshair.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.crosshair.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.errorbars.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.errorbars.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.fillbetween.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.fillbetween.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.image.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.image.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.min.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.navigate.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.navigate.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.pie.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.resize.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.selection.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.selection.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.stack.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.stack.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.symbol.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.symbol.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.threshold.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.threshold.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.time.js" afterPath="$PROJECT_DIR$/public/plugins/flot/jquery.flot.time.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/public/plugins/font-awesome/css/font-awesome.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/font-awesome/css/font-awesome.css.map" afterPath="$PROJECT_DIR$/public/plugins/font-awesome/css/font-awesome.css.map" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/public/plugins/font-awesome/css/font-awesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/plugins/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.css" afterPath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.js" afterPath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.min.css" afterPath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.min.js" afterPath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.print.css" afterPath="$PROJECT_DIR$/public/plugins/fullcalendar/fullcalendar.print.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/all.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/all.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/_all.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/_all.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/aero.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/aero.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/blue.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/blue.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/flat.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/flat.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/green.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/green.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/grey.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/grey.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/orange.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/orange.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/pink.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/pink.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/purple.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/purple.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/red.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/red.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/flat/yellow.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/flat/yellow.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/futurico/futurico.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/futurico/futurico.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/icheck.js" afterPath="$PROJECT_DIR$/public/plugins/iCheck/icheck.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/icheck.min.js" afterPath="$PROJECT_DIR$/public/plugins/iCheck/icheck.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/_all.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/_all.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/aero.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/aero.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/blue.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/blue.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/green.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/green.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/grey.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/grey.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/line.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/line.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/orange.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/orange.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/pink.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/pink.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/purple.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/purple.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/red.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/red.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/line/yellow.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/line/yellow.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/_all.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/_all.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/aero.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/aero.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/blue.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/blue.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/green.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/green.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/grey.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/grey.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/minimal.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/minimal.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/orange.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/orange.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/pink.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/pink.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/purple.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/purple.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/red.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/red.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/minimal/yellow.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/minimal/yellow.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/polaris/polaris.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/polaris/polaris.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/_all.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/_all.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/aero.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/aero.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/blue.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/blue.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/green.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/green.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/grey.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/grey.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/orange.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/orange.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/pink.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/pink.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/purple.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/purple.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/red.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/red.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/square.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/square.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/iCheck/square/yellow.css" afterPath="$PROJECT_DIR$/public/plugins/iCheck/square/yellow.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.date.extensions.js" afterPath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.date.extensions.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.extensions.js" afterPath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.extensions.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.js" afterPath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.numeric.extensions.js" afterPath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.numeric.extensions.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.phone.extensions.js" afterPath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.phone.extensions.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.regex.extensions.js" afterPath="$PROJECT_DIR$/public/plugins/input-mask/jquery.inputmask.regex.extensions.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/phone-codes/phone-be.json" afterPath="$PROJECT_DIR$/public/plugins/input-mask/phone-codes/phone-be.json" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/input-mask/phone-codes/phone-codes.json" afterPath="$PROJECT_DIR$/public/plugins/input-mask/phone-codes/phone-codes.json" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.css" afterPath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.min.js" afterPath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.skinFlat.css" afterPath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.skinFlat.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.skinNice.css" afterPath="$PROJECT_DIR$/public/plugins/ionslider/ion.rangeSlider.skinNice.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jQueryUI/jquery-ui.js" afterPath="$PROJECT_DIR$/public/plugins/jQueryUI/jquery-ui.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jQueryUI/jquery-ui.min.js" afterPath="$PROJECT_DIR$/public/plugins/jQueryUI/jquery-ui.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jquery/core.js" afterPath="$PROJECT_DIR$/public/plugins/jquery/core.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jquery/jquery.js" afterPath="$PROJECT_DIR$/public/plugins/jquery/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/public/plugins/jquery/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jquery/jquery.slim.js" afterPath="$PROJECT_DIR$/public/plugins/jquery/jquery.slim.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jquery/jquery.slim.min.js" afterPath="$PROJECT_DIR$/public/plugins/jquery/jquery.slim.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jvectormap/jquery-jvectormap-1.2.2.css" afterPath="$PROJECT_DIR$/public/plugins/jvectormap/jquery-jvectormap-1.2.2.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" afterPath="$PROJECT_DIR$/public/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/knob/jquery.knob.js" afterPath="$PROJECT_DIR$/public/plugins/knob/jquery.knob.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/morris/morris.css" afterPath="$PROJECT_DIR$/public/plugins/morris/morris.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/morris/morris.js" afterPath="$PROJECT_DIR$/public/plugins/morris/morris.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/morris/morris.min.js" afterPath="$PROJECT_DIR$/public/plugins/morris/morris.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/pace/pace.css" afterPath="$PROJECT_DIR$/public/plugins/pace/pace.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/pace/pace.js" afterPath="$PROJECT_DIR$/public/plugins/pace/pace.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/pace/pace.min.js" afterPath="$PROJECT_DIR$/public/plugins/pace/pace.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/esm/popper-utils.js" afterPath="$PROJECT_DIR$/public/plugins/popper/esm/popper-utils.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/esm/popper-utils.min.js" afterPath="$PROJECT_DIR$/public/plugins/popper/esm/popper-utils.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/esm/popper.js" afterPath="$PROJECT_DIR$/public/plugins/popper/esm/popper.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/esm/popper.min.js" afterPath="$PROJECT_DIR$/public/plugins/popper/esm/popper.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/popper-utils.js" afterPath="$PROJECT_DIR$/public/plugins/popper/popper-utils.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/popper-utils.min.js" afterPath="$PROJECT_DIR$/public/plugins/popper/popper-utils.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/popper.js" afterPath="$PROJECT_DIR$/public/plugins/popper/popper.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/popper.min.js" afterPath="$PROJECT_DIR$/public/plugins/popper/popper.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/umd/popper-utils.js" afterPath="$PROJECT_DIR$/public/plugins/popper/umd/popper-utils.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/umd/popper-utils.min.js" afterPath="$PROJECT_DIR$/public/plugins/popper/umd/popper-utils.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/umd/popper.js" afterPath="$PROJECT_DIR$/public/plugins/popper/umd/popper.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/popper/umd/popper.min.js" afterPath="$PROJECT_DIR$/public/plugins/popper/umd/popper.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/az.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/az.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/bg.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/bg.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/ca.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/ca.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/cs.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/cs.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/da.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/da.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/de.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/de.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/en.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/en.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/es.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/es.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/et.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/et.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/eu.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/eu.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/fa.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/fa.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/fi.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/fi.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/fr.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/fr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/gl.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/gl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/he.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/he.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/hi.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/hi.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/hr.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/hr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/hu.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/hu.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/id.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/id.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/is.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/is.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/it.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/it.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/ko.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/ko.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/lt.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/lt.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/lv.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/lv.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/mk.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/mk.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/nb.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/nb.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/nl.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/nl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/pl.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/pl.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/pt-BR.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/pt-BR.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/pt.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/pt.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/ro.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/ro.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/ru.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/ru.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/sk.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/sk.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/sr.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/sr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/sv.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/sv.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/th.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/th.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/tr.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/tr.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/uk.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/uk.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/vi.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/vi.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/zh-CN.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/zh-CN.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/i18n/zh-TW.js" afterPath="$PROJECT_DIR$/public/plugins/select2/i18n/zh-TW.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/select2.css" afterPath="$PROJECT_DIR$/public/plugins/select2/select2.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/select2.full.js" afterPath="$PROJECT_DIR$/public/plugins/select2/select2.full.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/select2.full.min.js" afterPath="$PROJECT_DIR$/public/plugins/select2/select2.full.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/select2.js" afterPath="$PROJECT_DIR$/public/plugins/select2/select2.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/select2/select2.min.js" afterPath="$PROJECT_DIR$/public/plugins/select2/select2.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/slimScroll/jquery.slimscroll.js" afterPath="$PROJECT_DIR$/public/plugins/slimScroll/jquery.slimscroll.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/sparkline/jquery.sparkline.js" afterPath="$PROJECT_DIR$/public/plugins/sparkline/jquery.sparkline.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/sparkline/jquery.sparkline.min.js" afterPath="$PROJECT_DIR$/public/plugins/sparkline/jquery.sparkline.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.css" afterPath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.js" afterPath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.js" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.min.css" afterPath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.min.css" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.min.js" afterPath="$PROJECT_DIR$/public/plugins/timepicker/bootstrap-timepicker.min.js" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" afterPath="$PROJECT_DIR$/public/web.config" />
-      <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" afterPath="$PROJECT_DIR$/resources/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/DashBroad.vue" afterPath="$PROJECT_DIR$/resources/js/components/DashBroad.vue" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/User.vue" afterPath="$PROJECT_DIR$/resources/js/components/User.vue" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" afterPath="$PROJECT_DIR$/resources/sass/app.scss" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/master.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/menu.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/nhaxuatban.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/nhaxuatban.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tacgia.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/tacgia.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/theloai_douong.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/theloai_douong.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/theloaisach.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/theloaisach.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trasach.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/trasach.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/users.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/frontend/register.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" afterPath="$PROJECT_DIR$/routes/channels.php" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" afterPath="$PROJECT_DIR$/routes/console.php" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" afterPath="$PROJECT_DIR$/storage/app/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" afterPath="$PROJECT_DIR$/webpack.mix.js" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -890,21 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2552">
+            <state relative-caret-position="1405">
               <caret line="125" column="59" lean-forward="false" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qlhoadon.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="42" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -913,7 +54,7 @@
       <file leaf-file-name="thongke.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/thongke.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="1166">
               <caret line="53" column="9" lean-forward="false" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
               <folding />
             </state>
@@ -923,7 +64,7 @@
       <file leaf-file-name="hoadonsach.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-990">
+            <state relative-caret-position="0">
               <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="16" />
               <folding>
                 <marker date="1560521133032" expanded="true" signature="9:37" ph="..." />
@@ -935,8 +76,8 @@
       <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="188" column="31" lean-forward="true" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
+            <state relative-caret-position="4136">
+              <caret line="188" column="31" lean-forward="false" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
               <folding>
                 <marker date="1560521286046" expanded="true" signature="332:346" ph="..." />
                 <marker date="1560521286046" expanded="true" signature="369:378" ph="..." />
@@ -957,7 +98,7 @@
       <file leaf-file-name="muontrasach.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
+            <state relative-caret-position="6534">
               <caret line="297" column="43" lean-forward="false" selection-start-line="297" selection-start-column="37" selection-end-line="297" selection-end-column="43" />
               <folding>
                 <marker date="1560521331399" expanded="true" signature="9:25" ph="..." />
@@ -985,17 +126,17 @@
       <file leaf-file-name="searchpm.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/searchpm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1337">
+            <state relative-caret-position="154">
               <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trasach.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trasach.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/trasach.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
+            <state relative-caret-position="3718">
               <caret line="169" column="90" lean-forward="false" selection-start-line="169" selection-start-column="84" selection-end-line="169" selection-end-column="90" />
               <folding>
                 <marker date="1560521453176" expanded="true" signature="9:25" ph="..." />
@@ -1017,7 +158,7 @@
       <file leaf-file-name="hoadonsachct.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/hoadonsachct.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="1012">
               <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
               <folding />
             </state>
@@ -1143,12 +284,12 @@
         <option value="$PROJECT_DIR$/database/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ThongKeController.php" />
         <option value="$PROJECT_DIR$/public/plugins/jquery/moment.js" />
-        <option value="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/thongke.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/trasach.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" />
       </list>
     </option>
   </component>
@@ -1261,7 +402,7 @@
       <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1400" />
@@ -1282,7 +423,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1313,12 +453,13 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/xampp/htdocs/cafethuvien" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/xampp/htdocs/cafethuvien/app/HoaDonSach.php" />
   </component>
@@ -1403,11 +544,13 @@
       <workItem from="1559134244306" duration="1069000" />
       <workItem from="1559187400636" duration="273000" />
       <workItem from="1560521083266" duration="403000" />
+      <workItem from="1560652602258" duration="723000" />
+      <workItem from="1560653542963" duration="360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="507880000" />
+    <option name="totallyTimeSpent" value="508963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1419,17 +562,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27336198" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28141782" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3671783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1746,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="90" column="105" lean-forward="false" selection-start-line="90" selection-start-column="105" selection-end-line="90" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1754,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1782,25 +922,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
-          <caret line="125" column="59" lean-forward="false" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="42" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/thongke.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="1166">
           <caret line="53" column="9" lean-forward="false" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
           <folding />
         </state>
@@ -1808,26 +932,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/hoadonsachct.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="1012">
           <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-990">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="16" />
-          <folding>
-            <marker date="1560521133032" expanded="true" signature="9:37" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="188" column="31" lean-forward="true" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
+        <state relative-caret-position="4136">
+          <caret line="188" column="31" lean-forward="false" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
           <folding>
             <marker date="1560521286046" expanded="true" signature="332:346" ph="..." />
             <marker date="1560521286046" expanded="true" signature="369:378" ph="..." />
@@ -1846,7 +960,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="6534">
           <caret line="297" column="43" lean-forward="false" selection-start-line="297" selection-start-column="37" selection-end-line="297" selection-end-column="43" />
           <folding>
             <marker date="1560521331399" expanded="true" signature="9:25" ph="..." />
@@ -1872,7 +986,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/searchpm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1337">
+        <state relative-caret-position="154">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
@@ -1880,7 +994,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/trasach.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="3718">
           <caret line="169" column="90" lean-forward="false" selection-start-line="169" selection-start-column="84" selection-end-line="169" selection-end-column="90" />
           <folding>
             <marker date="1560521453176" expanded="true" signature="9:25" ph="..." />
@@ -1895,6 +1009,31 @@
             <marker date="1560521453176" expanded="true" signature="5720:5763" ph="..." />
             <marker date="1560521453176" expanded="true" signature="5765:5772" ph="×" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="16" />
+          <folding>
+            <marker date="1560521133032" expanded="true" signature="9:37" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="242" column="50" lean-forward="false" selection-start-line="242" selection-start-column="50" selection-end-line="242" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1405">
+          <caret line="125" column="59" lean-forward="false" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

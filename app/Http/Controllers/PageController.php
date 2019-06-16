@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\HoaDonSach;
+use App\MuonSachTraSach;
 use App\NhaXuatBan;
 use App\Sach;
 use App\TacGia;
 use App\TheLoaiSach;
+use App\User;
+use App\ViTien;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class PageController extends Controller
 {
@@ -227,6 +233,91 @@ class PageController extends Controller
     public function theloaisach($name){
         $tl=TheLoaiSach::where('slug_name_tl','=',$name)->first();
         return view('frontend.theloaisach',compact('tl'));
+    }
+    public function logoutuser(){
+        Auth::logout();
+        return redirect('/');
+    }
+    public function profile(){
+        return view('frontend.profile');
+    }
+    public function editimg(Request $request){
+        $user=User::find(Auth::user()->id);
+        if($request->hasFile('hinhanh')){
+
+            $image = $request->hinhanh;
+            $new_name =str_random() . '.' . $image->getClientOriginalExtension();
+            if($user->hinhanh!='profile.png'){
+                unlink('images/'.$user->hinhanh);
+            }
+            $user->hinhanh=$new_name;
+        }
+        $image->move(public_path('images'), $new_name);
+        $user->save();
+        return response([
+            'success'=>'Bạn đã update thành công'
+        ]);
+    }
+    public function editinfo(Request $request){
+        $error='';
+        $success='';
+        $user=User::find(Auth::user()->id);
+        $user->name=$request->name;
+        $user->diachi=$request->diachi;
+        $user->SDT=$request->sdt;
+        if ($request->oldpw !=null){
+            if (Hash::check($request->oldpw,Auth::user()->password)){
+                $user->password=bcrypt($request->newpw);
+                $success='Bạn đã cập nhật thành công';
+            }else{
+                $error='Mật khẩu hiện tại không đúng vui lòng kiểm tra lại.';
+            }
+        }
+        $success='Bạn đã cập nhật thành công';
+        $user->save();
+        return response([
+            'success'=>$success,
+            'errors'=>$error
+        ]);
+    }
+    public function lichsu(){
+        $lichsu=ViTien::orderBy('ngaynap','DESC')->where('tentaikhoan','=',Auth::user()->email)->get();
+
+        return view('frontend.lichsu',compact('lichsu'));
+    }
+    public function hoadon(){
+        $a=[];
+        $user=User::find(Auth::user()->id);
+        foreach ($user->muontrasach as $pm){
+            foreach ($pm->hoadon as $hd){
+                array_push($a,$hd);
+            }
+        }
+        return view('frontend.hdtt',compact('a'));
+    }
+    public function pdf($id){
+        $pdf=\App::make('dompdf.wrapper');
+        $pdf->loadHTML($this->hoadonct_html($id));
+        return $pdf->stream();
+    }
+    function hoadonct_html($id){
+        $hoadon=HoaDonSach::find($id);
+        return view('backend.pdf_hoadon',compact('hoadon'));
+    }
+    public function phieumuon(){
+        $phieumuon=MuonSachTraSach::where('user_id','=',Auth::user()->id)->get();
+
+        return view('frontend.phieumuon',compact('phieumuon'));
+    }
+    public function pdfpm($id){
+        $pdf=\App::make('dompdf.wrapper');
+        $pdf->loadHTML($this->phieumuonct_html($id));
+        return $pdf->stream();
+    }
+    function phieumuonct_html($id){
+        $phieumuon=MuonSachTraSach::find($id);
+
+        return view('backend.pdf_phieumuon',compact('phieumuon'));
     }
 
 }

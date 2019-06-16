@@ -19,6 +19,13 @@ Route::get('/tacgia/{name}.html','PageController@tacgia');
 Route::get('/nhaxuatban/{name}.html','PageController@nhaxuatban');
 Route::get('/namxb/{name}.html','PageController@namxb');
 Route::get('/theloaisach/{name}.html','PageController@theloaisach');
+Route::get('logoutuser','PageController@logoutuser');
+Route::get('profile.html','PageController@profile');
+Route::get('lichsu.html','PageController@lichsu');
+Route::get('hoadon.html','PageController@hoadon');
+Route::get('hoadon/{id}','PageController@pdf');
+Route::get('phieumuon.html','PageController@phieumuon');
+Route::get('phieumuon/{id}','PageController@pdfpm');
 
 
 Route::get('/register','Admin\LogController@getRegister');
