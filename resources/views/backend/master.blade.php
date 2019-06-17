@@ -182,16 +182,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
 
-                        <a href="/admin/hoadonsach" class="nav-link">
-                            <i class="nav-icon fas fa-coins"></i>
-                            <p>
-                                Quản lý hóa đơn Sách
-
-                            </p>
-                        </a>
-                    </li>
 
                     <li class="nav-item">
 
@@ -204,6 +195,16 @@
                         </a>
                     </li>
                     @if(Auth::user()->level==1)
+                        <li class="nav-item">
+
+                            <a href="/admin/hoadon" class="nav-link">
+                                <i class="nav-icon fas fa-coins"></i>
+                                <p>
+                                    Quản lý hóa đơn
+
+                                </p>
+                            </a>
+                        </li>
                     <li class="nav-item">
 
                         <a href="admin/naptien/lichsu" class="nav-link">
@@ -230,6 +231,18 @@
                             <i class="nav-icon  fas fa-box-open"></i>
                             <p>
                                 Thống kê
+
+                            </p>
+                        </a>
+                    </li>
+                    @endif
+                    @if(Auth::user()->level==2)
+                    <li class="nav-item">
+
+                        <a href="/admin/hoadonnv" class="nav-link">
+                            <i class="nav-icon fas fa-coins"></i>
+                            <p>
+                                Hóa đơn đã tạo
 
                             </p>
                         </a>

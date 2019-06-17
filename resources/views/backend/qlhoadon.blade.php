@@ -59,90 +59,122 @@
 
         </div>
         <hr>
-        <ul class="timeline timeline-inverse">
+        <div class="abcde" >
 
-            <!-- timeline time label -->
-            @foreach($hoadon as $nam =>$values)
-                <li class=" list-group-item  nam" id="">
-                    <b>
-                        Năm {{date('Y',strtotime($nam))}}
-                    </b>
-                </li>
-                <!-- /.timeline-label -->
-                <!-- timeline item -->
-                <ul class=" timeline-inverse" >
-                    @foreach($values->groupBy(function ($item){return $item->created_at->format('m-Y');}) as $thang =>$value)
-                        <li class="list-group-item thang" style="position: relative;margin-bottom: 10px;">
-                            <b>Tháng {{$thang}}</b>
-                        </li>
-                        <ul class="timeline timeline-inverse">
-                            @foreach($value->groupBy(function ($item){return $item->created_at->format('d-m-Y');}) as $ngay => $vl)
-                                <li class="time-label ngay">
-                                    <b style="padding: 5px;display: inline-block;background-color: red;color: whitesmoke;border-radius: 4px;">{{$ngay}}</b>
-                                        <?php
-                                            $tongtien=0;
-                                            $tien=[];
-                                            foreach ($vl as $value){
-                                                array_push($tien,$value->tienthanhtoan);
-                                                $tongtien=array_sum($tien);
+            <div class="row justify-content-center" >
 
-                                            }
+                <div class="col-md-12 ">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a class="nav-link active" href="#hoadonsach1" data-toggle="tab">Hóa Đơn Sách</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#hoadoncafe1" data-toggle="tab">Hóa Đơn Café</a></li>
+                            </ul>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content">
 
-                                        ?>
-                                    <span>Tổng tiền trong ngày: {{number_format($tongtien,0,'.','.')}} VNĐ</span>
-                                </li>
-                                <ul>
+                                <div class="tab-pane active" id="hoadonsach1">
+                                    <ul class="timeline timeline-inverse">
+
+                                        <!-- timeline time label -->
+                                        @foreach($hoadon as $nam =>$values)
+                                            <li class=" list-group-item  nam" id="">
+                                                <b>
+                                                    Năm {{date('Y',strtotime($nam))}}
+                                                </b>
+                                            </li>
+                                            <!-- /.timeline-label -->
+                                            <!-- timeline item -->
+                                            <ul class=" timeline-inverse" >
+                                                @foreach($values->groupBy(function ($item){return $item->created_at->format('m-Y');}) as $thang =>$value)
+                                                    <li class="list-group-item thang" style="position: relative;margin-bottom: 10px;">
+                                                        <b>Tháng {{$thang}}</b>
+                                                    </li>
+                                                    <ul class="timeline timeline-inverse">
+                                                        @foreach($value->groupBy(function ($item){return $item->created_at->format('d-m-Y');}) as $ngay => $vl)
+                                                            <li class="time-label ngay">
+                                                                <b style="padding: 5px;display: inline-block;background-color: red;color: whitesmoke;border-radius: 4px;">{{$ngay}}</b>
+                                                                <?php
+                                                                $tongtien=0;
+                                                                $tien=[];
+                                                                foreach ($vl as $value){
+                                                                    array_push($tien,$value->tienthanhtoan);
+                                                                    $tongtien=array_sum($tien);
+
+                                                                }
+
+                                                                ?>
+                                                                <span>Tổng tiền trong ngày: {{number_format($tongtien,0,'.','.')}} VNĐ</span>
+                                                            </li>
+                                                            <ul>
 
 
 
-                                            <table class=" table table-bordered">
-                                                <tr>
-                                                    <th>Mã hóa đơn</th>
-                                                    <th>TK mượn</th>
-                                                    <th>Ngày mượn</th>
-                                                    <th>Người thanh toán</th>
-                                                    <th></th>
-                                                </tr>
-                                                @foreach ($vl as $value)
-                                                <tr>
-                                                    <td>{{$value->id}}</td>
-                                                    <td width="30%">{{$value->muontra->user->email}}</td>
-                                                    <td>{{date('d-m-Y',strtotime($value->muontra->ngaymuon))}}</td>
-                                                    <td width="30%"> {{$value->nguoitt}}</td>
-                                                    <td width="20%"><button class="btn btn-outline-primary hoadonct" data-id="{{$value->id}}">Chi tiết hóa đơn</button>&nbsp;<button class="btn btn-outline-danger"><i class="fas fa-trash"></i></button></td>
-                                                </tr>
+                                                                <table class=" table table-bordered">
+                                                                    <tr>
+                                                                        <th>Mã hóa đơn</th>
+                                                                        <th>TK mượn</th>
+                                                                        <th>Ngày mượn</th>
+                                                                        <th>Người thanh toán</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                    @foreach ($vl as $value)
+                                                                        <tr>
+                                                                            <td>{{$value->id}}</td>
+                                                                            <td width="30%">{{$value->muontra->user->email}}</td>
+                                                                            <td>{{date('d-m-Y',strtotime($value->muontra->ngaymuon))}}</td>
+                                                                            <td width="30%"> {{$value->nguoitt}}</td>
+                                                                            <td width="20%"><button class="btn btn-outline-primary hoadonct" data-id="{{$value->id}}">Chi tiết hóa đơn</button>&nbsp;<button class="btn btn-outline-danger"><i class="fas fa-trash"></i></button></td>
+                                                                        </tr>
+                                                                    @endforeach
+                                                                </table>
+                                                                {{--<i class=" fa far fa-check-circle bg-success "></i>--}}
+
+                                                                {{--<div class="timeline-item">--}}
+                                                                {{--<span class="time"><i class="fa fa-clock-o"></i>{{date_format($value->created_at,'D,M Y H:i A')}} </span>--}}
+
+                                                                {{--<h3 class="timeline-header"><a href="#" style="color: @if($value->status==1) green @elseif($value->status==2) blue @elseif($value->status==2) red @endif ">Hóa đơn mã phiếu mượn: {{$value->muontra_id}}</a></h3>--}}
+
+                                                                {{--<div class="timeline-body">--}}
+                                                                {{--<table class=" table table-bordered">--}}
+                                                                {{--<td width="30%">TK mượn: {{$value->muontra->user->email}}</td>--}}
+                                                                {{--<td>Ngày mượn: {{date('d-m-Y',strtotime($value->muontra->ngaymuon))}}</td>--}}
+                                                                {{--<td width="30%">Người thanh toán: {{$value->nguoitt}}</td>--}}
+                                                                {{--<td width="20%"><button class="btn btn-outline-primary hoadonct" data-id="{{$value->id}}">Chi tiết hóa đơn</button>&nbsp;<button class="btn btn-outline-danger"><i class="fas fa-trash"></i></button></td>--}}
+                                                                {{--</table>--}}
+
+                                                                {{--</div>--}}
+
+                                                                {{--</div>--}}
+
+
+
+                                                            </ul>
+
+                                                        @endforeach
+                                                    </ul>
                                                 @endforeach
-                                            </table>
-                                            {{--<i class=" fa far fa-check-circle bg-success "></i>--}}
+                                            </ul>
 
-                                            {{--<div class="timeline-item">--}}
-                                                {{--<span class="time"><i class="fa fa-clock-o"></i>{{date_format($value->created_at,'D,M Y H:i A')}} </span>--}}
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <!-- /.tab-pane -->
 
-                                                {{--<h3 class="timeline-header"><a href="#" style="color: @if($value->status==1) green @elseif($value->status==2) blue @elseif($value->status==2) red @endif ">Hóa đơn mã phiếu mượn: {{$value->muontra_id}}</a></h3>--}}
+                                <div class="tab-pane"  id="hoadoncafe1">
 
-                                                {{--<div class="timeline-body">--}}
-                                                    {{--<table class=" table table-bordered">--}}
-                                                        {{--<td width="30%">TK mượn: {{$value->muontra->user->email}}</td>--}}
-                                                        {{--<td>Ngày mượn: {{date('d-m-Y',strtotime($value->muontra->ngaymuon))}}</td>--}}
-                                                        {{--<td width="30%">Người thanh toán: {{$value->nguoitt}}</td>--}}
-                                                        {{--<td width="20%"><button class="btn btn-outline-primary hoadonct" data-id="{{$value->id}}">Chi tiết hóa đơn</button>&nbsp;<button class="btn btn-outline-danger"><i class="fas fa-trash"></i></button></td>--}}
-                                                    {{--</table>--}}
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+            </div>
+        </div>
 
-                                                {{--</div>--}}
-
-                                            {{--</div>--}}
-
-
-
-                                </ul>
-
-                            @endforeach
-                        </ul>
-                    @endforeach
-                </ul>
-
-            @endforeach
-        </ul>
     @endif
     <div class="modal fade bd-example-modal-lg" id="modalhdct" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -240,7 +272,7 @@
             $(document).on('click','.hoadonct',function () {
                 $('#modalhdct').modal('show');
                 $.ajax({
-                    url:'{{asset("admin/hoadonsach/hdct")}}',
+                    url:'{{asset("admin/hoadon/hdct")}}',
                     type:'GET',
                     data:{id:$(this).attr('data-id')},
                     success:function (data) {

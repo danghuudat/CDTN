@@ -6,6 +6,7 @@ use App\ChiTietHoaDonSach;
 use App\HoaDonSach;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use PDF;
 
 class HoaDonSachController extends Controller
@@ -78,7 +79,11 @@ class HoaDonSachController extends Controller
         $hoadon=HoaDonSach::find($id);
         return view('backend.pdf_hoadon',compact('hoadon'));
     }
-
+    public function hoadonnv(){
+        $hoadonsach= HoaDonSach::where('nguoitt','=',Auth::user()->email)->get();
+//        dd($hoadonsach);
+        return view('backend.hoadonnv',compact('hoadonsach'));
+    }
 
 
     /**

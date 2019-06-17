@@ -40,6 +40,7 @@ Route::group(['prefix'=>'admin','middleware'=>['LoggedIn','AuthOrigin']],functio
     route::get('/',function (){
         return view('backend.dashboard');
     });//
+	Route::get('/hoadonnv','Admin\HoaDonSachController@hoadonnv');
     Route::group(['prefix'=>'profile'],function (){
         Route::get('/','Admin\UserController@show');
         Route::post('editimage','Admin\UserController@editImage');
