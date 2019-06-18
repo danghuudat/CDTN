@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d6d7dab-d39a-4ab9-a61e-29e4090f6a17" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/douong.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/ban.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/ban.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/hoadoncafe.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/hoadoncafe.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/hoadonnv.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/hoadonnv.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/msts-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/msts-add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sach.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/sach.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/tacgia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/tacgia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="8d6d7dab-d39a-4ab9-a61e-29e4090f6a17" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/sach.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -91,6 +77,24 @@
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#p#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -212,8 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_04_11_103725_create_muonsachtrasach_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/msts-edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/MuonTraSach.php" />
         <option value="$PROJECT_DIR$/app/HoaDonSach.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_08_161555_create_sach_table.php" />
@@ -263,6 +265,8 @@
         <option value="$PROJECT_DIR$/resources/views/backend/tacgia.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/msts-add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/sach.blade.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -396,6 +400,24 @@
             <path>
               <item name="CDTN" type="b2602c69:ProjectViewProjectNode" />
               <item name="CDTN" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CDTN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDTN" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CDTN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDTN" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CDTN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CDTN" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,12 +520,12 @@
       <workItem from="1560521083266" duration="403000" />
       <workItem from="1560652602258" duration="723000" />
       <workItem from="1560653542963" duration="360000" />
-      <workItem from="1560848802957" duration="8972000" />
+      <workItem from="1560848802957" duration="9223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519262000" />
+    <option name="totallyTimeSpent" value="519513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -520,12 +542,12 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.29500756" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.29500756" />
       <window_info id="Structure" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3666121" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3666121" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32942554" />
@@ -575,20 +597,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/emailnaptien.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/lichsunt.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="80" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/lsnhaphuy.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -983,6 +991,20 @@
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#p#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
