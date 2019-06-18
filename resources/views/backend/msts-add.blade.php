@@ -72,7 +72,10 @@
 
                                 @endforeach
                             </select>
+                            <span id="errorbook" style="color: red;"></span>
+
                         </div>
+
                         <div class="form-group">
                             <label  class="col-form-label">Chọn thời gian mượn:</label>
                             <select class="form-control" name="thoigian" >
@@ -295,7 +298,10 @@
                 var formData= new FormData(this);
                 formData.append('user_id',$('.buttonms').val());
                 formData.append('tiendatcoc',$('#tiendc').val());
+                if($('#sach_id').val().length==0){
+                    $('#errorbook').html("Sách không được để trống");
 
+                }
                 if($('#tienht').val()-$('#tiendc').val()<0){
                     alert('Tiền của tài khoản hiện tại không đủ để đặt cọc.');
                 }else{

@@ -107,6 +107,15 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview ">
+                        <a href="/admin/ban" class="nav-link ">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Đặt đồ uống
+
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item">
 
                         <a href="/admin/user" class="nav-link">
@@ -197,13 +206,30 @@
                     @if(Auth::user()->level==1)
                         <li class="nav-item">
 
-                            <a href="/admin/hoadon" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="nav-icon fas fa-coins"></i>
                                 <p>
                                     Quản lý hóa đơn
+                                    <i class="fa fa-angle-left right"></i>
 
                                 </p>
+
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="admin/hoadonsach" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Hóa đơn sách</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="admin/hoadon" class="nav-link">
+                                        <i class="fa fa-circle-o nav-icon"></i>
+                                        <p>Hóa đơn cafe</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                     <li class="nav-item">
 

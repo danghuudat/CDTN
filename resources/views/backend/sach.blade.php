@@ -195,6 +195,8 @@
                             <label  class="col-sm-2 col-form-label">Giá:</label>
                             <div class="col-sm-4">
                                 <input type="text" name="gia" id="gia" class="form-control">
+                                <span id="errorgia" style="color: red"></span>
+
                             </div>
 
                         </div>
@@ -441,6 +443,7 @@
                 $('#action').val('Add');
                 $('#name').removeClass('is-invalid');
                 $('#errorname').text('');
+                $('#errorgia').text('');
                 $('#gioithieu').removeClass('is-invalid');
                 $('#errorgioithieu').text('');
                 $('#clickimage').attr('src','1.png');
@@ -481,6 +484,7 @@
                         $('#clickimage').attr('src','images/sach/'+data.hinhanh);
                         $('#name').removeClass('is-invalid');
                         $('#errorname').text('');
+                        $('#errorgia').text('');
 
 
 
@@ -507,6 +511,14 @@
             $('#formsubmit').submit(function (e) {
                 e.preventDefault();
                 if($('#action').val()==='Add'){
+                    if($('#name').val()==""){
+                        $('#errorname').html('tên sách không được để trống');
+                        return false;
+                    }
+                    if($('#gia').val()==""){
+                        $('#errorgia').html('gia sách không được để trống');
+                        return false;
+                    }
                     $.ajax({
                         url:'{{asset("admin/book/add")}}',
                         type: 'POST',
@@ -523,6 +535,8 @@
                                 }else{
                                     $('#name').removeClass('is-invalid');
                                     $('#errorname').text('');
+                                    $('#errorgia').text('');
+
                                 }
                             }else{
                                 alert(data.success);
@@ -537,6 +551,15 @@
                 }else if($('#action').val()==='Edit'){
                     var formData=new FormData(this);
                     formData.append('id',$('.submitbutton').val());
+                    if($('#name').val()==""){
+                        $('#errorname').html('tên sách không được để trống');
+                        return false;
+                    }
+                    if($('#gia').val()==""){
+                        $('#errorgia').html('gia sách không được để trống');
+                        return false;
+                    }
+
 
                     $.ajax({
                         url:'{{asset('admin/book/update')}}',
@@ -554,6 +577,8 @@
                                 }else{
                                     $('#name').removeClass('is-invalid');
                                     $('#errorname').text('');
+                                    $('#errorgia').text('');
+
                                 }
 
                             }else{

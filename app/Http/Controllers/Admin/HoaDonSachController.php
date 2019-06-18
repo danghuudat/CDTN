@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\ChiTietHoaDonSach;
+use App\HoadonCafe;
 use App\HoaDonSach;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -82,7 +83,12 @@ class HoaDonSachController extends Controller
     public function hoadonnv(){
         $hoadonsach= HoaDonSach::where('nguoitt','=',Auth::user()->email)->get();
 //        dd($hoadonsach);
-        return view('backend.hoadonnv',compact('hoadonsach'));
+        \Log::info(Auth::user()->id);
+        $hoadoncafe=HoadonCafe::/*join('users','users.id','=','hoadoncafe.user_id_tt')*/
+        where('hoadoncafe.user_id','=',Auth::user()->id)
+            ->get();
+        \Log::info($hoadoncafe);
+        return view('backend.hoadonnv',compact('hoadonsach','hoadoncafe'));
     }
 
 

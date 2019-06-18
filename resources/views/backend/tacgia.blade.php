@@ -79,7 +79,7 @@
                         <div class="form-group">
                             <label  class="col-form-label">Tên Tác giả:</label>
                             <input type="text" class="form-control " id="name" name="name">
-                            <span id="errorname" style="color: red"></span>
+                            <span id="errorname" style="color: red;"></span>
                         </div>
                         <div class="form-group">
                             <label  class="col-form-label">Giới thiệu:</label>
@@ -234,6 +234,10 @@
             $('#formsubmit').submit(function (e) {
                 e.preventDefault();
                 if($('#action').val()==='Add'){
+                    if($("#name").val()==""){
+                        $('#errorname').html("tên tác giả không được để trống");
+                        return false;
+                    }
                     $.ajax({
                         url:'{{asset("admin/book/tacgia/add")}}',
                         type: 'POST',
@@ -264,6 +268,10 @@
                 }else if($('#action').val()==='Edit'){
                     var formData=new FormData(this);
                     formData.append('id',$('.submitbutton').val());
+                    if($("#name").val()==""){
+                        $('#errorname').html("tên tác giả không được để trống");
+                        return false;
+                    }
                     $.ajax({
                         url:'{{asset("admin/book/tacgia/update")}}',
                         type: 'POST',

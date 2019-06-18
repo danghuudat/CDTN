@@ -42,7 +42,7 @@
                                                 <td>{{$hds->muontra_id}}</td>
                                                 <td>{{$hds->muontra->user->email}}</td>
                                                 <td>{{date_format($hds->created_at,'d-m-Y H:i A')}}</td>
-                                                <td><a href="{{asset('admin/hoadon/hoadonpdf/'.$hds->id)}}" target="_blank" class="btn btn-outline-success">Xem chi tiết</a></td>
+                                                <td><a href="{{asset('admin/hoadonsach/hoadonpdf/'.$hds->id)}}" target="_blank" class="btn btn-outline-success">Xem chi tiết</a></td>
 
                                             </tr>
                                             @endforeach
@@ -52,6 +52,34 @@
                                 <!-- /.tab-pane -->
 
                                 <div class="tab-pane"  id="hoadoncafe">
+                                    <table class="table table-bordered" id="tablehdcf">
+                                        <thead>
+                                        <tr>
+                                            <th>Mã Hóa Đơn</th>
+                                            <th>Tên khách hàng</th>
+                                            <th>Ngày mua</th>
+                                            <th>Xem chi tiết</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($hoadoncafe as $hdcf)
+                                            <tr>
+                                                <td>{{$hdcf->id}}</td>
+                                                <td><?php if($hdcf->email==null){
+                                                    echo"khách hàng vô danh";
+                                                    }
+                                                    else{
+                                                        echo($hdcf->email);
+                                                    }?></td>
+                                                <td>{{date_format($hdcf->created_at,'d-m-Y H:i A')}}</td>
+                                                <td><a href="{{asset('admin/hoadon/pdf/'.$hdcf->id)}}" target="_blank" class="btn btn-outline-success">Xem chi tiết</a></td>
+
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.tab-pane -->
 
                                 </div>
                                 <!-- /.tab-pane -->
@@ -74,6 +102,7 @@
                 "columnDefs": [
                     { "orderable": false, "targets": 4 }
                 ]            });
+            $('#tablehdcf').DataTable()
         })
     </script>
 @stop

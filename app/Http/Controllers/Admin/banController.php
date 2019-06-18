@@ -8,6 +8,7 @@ use App\HoadonCafe;
 use App\Menu;
 use App\Theloai_Douong;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -44,19 +45,20 @@ class banController extends Controller
                         'errors'=>$error
                     ]);
                 }
+                $userID = Auth::user();
+                \Log::info($userID);
                 $user[0]->tien-=$tongtien;
                 $user[0]->save();
                 $success="đặt đồ uống thành công";
                 $idUser = HoadonCafe::insertGetId(
-                    ['total' => $tongtien, 'user_id_tt' => $user[0]->id]
+                    ['total' => $tongtien, 'user_id_tt' => $user[0]->id,'user_id'=>$userID->id]
                 );
-                \Log::info($idUser);
                 for($i=0;$i<sizeof($request['douong']);$i++){
                     $id=str_replace('douong_','',$request['douong'][$i]['id']);
                     Ban_douong::insert(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);
 
                 }
-                 return response([
+                return response([
                     'success'=>$success,
                     'name'=>$user
                 ]);
@@ -70,25 +72,26 @@ class banController extends Controller
         }
         else{
             $tongtien=0;
-                for($i=0;$i<sizeof($request['douong']);$i++){
-                    $id=str_replace('douong_','',$request['douong'][$i]['id']);
-                    $giatien=Menu::find($id);
-                    $tongtien+=$request['douong'][$i]['soluong']*$giatien->gia;
+            for($i=0;$i<sizeof($request['douong']);$i++){
+                $id=str_replace('douong_','',$request['douong'][$i]['id']);
+                $giatien=Menu::find($id);
+                $tongtien+=$request['douong'][$i]['soluong']*$giatien->gia;
 
-                }
-                $idUser = HoadonCafe::insertGetId(
-                    ['total' => $tongtien, 'user_id_tt' => null]
-                );
+            }
+            $userID = Auth::user();
+            \Log::info($userID);
+            $idUser = HoadonCafe::insertGetId(
+                ['total' => $tongtien, 'user_id_tt' => null,'user_id'=>$userID->id]
+            );
             for($i=0;$i<sizeof($request['douong']);$i++){
                 $id=str_replace('douong_','',$request['douong'][$i]['id']);
                 Ban_douong::insert(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);
 
             }
-                $success="đặt đồ uống thành công";
-                \Log::info($idUser);
-                return response([
-                    'success'=>$success,
-                ]);
+            $success="đặt đồ uống thành công";
+            return response([
+                'success'=>$success,
+            ]);
 
         }
     }

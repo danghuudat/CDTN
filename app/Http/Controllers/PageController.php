@@ -7,6 +7,7 @@ use App\MuonSachTraSach;
 use App\NhaXuatBan;
 use App\Sach;
 use App\TacGia;
+use App\Theloai_Douong;
 use App\TheLoaiSach;
 use App\User;
 use App\ViTien;
@@ -20,6 +21,10 @@ class PageController extends Controller
         $sach=Sach::orderBy('solanmuon','DESC')->take(10)->get();
 
         return view('frontend.trangchu',compact('sach'));
+    }
+    public function cafe(){
+        $douong_theloai=Theloai_Douong::all();
+        return view('frontend.douong',compact('douong_theloai'));
     }
     public function thuvien(){
         $sachnoibat=Sach::where('noibat','=','1')->inRandomOrder()->get();

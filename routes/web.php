@@ -12,6 +12,7 @@
 */
 
 Route::get('/','PageController@index');
+Route::get('/cafe','PageController@cafe');
 Route::get('/thuvien','PageController@thuvien');
 Route::post('/loadmore_tv','PageController@loadmore_tv');
 Route::get('/thuvien/{name}.html','PageController@sachinfo');
@@ -26,6 +27,7 @@ Route::get('hoadon.html','PageController@hoadon');
 Route::get('hoadon/{id}','PageController@pdf');
 Route::get('phieumuon.html','PageController@phieumuon');
 Route::get('phieumuon/{id}','PageController@pdfpm');
+
 
 
 Route::get('/register','Admin\LogController@getRegister');

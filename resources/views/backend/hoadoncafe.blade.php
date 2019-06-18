@@ -121,7 +121,10 @@
                                                 ?>
 
                                                 <td width="30%">{{$value->created_at}}</td>
-                                                <td></td>
+                                                <?php
+                                                $username=\Illuminate\Support\Facades\DB::table('users')->find($value->user_id);
+                                                echo "<td style='width= 30%'>".$username->name."</td>";
+                                                ?>
                                                 <td width="20%"><button class="btn btn-outline-primary hoadonct"  data-id="{{$value->id}}">Chi tiết hóa đơn</button></td>
                                             </tr>
                                         @endforeach
