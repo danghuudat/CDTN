@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d6d7dab-d39a-4ab9-a61e-29e4090f6a17" name="Default" comment="" />
+    <list default="true" id="8d6d7dab-d39a-4ab9-a61e-29e4090f6a17" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,45 +29,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="90" column="48" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="48" />
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SachController.php">
+        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-06-22.log">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="33" />
+            <state relative-caret-position="4658">
+              <caret line="274" column="50" selection-start-line="274" selection-start-column="50" selection-end-line="274" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/msts-add.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="303" column="17" selection-start-line="303" selection-start-column="17" selection-end-line="303" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/sach-info.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="58" column="99" selection-start-line="58" selection-start-column="99" selection-end-line="58" selection-end-column="99" />
-              <folding>
-                <element signature="e#1895#1945#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="1683">
+              <caret line="99" column="77" selection-start-line="99" selection-start-column="77" selection-end-line="99" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/logs/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -71,12 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/sach.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="9826">
               <caret line="578" column="61" selection-start-line="578" selection-start-column="36" selection-end-line="578" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#p#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,12 +92,12 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -102,42 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/tacgia.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="4029">
               <caret line="237" column="44" selection-start-line="237" selection-end-line="238" />
-              <folding>
-                <element signature="e#90#96#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-06-18.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="2706" lean-forward="true" selection-start-line="7" selection-start-column="2706" selection-end-line="7" selection-end-column="2706" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/hoadoncafe.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="124" column="126" selection-start-line="124" selection-start-column="126" selection-end-line="124" selection-end-column="126" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -153,16 +126,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hoado</find>
-      <find>quản lý sách</find>
-      <find>Đặt đồ uống</find>
-      <find>hoadonpdf</find>
-      <find>tablehds</find>
       <find>tablehcf</find>
       <find>hoadonnv</find>
       <find>tablehdcf</find>
       <find>checkcmt()</find>
-      <find>hoadon</find>
       <find>admin</find>
       <find>banc</find>
       <find>checkcmt</find>
@@ -183,6 +150,12 @@
       <find>update</find>
       <find>errorname</find>
       <find>$('#errorname').text('');</find>
+      <find>dash</find>
+      <find>hoadon</find>
+      <find>giới thiệu về lightbook</find>
+      <find>hoadonct</find>
+      <find>reg</find>
+      <find>profile</find>
     </findStrings>
     <replaceStrings>
       <replace>Modalnhaxuatban</replace>
@@ -216,8 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Resources/MuonTraSach.php" />
-        <option value="$PROJECT_DIR$/app/HoaDonSach.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_08_161555_create_sach_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/Sach.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/VitienController.php" />
@@ -243,7 +214,6 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/nhaxuatban.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/namxb.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/thuvien.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" />
         <option value="$PROJECT_DIR$/database/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ThongKeController.php" />
         <option value="$PROJECT_DIR$/public/plugins/jquery/moment.js" />
@@ -251,8 +221,6 @@
         <option value="$PROJECT_DIR$/resources/views/backend/hoadonsach.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/trasach.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/douong.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PageController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
@@ -267,6 +235,11 @@
         <option value="$PROJECT_DIR$/resources/views/backend/sach.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/storage/logs/.gitignore" />
+        <option value="$PROJECT_DIR$/resources/views/backend/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" />
+        <option value="$PROJECT_DIR$/storage/logs/laravel-2019-06-22.log" />
       </list>
     </option>
   </component>
@@ -389,7 +362,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -430,12 +402,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/xampp/htdocs/cafethuvien/app/HoaDonSach.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cdtn2/CDTN" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -520,12 +493,14 @@
       <workItem from="1560521083266" duration="403000" />
       <workItem from="1560652602258" duration="723000" />
       <workItem from="1560653542963" duration="360000" />
-      <workItem from="1560848802957" duration="9223000" />
+      <workItem from="1560848802957" duration="10636000" />
+      <workItem from="1561086859874" duration="1448000" />
+      <workItem from="1561205967473" duration="959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519513000" />
+    <option name="totallyTimeSpent" value="523333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,9 +517,8 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.29500756" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.30408472" />
       <window_info id="Structure" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3666121" />
@@ -556,6 +530,7 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32942554" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Database" order="0" weight="0.32975295" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -597,18 +572,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/lsnhaphuy.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-989" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/msts-edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-307">
@@ -735,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="90" column="105" selection-start-line="90" selection-start-column="105" selection-end-line="90" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -760,13 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="242" column="50" selection-start-line="242" selection-start-column="50" selection-end-line="242" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -814,16 +763,6 @@
           <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding>
             <element signature="e#1705#1723#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="n#ul#0;n#li#2;n#ul#0;n#nav#0;n#div#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -900,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MSTSController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -938,66 +870,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/tacgia.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SachController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="237" column="44" selection-start-line="237" selection-end-line="238" />
-          <folding>
-            <element signature="e#90#96#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/msts-add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
+        <state relative-caret-position="5151">
           <caret line="303" column="17" selection-start-line="303" selection-start-column="17" selection-end-line="303" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="90" column="48" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SachController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/sach-info.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="935">
           <caret line="58" column="99" selection-start-line="58" selection-start-column="99" selection-end-line="58" selection-end-column="99" />
-          <folding>
-            <element signature="e#1895#1945#0#HTML" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4658">
+          <caret line="274" column="50" selection-start-line="274" selection-start-column="50" selection-end-line="274" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="99" column="77" selection-start-line="99" selection-start-column="77" selection-end-line="99" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/sach.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="9826">
           <caret line="578" column="61" selection-start-line="578" selection-start-column="36" selection-end-line="578" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1005,6 +937,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/tacgia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4029">
+          <caret line="237" column="44" selection-start-line="237" selection-end-line="238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-06-22.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="36" />
         </state>
       </provider>
     </entry>

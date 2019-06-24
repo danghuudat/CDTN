@@ -67,7 +67,7 @@
             <p>It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
             <div class="btn-sec">
                 <a href="frontend/about.html" class="btn yellow">Xem thêm</a>
-                <a href="frontend/login.html" class="btn black">Đăng ký</a>
+                <a href="{{asset('register')}}" class="btn black">Đăng ký</a>
             </div>
         </div>
     </section>
