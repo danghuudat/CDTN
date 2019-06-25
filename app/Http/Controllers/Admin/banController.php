@@ -8,6 +8,7 @@ use App\HoadonCafe;
 use App\Menu;
 use App\Theloai_Douong;
 use App\User;
+use App\ViTien;
 use Illuminate\Support\Facades\Auth;
 use Validator;
 use Illuminate\Http\Request;
@@ -46,13 +47,13 @@ class banController extends Controller
                     ]);
                 }
                 $userID = Auth::user();
-                \Log::info($userID);
-                $user[0]->tien-=$tongtien;
                 $user[0]->save();
                 $success="đặt đồ uống thành công";
                 $idUser = HoadonCafe::insertGetId(
-                    ['total' => $tongtien, 'user_id_tt' => $user[0]->id,'user_id'=>$userID->id]
+                    ['total' => $tongtien, 'user_id_tt' => $user[0]->id,'user_id'=>$userID->id,'created_at'=>date('Y-m-d H:i:s')]
                 );
+                $user=User::find($user[0]->id);
+                ViTien::insert(['tiennap'=>$tongtien,'ngaynap'=>date("Y-m-d"),'status'=>2,'tentaikhoan'=>$user->email,'nguoinap'=>Auth::user()->email]);
                 for($i=0;$i<sizeof($request['douong']);$i++){
                     $id=str_replace('douong_','',$request['douong'][$i]['id']);
                     Ban_douong::insert(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);

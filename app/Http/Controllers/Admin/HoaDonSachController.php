@@ -22,8 +22,11 @@ class HoaDonSachController extends Controller
         $hoadon=HoaDonSach::orderBy('id','DESC')->get()->groupBy(function ($item){
             return $item->created_at->format('Y');
         });
+        $hoadoncf=HoadonCafe::orderBy('id','DESC')->get()->groupBy(function ($item){
+            return $item->created_at->format('Y');
+        });
 
-        return view('backend.qlhoadon',compact('hoadon'));
+        return view('backend.qlhoadon',compact('hoadon','hoadoncf'));
     }
 
     /**

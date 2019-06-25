@@ -99,88 +99,24 @@
             </div>
         </div>
     </section>
-    <section class="features-sec">
-        <div class="container">
-            <ul>
-                <li>
-                    <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                    <h3>Đăng ký gói vàng</h3>
-                    <h5>Safe Shopping Guarantee</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-                <li>
-                    <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
-                    <h3>Đăng ký gói bạc</h3>
-                    <h5>Moneyback guarantee</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-                <li>
-                    <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                    <h3>Đăng ký gói đồng</h3>
-                    <h5>online Consultations</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="offers-sec" style="background:url(frontend/images/offers.jpg)no-repeat;">
-        <div class="cover"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail">
-                        <h3>Quảng cáo</h3>
-                        <h6>We are now offering some good discount
-                            on selected books go and shop them</h6>
-                        <a href="frontend/products.html" class="btn blue-btn">Xem chi tiết</a>
-                        <span class="icon-point percentage">
-                            <img src="frontend/images/precentagae.png" alt="">
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="detail">
-                        <h3>Quảng cáo</h3>
-                        <h6>We are now offering some good discount
-                            on selected books go and shop them</h6>
-                        <a href="frontend/products.html" class="btn blue-btn">Xem chi tiết</a>
-                        <span class="icon-point amount"><img src="frontend/images/amount.png" alt=""></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="testimonial-sec">
         <div class="container">
             <div id="testimonal" class="owl-carousel owl-theme">
                 <div class="item">
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
                     <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
+                        <h4 class="author">Đặng Hữu Đạt</h4>
+                        <span class="country">Hà Nội</span>
                     </div>
                 </div>
                 <div class="item">
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
                     <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
+                        <h4 class="author">Đặng Ngọc Ánh</h4>
+                        <span class="country">Hà Nội</span>
                     </div>
                 </div>
-                <div class="item">
-                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
-                    <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
-                    <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
-                    </div>
-                </div>
+
             </div>
         </div>
         <div class="left-quote">

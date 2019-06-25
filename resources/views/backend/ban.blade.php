@@ -237,7 +237,7 @@
                                     $('#HoaDonModal').modal('show');
 
 
-                                    document.getElementById("tenkhachhang").innerHTML = data.name[0]['name'];
+                                    document.getElementById("tenkhachhang").innerHTML = data.name['name'];
                                     var dateObj = new Date();
                                     var month = dateObj.getUTCMonth() + 1; //months from 1-12
                                     var day = dateObj.getUTCDate();
@@ -426,13 +426,8 @@
                                     $('#DoUong').modal('hide');
                                     $('#Ban').modal('hide');
                                     $('#hoadon').modal('show');
-
-
                                 }
                             })
-
-
-
                         }
                     })
                 }
