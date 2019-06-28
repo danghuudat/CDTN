@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d6d7dab-d39a-4ab9-a61e-29e4090f6a17" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/ban.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/ban.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/lichsu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/lichsu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" afterDir="false" />
     </list>
@@ -37,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="2431">
               <caret line="152" column="52" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="52" />
             </state>
           </provider>
@@ -46,30 +41,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="714">
               <caret line="52" column="126" selection-start-line="52" selection-start-column="126" selection-end-line="52" selection-end-column="126" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/lichsu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-              <folding>
-                <element signature="e#652#699#0#HTML" expanded="true" />
-                <element signature="e#700#732#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonCafeController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="32" />
+            <state relative-caret-position="4709">
+              <caret line="288" column="103" selection-start-line="288" selection-start-column="103" selection-end-line="288" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -77,32 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="518" column="14" lean-forward="true" selection-start-line="518" selection-start-column="14" selection-end-line="518" selection-end-column="14" />
-              <folding>
-                <element signature="e#10042#10089#0#HTML" expanded="true" />
-                <element signature="e#10636#10738#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="e#17680#17687#1#HTML" expanded="true" />
-                <element signature="e#18576#18583#1#HTML" expanded="true" />
-                <element signature="e#19151#19175#0#HTML" expanded="true" />
-                <element signature="e#20209#20252#0#HTML" expanded="true" />
-                <element signature="e#20304#20333#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="8806">
+              <caret line="518" column="14" selection-start-line="518" selection-start-column="14" selection-end-line="518" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -110,16 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/ban.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="4063">
               <caret line="239" column="97" selection-start-line="239" selection-start-column="97" selection-end-line="239" selection-end-column="97" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -132,17 +91,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="102" column="7" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+            <state relative-caret-position="1632">
+              <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="105" column="172" selection-start-line="105" selection-start-column="172" selection-end-line="105" selection-end-column="172" />
+            <state relative-caret-position="85">
+              <caret line="49" selection-start-line="49" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -150,18 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="101" column="473" selection-start-line="101" selection-start-column="473" selection-end-line="101" selection-end-column="473" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#h6#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h6#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h6#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h6#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#1;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#2;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1071">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -177,8 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TÊn tác giả</find>
-      <find>Thêm mới</find>
       <find>submitbutton</find>
       <find>add</find>
       <find>/checkcmt</find>
@@ -207,6 +154,8 @@
       <find>document.getElementById(&quot;tenkhachhang&quot;).innerHTM</find>
       <find>checkcm</find>
       <find>hdct</find>
+      <find>frontend.lichsu</find>
+      <find>tìm kiếm</find>
     </findStrings>
     <replaceStrings>
       <replace>Modalnhaxuatban</replace>
@@ -271,7 +220,6 @@
         <option value="$PROJECT_DIR$/resources/views/backend/muontrasach.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/trasach.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/douong.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PageController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/hoadonnv.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/hoadoncafe.blade.php" />
@@ -284,13 +232,14 @@
         <option value="$PROJECT_DIR$/storage/logs/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/backend/master.blade.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-06-22.log" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/ban.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/lichsu.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php" />
       </list>
     </option>
   </component>
@@ -471,7 +420,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/xampp/htdocs/cafethuvien/app/HoaDonSach.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eb/energybuilder" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -560,12 +509,13 @@
       <workItem from="1561086859874" duration="1448000" />
       <workItem from="1561205967473" duration="959000" />
       <workItem from="1561357210402" duration="1913000" />
-      <workItem from="1561426484165" duration="6063000" />
+      <workItem from="1561426484165" duration="7843000" />
+      <workItem from="1561442881307" duration="79000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="531309000" />
+    <option name="totallyTimeSpent" value="533168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,18 +528,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.31316188" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.31770045" />
       <window_info id="Structure" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.3666121" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.3666121" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info active="true" anchor="bottom" id="Find" order="5" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -937,13 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/thongkecafe.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -962,108 +904,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="105" column="172" selection-start-line="105" selection-start-column="172" selection-end-line="105" selection-end-column="172" />
+        <state relative-caret-position="2431">
+          <caret line="152" column="52" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/master.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="101" column="473" selection-start-line="101" selection-start-column="473" selection-end-line="101" selection-end-column="473" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#h6#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h6#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h6#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h6#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#0;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#1;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#2;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="714">
+          <caret line="52" column="126" selection-start-line="52" selection-start-column="126" selection-end-line="52" selection-end-column="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/lichsu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="102" column="7" lean-forward="true" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4709">
+          <caret line="288" column="103" selection-start-line="288" selection-start-column="103" selection-end-line="288" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8806">
+          <caret line="518" column="14" selection-start-line="518" selection-start-column="14" selection-end-line="518" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/ban.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4063">
+          <caret line="239" column="97" selection-start-line="239" selection-start-column="97" selection-end-line="239" selection-end-column="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/web.config">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HoaDonSachController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="152" column="52" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="52" />
+        <state relative-caret-position="1632">
+          <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/ban.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="239" column="97" selection-start-line="239" selection-start-column="97" selection-end-line="239" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1071">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/banController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/trangchu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" column="126" selection-start-line="52" selection-start-column="126" selection-end-line="52" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/qlhoadon.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="518" column="14" lean-forward="true" selection-start-line="518" selection-start-column="14" selection-end-line="518" selection-end-column="14" />
-          <folding>
-            <element signature="e#10042#10089#0#HTML" expanded="true" />
-            <element signature="e#10636#10738#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="e#17680#17687#1#HTML" expanded="true" />
-            <element signature="e#18576#18583#1#HTML" expanded="true" />
-            <element signature="e#19151#19175#0#HTML" expanded="true" />
-            <element signature="e#20209#20252#0#HTML" expanded="true" />
-            <element signature="e#20304#20333#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/lichsu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="e#652#699#0#HTML" expanded="true" />
-            <element signature="e#700#732#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="49" selection-start-line="49" selection-end-line="50" />
         </state>
       </provider>
     </entry>

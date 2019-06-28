@@ -61,10 +61,7 @@
                         </li>
                             @endif
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-                        <span class="fa fa-search"></span>
-                    </form>
+
                 </div>
             </nav>
         </div>
