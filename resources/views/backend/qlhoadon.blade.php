@@ -125,7 +125,7 @@
                                                                             <td width="30%">{{$value->muontra->user->email}}</td>
                                                                             <td>{{date('d-m-Y',strtotime($value->muontra->ngaymuon))}}</td>
                                                                             <td width="30%"> {{$value->nguoitt}}</td>
-                                                                            <td width="20%"><button class="btn btn-outline-primary hoadonct" data-id="{{$value->id}}">Chi tiết hóa đơn</button>&nbsp;<button class="btn btn-outline-danger"><i class="fas fa-trash"></i></button></td>
+                                                                            <td width="20%"><button class="btn btn-outline-primary hoadonct" data-id="{{$value->id}}">Chi tiết hóa đơn</button></td>
                                                                         </tr>
                                                                     @endforeach
                                                                 </table>
@@ -498,7 +498,14 @@
             $(document).on('click','.hoadonctcf',function () {
                 $("#bodyhoadon").html("");
                 $("#tongtien").html("");
+                $("#mahoadon").html("");
+                $("#ngaymua").html("");
+                $("#taikhoan").html("");
                 var id=$(this).attr('data-id');
+                $("#mahoadon").append("Mã hóa đơn :"+id);
+
+                $('#modalhdctcf').modal('show');
+
                 $.ajax({
                     url:'{{asset("admin/hoadon/hdct")}}',
                     type:'GET',
@@ -507,13 +514,19 @@
                         console.log(data)
                         var i=1;
                         $.each( data['hoadon'], function( index, value ){
-                            i+=1;
+
                             $("#bodyhoadon").append("<tr><td scope='row'>"+i+"</td><td style='font-size: 16px'>"+value.tendouong+"</td><td style='font-size: 16px'>"+value.soluong+"</td><td style='font-size: 16px'>"+value.gia+"</td><td style='font-size: 16px'>"+value.gia*value.soluong+"</td></tr>")
+                            i+=1;
                         })
                         $("#tongtien").append(data['hoadon'][0]['total']+' VNĐ');
                         $("#convert-pdf").attr('data-id',id)
-                        $('#modalhdctcf').modal('show');
-
+                        $("#ngaymua").append("Ngày mua: "+data['hoadon'][0]['created_at']);
+                        if(data['hoadon'][0]['name']!=null){
+                            $("#taikhoan").append("Tài khoản: "+data['hoadon'][0]['name']);
+                        }
+                        else{
+                            $("#taikhoan").append("Tài khoản: Khách hàng vô danh");
+                        }
                     }
                 })
             })

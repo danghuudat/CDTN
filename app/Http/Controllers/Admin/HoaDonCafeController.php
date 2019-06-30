@@ -24,6 +24,8 @@ class HoaDonCafeController extends Controller
     {
         $hoadon=HoadonCafe::join('ban_douong','ban_douong.hoadoncafe_id','=','hoadoncafe.id')
             ->join('menu','menu.id','=','ban_douong.douong_id')
+            ->leftjoin('users','hoadoncafe.user_id_tt','=','users.id')
+            ->select('users.email','users.name','menu.tendouong','ban_douong.soluong','menu.gia','hoadoncafe.total','hoadoncafe.created_at')
             ->where('hoadoncafe_id','=',$request->id)->get();
         \Log::info($hoadon);
 //        return $hoadon;
