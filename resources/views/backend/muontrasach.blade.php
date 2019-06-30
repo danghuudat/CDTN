@@ -101,7 +101,8 @@
         </tr>
         </thead>
     </table>
-    <div class="modal fade bd-example-modal-lg" id="MTSModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+   
+    <div class="modal fade bd-example-modal-lg" id="MTSModal"  role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -128,7 +129,32 @@
             </div>
         </div>
     </div>
+ <div class="modal fade" id="naptienModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formnaptien">
+                        <div class="form-group">
+                            <label  class="col-form-label">Số tiền:</label>
+                            <input type="text" class="form-control " id="tiennap">
 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary buttonnt" value="" ></button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 @endsection
 @section('script')
     <script>
@@ -160,10 +186,10 @@
                         $('#tiencoc').html('Số tiền phải đặt cọc: <span style="color:red"> '+data.toString().replace(
                             /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ</span>');
                         $('#tiendc').val(data);
-
-                        if ($('#tienht').val() >$('#tiendc').val()){
-                            $('.formnt').show();
-                        }
+                        if ($('#tienht').val()-$('#tiendc').val()<0){
+                          $('.formnt').show();
+                       }
+                        
                     }
                 })
 
@@ -179,7 +205,8 @@
                         $('#tiencoc').html('Tiền đặt cọc: <span style="color:red"> '+data.toString().replace(
                             /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ</span>');
                         $('#tiendc').val(data);
-                        if ($('#tienht').val()>$('#tiendc').val()){
+                        
+                        if ($('#tienht').val()-$('#tiendc').val()>0){
                             $('.formnt').hide();
                         }
                     }
@@ -233,26 +260,20 @@
                         if (row.tinhtrang==0) {
                             if (row.tra>0){
                                 return '<button class="btn btn-outline-info phieumuon" value="' + row.id + '">Phiếu mượn</button>&nbsp<!-- Example single danger button -->\n' +
-                                    '<div class="btn-group">\n' +
-                                    '  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
-                                    '    Hành động\n' +
-                                    '  </button>\n' +
-                                    '  <div class="dropdown-menu">\n' +
-                                    '    <a class="dropdown-item hoadon"  id="' + row.id + '">Hóa đơn</a>\n' +
-                                    '    <a class="dropdown-item giahan" href="" id="' + row.id + '">Gia hạn</a>\n' +
-                                    '  </div>\n' +
+                                    
+                                    
+                                    '    <a class="btn btn-outline-info hoadon"  id="' + row.id + '">Hóa đơn</a>\n' +
+                                
+                                    
                                     '</div> @if(Auth::user()->level==1)<button class="btn btn-danger delete" value="' + row.id + '"><i class="fas fa-trash-alt"></i></button>@endif';
                             }else{
                                 return '<button class="btn btn-outline-info phieumuon" value="' + row.id + '">Phiếu mượn</button>&nbsp<!-- Example single danger button -->\n' +
-                                    '<div class="btn-group">\n' +
-                                    '  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
-                                    '    Hành động\n' +
-                                    '  </button>\n' +
-                                    '  <div class="dropdown-menu">\n' +
-                                    '    <a class="dropdown-item edit" href="" id="' + row.id + '">Edit</a>\n ' +
-                                    '    <a class="dropdown-item trasach" href="" id="' + row.id + '">Trả sách</a>\n' +
-                                    '    <a class="dropdown-item giahan" href="" id="' + row.id + '">Gia hạn</a>\n' +
-                                    '  </div>\n' +
+                                    
+                                   
+                                   
+                                    '    <a class="btn btn-primary edit" href="" id="' + row.id + '">Edit</a>\n ' +
+                                
+                                   
                                     '</div> @if(Auth::user()->level==1)<button class="btn btn-danger delete" value="' + row.id + '"><i class="fas fa-trash-alt"></i></button>@endif';
                             }
 
@@ -292,6 +313,36 @@
                     data:{id:$(this).val()},
                     success:function (data) {
                         $('#infomuonsach').html(data);
+                    }
+                })
+            });
+             $(document).on('click','.formnt',function () {
+                $('#naptienModal').modal('show');
+                $('.modal-title').text('Nạp tiền tài khoản: '+$(this).val());
+                $('.buttonnt').text('Nạp tiền');
+                $('.buttonnt').val($(this).val());
+            });
+             $(document).on('submit','#formnaptien',function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url:'{{asset("admin/naptien/add")}}',
+                    type:'POST',
+                    dataType:'json',
+                    data:{id:$('.buttonnt').val(),tiennap:$('#tiennap').val()},
+                    success:function (data) {
+                        alert(data.success);
+                        $('#naptienModal').modal('hide');
+                        
+                        const tienht=parseInt($('#tienht').val());
+                        const tiennap=parseInt($('#tiennap').val());
+                        const tong=tienht + tiennap;
+                        $('#tienht').val(tong);
+                        $('#tientaikhoan').text('Tiền trong tài khoản: '+tong.toString().replace(
+                            /\B(?=(\d{3})+(?!\d))/g, ".")+' VNĐ');
+                        if ($('#tienht').val()-$('#tiendc').val()>0){
+                            $('.formnt').hide();
+                        }
                     }
                 })
             });

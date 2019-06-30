@@ -166,7 +166,7 @@
             $(document).on('click','.hoadonct',function () {
                 $('#modalhdct').modal('show');
                 $.ajax({
-                    url:'{{asset("admin/hoadon/hdct")}}',
+                    url:'{{asset("admin/hoadonsach/hdct")}}',
                     type:'GET',
                     data:{id:$(this).attr('data-id')},
                     success:function (data) {

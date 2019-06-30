@@ -287,6 +287,7 @@ class PageController extends Controller
     }
     public function lichsu(){
         $lichsu=ViTien::orderBy('ngaynap','DESC')->where('tentaikhoan','=',Auth::user()->email)->get();
+
         return view('frontend.lichsu',compact('lichsu'));
     }
     public function hoadon(){

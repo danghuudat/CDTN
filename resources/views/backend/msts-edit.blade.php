@@ -39,7 +39,7 @@
     </div>
     <div class="form-group">
         <input type="hidden" value="{{$infomuontra->user->tien}}" id="tienht">
-        <span id="tientaikhoan">Tiền trong tài khoản: {{number_format($infomuontra->user->tien,0,'.','.')}} VNĐ</span> <button type="button" class="btn btn-outline-warning formnt" value="" style="display: none;">Nạp tiền</button>
+        <span id="tientaikhoan">Tiền trong tài khoản: {{number_format($infomuontra->user->tien,0,'.','.')}} VNĐ</span> <button type="button" class="btn btn-outline-warning formnt" value="{{$infomuontra->user->email}}" style="display: none;">Nạp tiền</button>
 
     </div>
     <div class="form-group">

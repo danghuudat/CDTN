@@ -22,15 +22,7 @@
                     </tr>
                    @foreach($lichsu as $ls)
                    <tr @if($ls->status==0) style="background: #b6d7b6" @else style="background:#e78181" @endif >
-                       <td>{{--{{$ls->status==0 ? 'Nạp tiền' : 'Trừ tiền trả sách'}}--}}
-                       @if($ls->status==0)
-                           Nạp tiền
-                       @elseif($ls->status==1)
-                           Trừ tiền trả sách
-                       @else
-                           Thanh toán cafe
-                       @endif
-                       </td>
+                       <td>{{$ls->status==0 ? 'Nạp tiền' : 'Trừ tiền trả sách'}}</td>
                        <td>{{number_format($ls->tiennap,0,'.','.')}} VNĐ</td>
                        <td>{{date_format($ls->created_at,'d-m-Y H:i A')}}</td>
                    </tr>

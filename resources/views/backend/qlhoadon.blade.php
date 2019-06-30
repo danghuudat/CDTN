@@ -45,7 +45,7 @@
             margin-right: 0px;
         }
     </style>
-@endsection
+    @endsection
 @section('content')
     @if(Auth::user()->level !=1)
         @include('backend.Not-Found')

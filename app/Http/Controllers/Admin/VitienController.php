@@ -44,6 +44,7 @@ class VitienController extends Controller
         $naptien->tiennap=$request->tiennap;
         $naptien->ngaynap=date('Y-m-d');
         $naptien->nguoinap=Auth::user()->email;
+        $naptien->status=0;
         $naptien->save();
         $info=ViTien::find($naptien->id);
         $user=User::where('email','=',$request->id)->first();

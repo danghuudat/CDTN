@@ -17,6 +17,7 @@ class HoaDonCafeController extends Controller
         $hoadon=HoadonCafe::orderBy('id','DESC')->get()->groupBy(function ($item){
             return $item->created_at->format('Y');
         });
+        // dd($hoadon);
         return view('backend.hoadoncafe',compact('hoadon'));
     }
     public function showhdct(Request $request)
