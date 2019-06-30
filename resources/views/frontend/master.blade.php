@@ -44,7 +44,7 @@
                             <a href="thuvien" class="nav-link">Thư viện</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="/Giới thiệu" class="nav-link">Giới thiệu</a>
+                            <a href="/gioithieu" class="nav-link">Giới thiệu</a>
                         </li>
                         <li class="navbar-item">
                             <a href="/cafe" class="nav-link">Cafe</a>

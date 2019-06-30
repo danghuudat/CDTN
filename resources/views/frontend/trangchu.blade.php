@@ -67,7 +67,7 @@
             </p>
 
             <div class="btn-sec">
-                <a href="frontend/about.html" class="btn yellow">Xem thêm</a>
+                <a href="{{asset('gioithieu')}}" class="btn yellow">Xem thêm</a>
                 <a href="{{asset('register')}}" class="btn black">Đăng ký</a>
             </div>
         </div>
@@ -98,30 +98,6 @@
             <div class="btn-sec">
                 <a href="{{asset('thuvien')}}" class="btn gray-btn">Xem thêm</a>
             </div>
-        </div>
-    </section>
-    <section class="features-sec">
-        <div class="container">
-            <ul>
-                <li>
-                    <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                    <h3>Đăng ký gói vàng</h3>
-                    <h5>Safe Shopping Guarantee</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-                <li>
-                    <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
-                    <h3>Đăng ký gói bạc</h3>
-                    <h5>Moneyback guarantee</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-                <li>
-                    <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                    <h3>Đăng ký gói đồng</h3>
-                    <h5>online Consultations</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-            </ul>
         </div>
     </section>
     <section class="offers-sec" style="background:url(frontend/images/offers.jpg)no-repeat;">
