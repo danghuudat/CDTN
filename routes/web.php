@@ -12,6 +12,8 @@
 */
 
 Route::get('/','PageController@index');
+Route::get('/gioithieu','PageController@gioithieu');
+
 Route::get('/cafe','PageController@cafe');
 Route::get('/thuvien','PageController@thuvien');
 Route::post('/loadmore_tv','PageController@loadmore_tv');

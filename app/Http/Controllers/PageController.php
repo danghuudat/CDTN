@@ -26,6 +26,9 @@ class PageController extends Controller
         $douong_theloai=Theloai_Douong::all();
         return view('frontend.douong',compact('douong_theloai'));
     }
+    public function gioithieu(){
+        return view('frontend.gioithieu');
+    }
     public function thuvien(){
         $sachnoibat=Sach::where('noibat','=','1')->inRandomOrder()->get();
         $sach=Sach::orderBy('solanmuon','DESC')->limit(5)->get();

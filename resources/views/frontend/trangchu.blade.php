@@ -63,8 +63,9 @@
         </div>
         <div class="about-content">
             <h2>Giới thiệu về LightBook,</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. Lorem Ipsum has been the book. </p>
-            <p>It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
+            <p>Đam mê đọc sách có thể trở thành một nguồn thúc đẩy lớn hướng bạn đi tới con đường đúng đắn. Còn hơn thế nữa, bạn có thể truyền cảm hứng của chính mình cho những người khác. Đọc sách khiến con người sống chậm lại, suy nghĩ nhiều hơn về những người xung quanh. Từ những câu chuyện cay đắng từ cuộc đời của các tác giả, nhân vật mà họ cảm thấy trân trọng những điều đơn giản và nhỏ nhặt. Nối kết mọi người đến gần với nhau hơn thông qua những trang sách, bạn đã góp phần rất nhiều vào công cuộc xây dựng một xã hội văn minh, tạo tiền đề cho sự phát triển của các thế hệ tương lai sau này.
+            </p>
+
             <div class="btn-sec">
                 <a href="frontend/about.html" class="btn yellow">Xem thêm</a>
                 <a href="{{asset('register')}}" class="btn black">Đăng ký</a>
