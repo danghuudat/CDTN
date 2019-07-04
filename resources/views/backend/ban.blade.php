@@ -100,7 +100,7 @@
                                 <tbody>
                                 <tr>
                                     <td>HD</td>
-                                    <td>HD001</td>
+                                    <td id="mahd"></td>
                                 </tr>
                                 <tr>
                                     <td>Khách hàng</td>
@@ -133,7 +133,6 @@
 
                         <div class="modal-footer">
                             <input type="hidden" id="action" value="">
-                            <button type="submit" class="btn btn-primary submitbutton" >Thanh toán</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -234,6 +233,8 @@
                                     alert(data.errors);
                                 }
                                 else{
+                                    $('#CardModal').modal('hide');
+
                                     $('#HoaDonModal').modal('show');
 
 
@@ -255,13 +256,17 @@
                                     document.getElementById("tongcong").innerHTML = tongcong;
                                     $("#socmt").prop('disabled', true);
                                     $("#traquataikhoan").prop("checked", false);
+                                    $("#mahd").html("");
+
+                                    $("#mahd").append(data.id);
                                     isPayCard=0;
                                     $.each(ordering, function (index,value) {
                                         $('.'+value.id).val("");
                                         $('#'+value.id).prop("checked", false);
                                     })
                                     ordering=[];
-                                    douong_soluong=[]
+                                    douong_soluong=[];
+
 
                                 }
                             }
@@ -285,6 +290,8 @@
                                     alert(data.errors);
                                 }
                                 else{
+                                    $('#CardModal').modal('hide');
+
                                     var dateObj = new Date();
                                     var month = dateObj.getUTCMonth() + 1; //months from 1-12
                                     var day = dateObj.getUTCDate();
@@ -306,11 +313,15 @@
                                     $("#socmt").prop('disabled', true);
                                     $("#traquataikhoan").prop("checked", false);
                                     $('#HoaDonModal').modal('show')
+                                    $("#mahd").html("");
+
+                                    $("#mahd").append(data.id);
                                     $.each(ordering, function (index,value) {
                                         $('.'+value.id).val('');
                                         $('#'+value.id).prop("checked", false);
                                     })
                                     ordering=[];
+
 
                                 }
                             }

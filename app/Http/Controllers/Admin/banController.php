@@ -55,12 +55,13 @@ class banController extends Controller
                 );
                 for($i=0;$i<sizeof($request['douong']);$i++){
                     $id=str_replace('douong_','',$request['douong'][$i]['id']);
-                    Ban_douong::insert(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);
+                    $id_hoadon=Ban_douong::insertGetId(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);
 
                 }
                 return response([
                     'success'=>$success,
-                    'name'=>$user
+                    'name'=>$user,
+                    'id'=>$id_hoadon
                 ]);
             }
             else{
@@ -85,12 +86,13 @@ class banController extends Controller
             );
             for($i=0;$i<sizeof($request['douong']);$i++){
                 $id=str_replace('douong_','',$request['douong'][$i]['id']);
-                Ban_douong::insert(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);
+                $id_hoadon=Ban_douong::insertGetId(['hoadoncafe_id'=>$idUser,'douong_id'=>$id,'soluong'=>$request['douong'][$i]['soluong']]);
 
             }
             $success="đặt đồ uống thành công";
             return response([
                 'success'=>$success,
+                'id'=>$id_hoadon
             ]);
 
         }
