@@ -72,7 +72,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         {{csrf_field()}}
     </div>
@@ -141,7 +140,7 @@
             </div>
             {{csrf_field()}}
         </div>
-
+    </div>
         <hr>
         <table id="example" class="table display cell-border mt-2" style="width:100%">
             <thead>

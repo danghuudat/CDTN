@@ -29,8 +29,8 @@
                                     ?>
                                     <div class="col-md-3">
                                         <div class="item">
-                                            <img src="{{asset('images/'.$mn->anh)}}" width="200px" height="250px" alt="img">
-                                            <h4 style="text-transform: capitalize">{{$mn->tendouong}}</h4>
+                                            <img src="{{asset('images/'.$mn->anh)}}" width="300px" height="200px" alt="img">
+                                            <h4 style="text-transform: capitalize;line-height: 35px">{{$mn->tendouong}}</h4>
                                             <h6 style="color: red">{{$mn->gia}}đ</h6>
                                         </div>
                                     </div>
