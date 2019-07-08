@@ -9,7 +9,7 @@
             <li class="list-group-item @if(\Illuminate\Support\Facades\Request::segment(1)=='hoadon.html') active @endif">Hóa đơn thanh toán</li>
         </a>
         <a href="/phieumuon.html">
-            <li class="list-group-item @if(\Illuminate\Support\Facades\Request::segment(1)=='phieumuon.html') active @endif">Phiếu mượn sách đang mượn</li>
+            <li class="list-group-item @if(\Illuminate\Support\Facades\Request::segment(1)=='phieumuon.html') active @endif">Phiếu mượn sách đã mượn</li>
         </a>
 
     </ul>

@@ -65,8 +65,8 @@ class VitienController extends Controller
         ]);
     }
     public function history(){
-        $ngaynap=ViTien::orderBy('ngaynap','DESC')->get()->groupBy(function ($item){
-            return date('d-m-Y',strtotime($item->ngaynap));
+        $ngaynap=ViTien::where('status','=',0)->orderBy('ngaynap','DESC')->get()->groupBy(function ($item){
+            return date('Y',strtotime($item->ngaynap));
         });
         return view('backend.lichsunt',compact('ngaynap'));
     }

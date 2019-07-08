@@ -7,6 +7,9 @@
             .activels{
                 background-color: #f0f0f0;
             }
+            .timeline li{
+                margin-right: 0px;
+            }
         </style>
         <div class="row mt-3">
             <div class="col-md-9">
@@ -16,24 +19,47 @@
 
         </div>
         <hr>
-        <ul class="list-group mt-3">
-            @foreach($ngaynap as $ngay =>$values)
-                <li class="list-group-item lichsu" value=""><b>{{$ngay}}</b></li>
-                <ul>
-                    <li class="list-group-item">
-                        @foreach($values as $value)
+        <ul class="timeline timeline-inverse">
+            @foreach($ngaynap as $nam =>$values)
+                <li class="list-group-item lichsu" value=""><b>Năm {{$nam}}</b></li>
+                <ul class=" timeline-inverse" >
+                    @foreach($values->groupBy(function ($item){return date('m-Y',strtotime( $item->ngaynap));}) as $thang =>$value)
+                        <li class="list-group-item thang" style="position: relative;margin-bottom: 10px;">
+                            <b>Tháng {{$thang}}</b>
+                        </li>
+                        <ul class="timeline timeline-inverse">
+                            @foreach($value->groupBy(function ($item){return date('d-m-Y',strtotime( $item->ngaynap));}) as $ngay =>$kq)
+                                <li class="time-label ngay">
+                                    <b style="padding: 5px;display: inline-block;background-color: red;color: whitesmoke;border-radius: 4px;">{{$ngay}}
+                                    </b>
+                                </li>
+                                <ul>
+                                    <table class=" table table-bordered">
+                                        <tr>
+                                            <th>Tài Khoản</th>
+                                            <th>Số Tiền</th>
+                                            <th>Người Nạp</th>
+                                            <th>Ngày Nạp</th>
 
-                            <table class=" table table-bordered">
-                                <td width="30%">Tài khoản: {{$value->tentaikhoan}}</td>
-                                <td width="20%">Số tiền: {{number_format($value->tiennap,0,'.','.')}} VNĐ</td>
-                                <td width="25%">Người nạp TK: {{$value->nguoinap}}</td>
-                                <td width="25%">Ngày nạp: {{date_format($value->created_at,'d-m-Y H:i A')}}</td>
+                                        </tr>
+                                        @foreach ($kq as $value)
+                                            <tr>
+                                                <td width="30%"> {{$value->tentaikhoan}}</td>
+                                                <td width="20%">{{number_format($value->tiennap,0,'.','.')}} VNĐ</td>
+                                                <td width="25%">{{$value->nguoinap}}</td>
+                                                <td width="25%">{{date_format($value->created_at,'d-m-Y H:i A')}}</td>
+                                            </tr>
+                                        @endforeach
+                                    </table>
 
-                            </table>
+                                </ul>
+                            @endforeach
+                        </ul>
+
 
 
                         @endforeach
-                    </li>
+                        </li>
                 </ul>
             @endforeach
         </ul>
@@ -42,24 +68,70 @@
 @section('script')
     <script>
         $(document).ready(function () {
-            $('.lichsu').next().toggle()
-            $('.lichsu:first').addClass('activels');
-            if($('.lichsu:first').addClass('activels')) {
-                $('.lichsu:first').append('<i class="fas fa-chevron-down abcde" style="float: right"></i>').next().show();
+            $(' .nam').next().toggle()
+            $(' .nam:first').addClass('activels');
+            if($(' .nam:first').addClass('activels')) {
+                $(' .nam:first').append('<i class="fas fa-chevron-down abcde" style="float: right"></i>').next().show();
 
             }
-            $('.lichsu').click(function () {
+            $(' .nam').click(function () {
                 if($(this).hasClass('activels')){
 
 
                 }else{
-                    $('.lichsu').next().slideUp()
-                    $('.abcde').remove()
+                    $(' .nam').next().slideUp()
+                    $(' .abcde').remove()
                     $(this).next().toggle(1000);
                     $(this).addClass('activels').append('<i class="fas fa-chevron-down abcde" style="float: right"></i>').siblings().removeClass('activels');
 
                 }
+            })
 
+
+            $(' .thang').next().toggle()
+            $(' .thang:first').addClass('activels');
+            if($(' .thang:first').addClass('activels')) {
+                $(' .thang:first').append('<i class="fas fa-chevron-down montharrow" style="float: right"></i>').next().show();
+
+            }
+            $(' .thang').click(function () {
+                if($(this).hasClass('activels')){
+
+
+                }else{
+                    $(' .ngay').removeClass('active')
+                    $(' .thang').next().slideUp()
+                    $(' .montharrow').remove()
+                    $(this).next().toggle(1000);
+                    $(this).addClass('activels').append('<i class="fas fa-chevron-down montharrow" style="float: right"></i>').siblings().removeClass('activels');
+                    if($(' .ngay:first').addClass('active')) {
+                        // $('.ngay:first b').css('background-color','blue');
+                        $(' .ngay:first').next().show();
+
+                    }
+
+                }
+
+            })
+            $(' .ngay').next().toggle()
+            $(' .ngay:first ').addClass('active');
+            if($(' .ngay:first').addClass('active')) {
+                // $('.ngay:first b').css('background-color','blue');
+                $(' .ngay:first').next().show();
+
+            }
+            $(' .ngay').click(function () {
+                if($(this).hasClass('active')){
+
+
+                }else{
+                    $(' .ngay').next().slideUp();
+                    $(this).next().toggle(1000);
+                    $(this).addClass('active').siblings().removeClass('active');
+                    // $('.ngay b').css('background-color','red');
+                    // $(this).children().css('background-color','blue');
+
+                }
             })
         })
     </script>

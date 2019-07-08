@@ -495,7 +495,7 @@
 
             });
             $(document).on('click','.delete',function () {
-                if (confirm('Bạn muốn xóa?')){
+                if (confirm('Bạn muốn hủy sách?')){
 
                     $.ajax({
                         url:'{{asset("admin/book/delete")}}',

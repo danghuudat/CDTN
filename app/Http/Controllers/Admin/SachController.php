@@ -183,6 +183,21 @@ class SachController extends Controller
      */
     public function destroy(Request $request)
     {
+        $sach=Sach::find($request->id);
+        $success='';
+            $nhapsach=new LSNhapHuy();
+            $nhapsach->sach_id=$request->id;
+            $nhapsach->status=2;
+            $nhapsach->soluong=$sach->soluong ;
+            $nhapsach->ngay=date('Y-m-d');
+            $nhapsach->save();
+            $sach->soluong=0;
+            $sach->save();
+            $success='Hủy sách thành công';
+
+        return response([
+            'success'=>$success,
+        ]);
 //        $sach=Sach::find($request->id);
 //        $xoa=new LSNhapHuy();
 //        $xoa->sach_id=$request->id;

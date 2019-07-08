@@ -76,28 +76,27 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="address">
-                    <h4>Our Address</h4>
-                    <h6>The BookStore Theme, 4th Store
-                        Beside that building, USA</h6>
-                    <h6>Call : 800 1234 5678</h6>
-                    <h6>Email : info@bookstore.com</h6>
+                    <h4>Địa Chỉ</h4>
+                    <h6>Đường Nghiêm Xuân Yêm - Đại Kim - Hoàng Mai - Hà Nội</h6>
+                    <h6>SĐT : 800 1234 5678</h6>
+                    <h6>Email : info@thanglong.edu.vn</h6>
                 </div>
                 <div class="timing">
-                    <h4>Timing</h4>
-                    <h6>Mon - Fri: 7am - 10pm</h6>
-                    <h6>​​Saturday: 8am - 10pm</h6>
-                    <h6>​Sunday: 8am - 11pm</h6>
+                    <h4>Giờ mở cửa</h4>
+                    <h6>Thứ hai - Thứ sáu: 7am - 10pm</h6>
+                    <h6>Thứ bảy: 8am - 10pm</h6>
+                    <h6>Chủ nhật: 8am - 11pm</h6>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="navigation">
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="frontend/index.html">Home</a></li>
-                        <li><a href="frontend/about.html">About Us</a></li>
-                        <li><a href="frontend/privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="frontend/terms-conditions.html">Terms</a></li>
-                        <li><a href="frontend/products.html">Products</a></li>
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="gioithieu">Giới thiệu</a></li>
+                        <li><a href="thuvien">Cafe</a></li>
+                        <li><a href="cafe">Sách</a></li>
+                        <li><a href="register">Đăng ký</a></li>
                     </ul>
                 </div>
                 <div class="navigation">
@@ -110,27 +109,7 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="form">
-                    <h3>Quick Contact us</h3>
-                    <h6>We are now offering some good discount
-                        on selected books go and shop them</h6>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input placeholder="Name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" placeholder="Email" required>
-                            </div>
-                            <div class="col-md-12">
-                                <textarea placeholder="Messege"></textarea>
-                            </div>
-                            <div class="col-md-12">
-                                <button class="btn black">Alright, Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Thang%20Long%20uni&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.bitgeeks.net/embed-google-map/">embed google map js</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:350px;}</style></div>
             </div>
         </div>
     </div>
